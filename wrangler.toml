@@ -1,0 +1,5 @@
+# Cloudflare Pages — site estático (sem build). Declara a pasta de saída aqui,
+# então você não precisa configurar nada no painel além de conectar o repo.
+name = "market-graph"
+pages_build_output_dir = "web"
+compatibility_date = "2025-06-01"

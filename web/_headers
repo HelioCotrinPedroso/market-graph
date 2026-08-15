@@ -1,0 +1,14 @@
+# Regras de cache/segurança do Cloudflare Pages (aplicadas na borda/CDN).
+
+# Dados: cache curto para a atualização sob demanda aparecer rápido (até ~1 min).
+/data/*
+  Cache-Control: public, max-age=60
+
+# HTML: sempre revalida (garante que a versão nova do app seja servida).
+/index.html
+  Cache-Control: no-cache
+
+# Segurança básica em tudo.
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin

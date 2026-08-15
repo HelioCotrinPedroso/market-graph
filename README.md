@@ -116,10 +116,30 @@ URL: `https://<seu-usuario>.github.io/market-graph/`.
 - **Localmente** (mais confiável p/ o Yahoo): `docker compose run --rm pipeline` e depois
   `git add web/data/graph.json && git commit -m "dados" && git push`.
 
-### Alternativa: Vercel / Netlify / Cloudflare Pages
+### Cloudflare Pages (recomendado se o repo for privado)
+
+Grátis, aceita **repositório privado** e permite uso comercial. Já vem configurado via `wrangler.toml`
+(`pages_build_output_dir = "web"`) e `web/_headers` (cache/segurança).
+
+**Git integration (mais fácil):**
+1. Cloudflare Dashboard → **Workers & Pages → Create → Pages → Connect to Git** → escolha o repo.
+2. **Build command:** deixe vazio · **Output directory:** `web` (ou apenas confie no `wrangler.toml`).
+3. Deploy. A cada `push` na `main` o Cloudflare republica sozinho.
+
+URL: `https://market-graph.pages.dev` (ou domínio próprio depois).
+
+**Atualizar dados (sob demanda):** igual ao Pages — rode `docker compose run --rm pipeline` e dê
+`git push`, ou use o Action **"Atualizar dados (sob demanda)"** (ele commita e o Cloudflare redeploya).
+
+**Deploy manual pela CLI** (sem Git integration), se preferir:
+```bash
+npx wrangler pages deploy web --project-name market-graph
+```
+
+### Alternativa: Vercel / Netlify
 
 Conecte o repo e configure **Output/Publish directory = `web`** (sem build). Auto-deploy a cada push.
-Para atualizar dados, rode o pipeline localmente e dê push (o `refresh-data` do Actions também serve).
+Obs.: o plano grátis da Vercel (Hobby) é apenas para uso **não-comercial**.
 
 ## Fontes de dados
 
