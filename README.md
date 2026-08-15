@@ -90,6 +90,37 @@ docker build -t market-graph .
 docker run --rm -p 8000:8000 market-graph
 ```
 
+## Deploy (GitHub Pages) — dados sob demanda
+
+O site é estático (`web/`) e vai para o **GitHub Pages** de graça. Os dados **não** são
+atualizados em tempo real nem por agenda — você atualiza **quando quiser**.
+
+**1. Criar o repositório e enviar** (uma vez):
+
+```bash
+cd D:\market-graph
+git remote add origin https://github.com/<seu-usuario>/market-graph.git
+git push -u origin main
+```
+
+**2. Ligar o Pages**: no GitHub, `Settings → Pages → Build and deployment → Source: GitHub Actions`.
+No free, o Pages exige repositório **público** (privado só no GitHub Pro).
+
+Pronto: a cada `push` na `main`, o workflow **Deploy** publica o site.
+URL: `https://<seu-usuario>.github.io/market-graph/`.
+
+**Atualizar os dados (sob demanda)** — duas formas, ambas manuais:
+
+- **Pelo GitHub** (sem instalar nada): aba `Actions → Atualizar dados (sob demanda) → Run workflow`.
+  Ele roda o pipeline, faz commit do `graph.json` novo e o site republica sozinho.
+- **Localmente** (mais confiável p/ o Yahoo): `docker compose run --rm pipeline` e depois
+  `git add web/data/graph.json && git commit -m "dados" && git push`.
+
+### Alternativa: Vercel / Netlify / Cloudflare Pages
+
+Conecte o repo e configure **Output/Publish directory = `web`** (sem build). Auto-deploy a cada push.
+Para atualizar dados, rode o pipeline localmente e dê push (o `refresh-data` do Actions também serve).
+
 ## Fontes de dados
 
 | Bloco | Métrica | Fonte | Chave |
