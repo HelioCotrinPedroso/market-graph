@@ -8,6 +8,9 @@ services:
     volumes:
       # editar os CSVs no host e reiniciar reflete no graph.json (reconstruído no start)
       - ./data/sources:/app/data/sources:ro
+      # cache dos fetchers (dados reais) entra no rebuild do start
+      - ./data/cache:/app/data/cache:ro
+      - ./web/data:/app/web/data
     restart: unless-stopped
 
   # Atualizar com dados REAIS de mercado (roda sob demanda, precisa de internet):

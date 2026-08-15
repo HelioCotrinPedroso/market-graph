@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T19:40:29.356660+00:00",
+ "generated_at": "2026-08-15T20:18:00.077604+00:00",
  "source_note": "Valores de mercado/PIB via APIs quando o cache existe; caso contrário, valores-semente dos CSVs. Valuations privados, relações e notícias são curados manualmente.",
  "years": [
   2020,
@@ -228,7 +228,7 @@
      "name": "Microsoft",
      "sector": 0,
      "type": "public",
-     "value": 3100.0,
+     "value": 3679,
      "m": 0.9,
      "p": 78,
      "ticker": "MSFT"
@@ -238,7 +238,7 @@
      "name": "Apple",
      "sector": 0,
      "type": "public",
-     "value": 3400.0,
+     "value": 4465,
      "m": 0.6,
      "p": 62,
      "ticker": "AAPL"
@@ -248,7 +248,7 @@
      "name": "Alphabet",
      "sector": 0,
      "type": "public",
-     "value": 2200.0,
+     "value": 4230,
      "m": 0.9,
      "p": 80,
      "ticker": "GOOGL"
@@ -258,7 +258,7 @@
      "name": "Amazon",
      "sector": 0,
      "type": "public",
-     "value": 2000.0,
+     "value": 2833,
      "m": 0.9,
      "p": 76,
      "ticker": "AMZN"
@@ -268,7 +268,7 @@
      "name": "Meta",
      "sector": 0,
      "type": "public",
-     "value": 1500.0,
+     "value": 1503,
      "m": 1.0,
      "p": 74,
      "ticker": "META"
@@ -278,7 +278,7 @@
      "name": "Oracle",
      "sector": 0,
      "type": "public",
-     "value": 700.0,
+     "value": 434,
      "m": 1.1,
      "p": 70,
      "ticker": "ORCL"
@@ -298,7 +298,7 @@
      "name": "Tencent",
      "sector": 0,
      "type": "public",
-     "value": 450.0,
+     "value": 505,
      "m": 0.8,
      "p": 66,
      "ticker": "0700.HK"
@@ -308,7 +308,7 @@
      "name": "Palantir",
      "sector": 0,
      "type": "public",
-     "value": 400.0,
+     "value": 418,
      "m": 1.5,
      "p": 82,
      "ticker": "PLTR"
@@ -318,7 +318,7 @@
      "name": "SAP",
      "sector": 0,
      "type": "public",
-     "value": 350.0,
+     "value": 240,
      "m": 0.7,
      "p": 60,
      "ticker": "SAP"
@@ -368,7 +368,7 @@
      "name": "Nvidia",
      "sector": 1,
      "type": "public",
-     "value": 4200.0,
+     "value": 5454,
      "m": 1.3,
      "p": 90,
      "ticker": "NVDA"
@@ -378,7 +378,7 @@
      "name": "Broadcom",
      "sector": 1,
      "type": "public",
-     "value": 1100.0,
+     "value": 1870,
      "m": 1.2,
      "p": 78,
      "ticker": "AVGO"
@@ -388,7 +388,7 @@
      "name": "TSMC",
      "sector": 1,
      "type": "public",
-     "value": 1050.0,
+     "value": 2211,
      "m": 1.0,
      "p": 80,
      "ticker": "TSM"
@@ -398,7 +398,7 @@
      "name": "ASML",
      "sector": 1,
      "type": "public",
-     "value": 400.0,
+     "value": 708,
      "m": 0.9,
      "p": 75,
      "ticker": "ASML"
@@ -428,7 +428,7 @@
      "name": "Cisco",
      "sector": 1,
      "type": "public",
-     "value": 250.0,
+     "value": 440,
      "m": 0.6,
      "p": 55,
      "ticker": "CSCO"
@@ -438,7 +438,7 @@
      "name": "Qualcomm",
      "sector": 1,
      "type": "public",
-     "value": 200.0,
+     "value": 174,
      "m": 0.7,
      "p": 60,
      "ticker": "QCOM"
@@ -448,7 +448,7 @@
      "name": "Arm",
      "sector": 1,
      "type": "public",
-     "value": 170.0,
+     "value": 298,
      "m": 1.0,
      "p": 70,
      "ticker": "ARM"
@@ -468,7 +468,7 @@
      "name": "Berkshire",
      "sector": 2,
      "type": "public",
-     "value": 1050.0,
+     "value": 1079,
      "m": 0.7,
      "p": 66,
      "ticker": "BRK-B"
@@ -478,7 +478,7 @@
      "name": "JPMorgan",
      "sector": 2,
      "type": "public",
-     "value": 750.0,
+     "value": 964,
      "m": 0.9,
      "p": 72,
      "ticker": "JPM"
@@ -488,7 +488,7 @@
      "name": "Visa",
      "sector": 2,
      "type": "public",
-     "value": 650.0,
+     "value": 680,
      "m": 0.9,
      "p": 74,
      "ticker": "V"
@@ -498,7 +498,7 @@
      "name": "Mastercard",
      "sector": 2,
      "type": "public",
-     "value": 500.0,
+     "value": 499,
      "m": 0.9,
      "p": 73,
      "ticker": "MA"
@@ -508,7 +508,7 @@
      "name": "Bank of America",
      "sector": 2,
      "type": "public",
-     "value": 350.0,
+     "value": 451,
      "m": 0.7,
      "p": 62,
      "ticker": "BAC"
@@ -518,7 +518,7 @@
      "name": "ICBC",
      "sector": 2,
      "type": "public",
-     "value": 280.0,
+     "value": 325,
      "m": 0.5,
      "p": 55,
      "ticker": "1398.HK"
@@ -528,7 +528,7 @@
      "name": "Morgan Stanley",
      "sector": 2,
      "type": "public",
-     "value": 220.0,
+     "value": 342,
      "m": 0.8,
      "p": 64,
      "ticker": "MS"
@@ -538,7 +538,7 @@
      "name": "HSBC",
      "sector": 2,
      "type": "public",
-     "value": 180.0,
+     "value": 356,
      "m": 0.6,
      "p": 58,
      "ticker": "HSBC"
@@ -548,7 +548,7 @@
      "name": "Goldman Sachs",
      "sector": 2,
      "type": "public",
-     "value": 180.0,
+     "value": 303,
      "m": 0.9,
      "p": 66,
      "ticker": "GS"
@@ -558,7 +558,7 @@
      "name": "Saudi Aramco",
      "sector": 3,
      "type": "public",
-     "value": 1800.0,
+     "value": 1706,
      "m": 0.6,
      "p": 60,
      "ticker": "2222.SR"
@@ -568,7 +568,7 @@
      "name": "ExxonMobil",
      "sector": 3,
      "type": "public",
-     "value": 550.0,
+     "value": 658,
      "m": 0.8,
      "p": 64,
      "ticker": "XOM"
@@ -578,7 +578,7 @@
      "name": "Chevron",
      "sector": 3,
      "type": "public",
-     "value": 320.0,
+     "value": 392,
      "m": 0.7,
      "p": 62,
      "ticker": "CVX"
@@ -588,7 +588,7 @@
      "name": "Shell",
      "sector": 3,
      "type": "public",
-     "value": 250.0,
+     "value": 250,
      "m": 0.7,
      "p": 60,
      "ticker": "SHEL"
@@ -598,7 +598,7 @@
      "name": "PetroChina",
      "sector": 3,
      "type": "public",
-     "value": 240.0,
+     "value": 220,
      "m": 0.6,
      "p": 56,
      "ticker": "0857.HK"
@@ -608,7 +608,7 @@
      "name": "TotalEnergies",
      "sector": 3,
      "type": "public",
-     "value": 160.0,
+     "value": 196,
      "m": 0.7,
      "p": 60,
      "ticker": "TTE"
@@ -618,7 +618,7 @@
      "name": "NextEra",
      "sector": 3,
      "type": "public",
-     "value": 160.0,
+     "value": 180,
      "m": 1.0,
      "p": 72,
      "ticker": "NEE"
@@ -628,7 +628,7 @@
      "name": "Petrobras",
      "sector": 3,
      "type": "public",
-     "value": 110.0,
+     "value": 115,
      "m": 0.9,
      "p": 62,
      "ticker": "PBR"
@@ -638,7 +638,7 @@
      "name": "BP",
      "sector": 3,
      "type": "public",
-     "value": 100.0,
+     "value": 110,
      "m": 0.6,
      "p": 55,
      "ticker": "BP"
@@ -648,7 +648,7 @@
      "name": "Eli Lilly",
      "sector": 4,
      "type": "public",
-     "value": 850.0,
+     "value": 1052,
      "m": 1.5,
      "p": 88,
      "ticker": "LLY"
@@ -658,7 +658,7 @@
      "name": "Novo Nordisk",
      "sector": 4,
      "type": "public",
-     "value": 400.0,
+     "value": 201,
      "m": 1.3,
      "p": 84,
      "ticker": "NVO"
@@ -668,7 +668,7 @@
      "name": "J&J",
      "sector": 4,
      "type": "public",
-     "value": 380.0,
+     "value": 627,
      "m": 0.6,
      "p": 60,
      "ticker": "JNJ"
@@ -678,7 +678,7 @@
      "name": "UnitedHealth",
      "sector": 4,
      "type": "public",
-     "value": 350.0,
+     "value": 361,
      "m": 0.7,
      "p": 64,
      "ticker": "UNH"
@@ -688,7 +688,7 @@
      "name": "AbbVie",
      "sector": 4,
      "type": "public",
-     "value": 350.0,
+     "value": 441,
      "m": 0.8,
      "p": 66,
      "ticker": "ABBV"
@@ -698,17 +698,17 @@
      "name": "Roche",
      "sector": 4,
      "type": "public",
-     "value": 260.0,
+     "value": 348,
      "m": 0.6,
      "p": 60,
-     "ticker": "ROG.SW"
+     "ticker": "RHHBY"
     },
     {
      "id": "merck",
      "name": "Merck",
      "sector": 4,
      "type": "public",
-     "value": 240.0,
+     "value": 335,
      "m": 0.8,
      "p": 66,
      "ticker": "MRK"
@@ -718,7 +718,7 @@
      "name": "AstraZeneca",
      "sector": 4,
      "type": "public",
-     "value": 240.0,
+     "value": 243,
      "m": 0.9,
      "p": 70,
      "ticker": "AZN"
@@ -728,7 +728,7 @@
      "name": "Pfizer",
      "sector": 4,
      "type": "public",
-     "value": 160.0,
+     "value": 153,
      "m": 0.5,
      "p": 54,
      "ticker": "PFE"
@@ -738,7 +738,7 @@
      "name": "GE Aerospace",
      "sector": 5,
      "type": "public",
-     "value": 200.0,
+     "value": 382,
      "m": 1.1,
      "p": 72,
      "ticker": "GE"
@@ -758,7 +758,7 @@
      "name": "RTX",
      "sector": 5,
      "type": "public",
-     "value": 180.0,
+     "value": 300,
      "m": 0.9,
      "p": 68,
      "ticker": "RTX"
@@ -768,7 +768,7 @@
      "name": "Caterpillar",
      "sector": 5,
      "type": "public",
-     "value": 180.0,
+     "value": 394,
      "m": 0.8,
      "p": 64,
      "ticker": "CAT"
@@ -778,7 +778,7 @@
      "name": "Honeywell",
      "sector": 5,
      "type": "public",
-     "value": 140.0,
+     "value": 74,
      "m": 0.7,
      "p": 62,
      "ticker": "HON"
@@ -788,7 +788,7 @@
      "name": "Boeing",
      "sector": 5,
      "type": "public",
-     "value": 120.0,
+     "value": 183,
      "m": 0.7,
      "p": 60,
      "ticker": "BA"
@@ -798,7 +798,7 @@
      "name": "Lockheed Martin",
      "sector": 5,
      "type": "public",
-     "value": 110.0,
+     "value": 140,
      "m": 0.8,
      "p": 66,
      "ticker": "LMT"
@@ -818,7 +818,7 @@
      "name": "Walmart",
      "sector": 6,
      "type": "public",
-     "value": 700.0,
+     "value": 917,
      "m": 0.8,
      "p": 66,
      "ticker": "WMT"
@@ -828,7 +828,7 @@
      "name": "Costco",
      "sector": 6,
      "type": "public",
-     "value": 400.0,
+     "value": 426,
      "m": 0.9,
      "p": 70,
      "ticker": "COST"
@@ -848,7 +848,7 @@
      "name": "P&G",
      "sector": 6,
      "type": "public",
-     "value": 400.0,
+     "value": 336,
      "m": 0.6,
      "p": 60,
      "ticker": "PG"
@@ -858,7 +858,7 @@
      "name": "LVMH",
      "sector": 6,
      "type": "public",
-     "value": 350.0,
+     "value": 262,
      "m": 0.8,
      "p": 68,
      "ticker": "MC.PA"
@@ -868,7 +868,7 @@
      "name": "Coca-Cola",
      "sector": 6,
      "type": "public",
-     "value": 300.0,
+     "value": 377,
      "m": 0.6,
      "p": 58,
      "ticker": "KO"
@@ -878,7 +878,7 @@
      "name": "Nestlé",
      "sector": 6,
      "type": "public",
-     "value": 280.0,
+     "value": 256,
      "m": 0.5,
      "p": 56,
      "ticker": "NESN.SW"
@@ -888,7 +888,7 @@
      "name": "McDonald's",
      "sector": 6,
      "type": "public",
-     "value": 220.0,
+     "value": 193,
      "m": 0.7,
      "p": 60,
      "ticker": "MCD"
@@ -898,7 +898,7 @@
      "name": "BHP",
      "sector": 7,
      "type": "public",
-     "value": 150.0,
+     "value": 220,
      "m": 0.8,
      "p": 62,
      "ticker": "BHP"
@@ -908,7 +908,7 @@
      "name": "Rio Tinto",
      "sector": 7,
      "type": "public",
-     "value": 110.0,
+     "value": 156,
      "m": 0.7,
      "p": 60,
      "ticker": "RIO"
@@ -918,7 +918,7 @@
      "name": "Glencore",
      "sector": 7,
      "type": "public",
-     "value": 60.0,
+     "value": 87,
      "m": 0.8,
      "p": 60,
      "ticker": "GLEN.L"
@@ -928,7 +928,7 @@
      "name": "Freeport",
      "sector": 7,
      "type": "public",
-     "value": 60.0,
+     "value": 93,
      "m": 1.0,
      "p": 66,
      "ticker": "FCX"
@@ -938,7 +938,7 @@
      "name": "Newmont",
      "sector": 7,
      "type": "public",
-     "value": 60.0,
+     "value": 124,
      "m": 0.9,
      "p": 64,
      "ticker": "NEM"
@@ -948,7 +948,7 @@
      "name": "Vale",
      "sector": 7,
      "type": "public",
-     "value": 45.0,
+     "value": 58,
      "m": 0.8,
      "p": 60,
      "ticker": "VALE"
@@ -958,7 +958,7 @@
      "name": "Nutrien",
      "sector": 7,
      "type": "public",
-     "value": 30.0,
+     "value": 33,
      "m": 0.7,
      "p": 58,
      "ticker": "NTR"
@@ -968,7 +968,7 @@
      "name": "ADM",
      "sector": 7,
      "type": "public",
-     "value": 30.0,
+     "value": 39,
      "m": 0.6,
      "p": 55,
      "ticker": "ADM"
@@ -2156,9 +2156,9 @@
      "name": "Bitcoin",
      "sector": 0,
      "type": "estabelecido",
-     "value": 2000.0,
-     "vol": 45.0,
-     "dom": 56.0,
+     "value": 1265.61,
+     "vol": 11.31,
+     "dom": 56.12,
      "coingecko_id": "bitcoin",
      "m": 1.0
     },
@@ -2167,9 +2167,9 @@
      "name": "Ethereum",
      "sector": 0,
      "type": "estabelecido",
-     "value": 500.0,
-     "vol": 22.0,
-     "dom": 14.0,
+     "value": 227.19,
+     "vol": 2.93,
+     "dom": 10.07,
      "coingecko_id": "ethereum",
      "m": 1.0
     },
@@ -2178,9 +2178,9 @@
      "name": "Solana",
      "sector": 0,
      "type": "estabelecido",
-     "value": 120.0,
-     "vol": 8.0,
-     "dom": 3.4,
+     "value": 43.99,
+     "vol": 0.68,
+     "dom": 1.95,
      "coingecko_id": "solana",
      "m": 1.0
     },
@@ -2189,9 +2189,9 @@
      "name": "BNB",
      "sector": 0,
      "type": "estabelecido",
-     "value": 110.0,
-     "vol": 3.0,
-     "dom": 3.1,
+     "value": 81.31,
+     "vol": 0.43,
+     "dom": 3.61,
      "coingecko_id": "binancecoin",
      "m": 1.0
     },
@@ -2200,9 +2200,9 @@
      "name": "XRP",
      "sector": 0,
      "type": "estabelecido",
-     "value": 150.0,
-     "vol": 6.0,
-     "dom": 4.2,
+     "value": 62.89,
+     "vol": 0.59,
+     "dom": 2.79,
      "coingecko_id": "ripple",
      "m": 1.0
     },
@@ -2211,9 +2211,9 @@
      "name": "Cardano",
      "sector": 0,
      "type": "emergente",
-     "value": 30.0,
-     "vol": 1.2,
-     "dom": 0.8,
+     "value": 6.65,
+     "vol": 0.13,
+     "dom": 0.29,
      "coingecko_id": "cardano",
      "m": 1.0
     },
@@ -2222,9 +2222,9 @@
      "name": "Sui",
      "sector": 0,
      "type": "emergente",
-     "value": 20.0,
-     "vol": 1.5,
-     "dom": 0.6,
+     "value": 2.77,
+     "vol": 0.09,
+     "dom": 0.12,
      "coingecko_id": "sui",
      "m": 1.0
     },
@@ -2233,9 +2233,9 @@
      "name": "Arbitrum",
      "sector": 1,
      "type": "emergente",
-     "value": 8.0,
-     "vol": 0.7,
-     "dom": 0.2,
+     "value": 0.49,
+     "vol": 0.03,
+     "dom": 0.02,
      "coingecko_id": "arbitrum",
      "m": 1.0
     },
@@ -2244,9 +2244,9 @@
      "name": "Optimism",
      "sector": 1,
      "type": "emergente",
-     "value": 6.0,
-     "vol": 0.5,
-     "dom": 0.17,
+     "value": 0.2,
+     "vol": 0.02,
+     "dom": 0.01,
      "coingecko_id": "optimism",
      "m": 1.0
     },
@@ -2255,10 +2255,10 @@
      "name": "Polygon",
      "sector": 1,
      "type": "emergente",
-     "value": 7.0,
-     "vol": 0.6,
-     "dom": 0.2,
-     "coingecko_id": "matic-network",
+     "value": 0.81,
+     "vol": 0.03,
+     "dom": 0.04,
+     "coingecko_id": "polygon-ecosystem-token",
      "m": 1.0
     },
     {
@@ -2266,9 +2266,9 @@
      "name": "Uniswap",
      "sector": 2,
      "type": "estabelecido",
-     "value": 9.0,
-     "vol": 1.0,
-     "dom": 0.25,
+     "value": 2.02,
+     "vol": 0.15,
+     "dom": 0.09,
      "coingecko_id": "uniswap",
      "m": 1.0
     },
@@ -2277,9 +2277,9 @@
      "name": "Aave",
      "sector": 2,
      "type": "estabelecido",
-     "value": 6.0,
-     "vol": 0.6,
-     "dom": 0.17,
+     "value": 1.34,
+     "vol": 0.1,
+     "dom": 0.06,
      "coingecko_id": "aave",
      "m": 1.0
     },
@@ -2288,9 +2288,9 @@
      "name": "Lido",
      "sector": 2,
      "type": "estabelecido",
-     "value": 8.0,
-     "vol": 0.4,
-     "dom": 0.22,
+     "value": 0.25,
+     "vol": 0.02,
+     "dom": 0.01,
      "coingecko_id": "lido-dao",
      "m": 1.0
     },
@@ -2299,9 +2299,9 @@
      "name": "Tether",
      "sector": 3,
      "type": "estabelecido",
-     "value": 140.0,
-     "vol": 80.0,
-     "dom": 3.9,
+     "value": 183.02,
+     "vol": 18.68,
+     "dom": 8.12,
      "coingecko_id": "tether",
      "m": 1.0
     },
@@ -2310,9 +2310,9 @@
      "name": "USDC (Circle)",
      "sector": 3,
      "type": "estabelecido",
-     "value": 60.0,
-     "vol": 40.0,
-     "dom": 1.7,
+     "value": 71.86,
+     "vol": 3.46,
+     "dom": 3.19,
      "coingecko_id": "usd-coin",
      "m": 1.0
     },
@@ -2321,9 +2321,9 @@
      "name": "Dai",
      "sector": 3,
      "type": "estabelecido",
-     "value": 8.0,
-     "vol": 5.0,
-     "dom": 0.22,
+     "value": 4.58,
+     "vol": 0.06,
+     "dom": 0.2,
      "coingecko_id": "dai",
      "m": 1.0
     },
@@ -2332,9 +2332,9 @@
      "name": "Chainlink",
      "sector": 4,
      "type": "estabelecido",
-     "value": 15.0,
-     "vol": 1.0,
-     "dom": 0.4,
+     "value": 7.16,
+     "vol": 0.5,
+     "dom": 0.32,
      "coingecko_id": "chainlink",
      "m": 1.0
     },
@@ -2343,9 +2343,9 @@
      "name": "Ondo",
      "sector": 4,
      "type": "emergente",
-     "value": 6.0,
-     "vol": 0.4,
-     "dom": 0.17,
+     "value": 1.58,
+     "vol": 0.04,
+     "dom": 0.07,
      "coingecko_id": "ondo-finance",
      "m": 1.0
     },
@@ -2354,9 +2354,9 @@
      "name": "Dogecoin",
      "sector": 5,
      "type": "emergente",
-     "value": 30.0,
-     "vol": 3.0,
-     "dom": 0.8,
+     "value": 10.86,
+     "vol": 0.16,
+     "dom": 0.48,
      "coingecko_id": "dogecoin",
      "m": 1.0
     },
@@ -2365,9 +2365,9 @@
      "name": "Shiba Inu",
      "sector": 5,
      "type": "emergente",
-     "value": 12.0,
-     "vol": 1.2,
-     "dom": 0.34,
+     "value": 2.68,
+     "vol": 0.05,
+     "dom": 0.12,
      "coingecko_id": "shiba-inu",
      "m": 1.0
     },
@@ -2376,9 +2376,9 @@
      "name": "Pepe",
      "sector": 5,
      "type": "emergente",
-     "value": 8.0,
-     "vol": 1.5,
-     "dom": 0.22,
+     "value": 1.11,
+     "vol": 0.05,
+     "dom": 0.05,
      "coingecko_id": "pepe",
      "m": 1.0
     },
@@ -2387,9 +2387,9 @@
      "name": "Bittensor",
      "sector": 6,
      "type": "emergente",
-     "value": 6.0,
-     "vol": 0.5,
-     "dom": 0.17,
+     "value": 1.9,
+     "vol": 0.05,
+     "dom": 0.08,
      "coingecko_id": "bittensor",
      "m": 1.0
     },
@@ -2398,9 +2398,9 @@
      "name": "Render",
      "sector": 6,
      "type": "emergente",
-     "value": 4.0,
-     "vol": 0.3,
-     "dom": 0.11,
+     "value": 0.66,
+     "vol": 0.01,
+     "dom": 0.03,
      "coingecko_id": "render-token",
      "m": 1.0
     },
@@ -2409,9 +2409,9 @@
      "name": "Fetch.ai",
      "sector": 6,
      "type": "emergente",
-     "value": 3.0,
-     "vol": 0.25,
-     "dom": 0.08,
+     "value": 0.29,
+     "vol": 0.05,
+     "dom": 0.01,
      "coingecko_id": "fetch-ai",
      "m": 1.0
     }

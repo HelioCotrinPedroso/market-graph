@@ -8,7 +8,7 @@ ada,Cardano,0,Layer 1,cardano,emergente,30,1.2,0.8
 sui,Sui,0,Layer 1,sui,emergente,20,1.5,0.6
 arb,Arbitrum,1,Layer 2 & Scaling,arbitrum,emergente,8,0.7,0.2
 op,Optimism,1,Layer 2 & Scaling,optimism,emergente,6,0.5,0.17
-matic,Polygon,1,Layer 2 & Scaling,matic-network,emergente,7,0.6,0.2
+matic,Polygon,1,Layer 2 & Scaling,polygon-ecosystem-token,emergente,7,0.6,0.2
 uni,Uniswap,2,DeFi,uniswap,estabelecido,9,1.0,0.25
 aave,Aave,2,DeFi,aave,estabelecido,6,0.6,0.17
 lido,Lido,2,DeFi,lido-dao,estabelecido,8,0.4,0.22
