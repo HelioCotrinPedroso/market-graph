@@ -68,6 +68,28 @@ python -m http.server 8000 --directory web
 # abra http://localhost:8000
 ```
 
+## Rodar com Docker
+
+Sobe a plataforma num container (o `graph.json` é reconstruído no start):
+
+```bash
+docker compose up --build      # http://localhost:8000
+```
+
+Para atualizar com **dados reais** de mercado dentro do container (precisa de internet):
+
+```bash
+docker compose run --rm pipeline     # busca ações/cripto/PIB e regrava web/data/graph.json
+docker compose up                    # sobe já com os dados atualizados
+```
+
+Sem docker-compose, direto no Docker:
+
+```bash
+docker build -t market-graph .
+docker run --rm -p 8000:8000 market-graph
+```
+
 ## Fontes de dados
 
 | Bloco | Métrica | Fonte | Chave |

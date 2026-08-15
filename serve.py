@@ -18,6 +18,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--port", type=int, default=8000)
     ap.add_argument("--no-build", action="store_true")
+    ap.add_argument("--no-open", action="store_true", help="não abrir o navegador (uso em container)")
     args = ap.parse_args()
 
     if not args.no_build:
@@ -29,10 +30,11 @@ def main():
     socketserver.TCPServer.allow_reuse_address = True
     url = f"http://localhost:{args.port}"
     print(f"\nServindo {web}\n  {url}   (Ctrl+C para parar)\n")
-    try:
-        webbrowser.open(url)
-    except Exception:
-        pass
+    if not args.no_open and not os.environ.get("MG_NO_OPEN"):
+        try:
+            webbrowser.open(url)
+        except Exception:
+            pass
     with socketserver.TCPServer(("", args.port), handler) as httpd:
         try:
             httpd.serve_forever()

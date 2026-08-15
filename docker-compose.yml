@@ -1,0 +1,23 @@
+services:
+  terminal:
+    build: .
+    image: market-graph
+    container_name: market-graph
+    ports:
+      - "8000:8000"
+    volumes:
+      # editar os CSVs no host e reiniciar reflete no graph.json (reconstruído no start)
+      - ./data/sources:/app/data/sources:ro
+    restart: unless-stopped
+
+  # Atualizar com dados REAIS de mercado (roda sob demanda, precisa de internet):
+  #   docker compose run --rm pipeline
+  pipeline:
+    build: .
+    image: market-graph
+    profiles: ["tools"]
+    volumes:
+      - ./data/sources:/app/data/sources:ro
+      - ./data/cache:/app/data/cache
+      - ./web/data:/app/web/data
+    command: ["python", "pipeline/run.py"]
