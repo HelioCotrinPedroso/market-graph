@@ -1,13 +1,20 @@
 name: Atualizar dados (sob demanda)
 
-# Roda o pipeline (yfinance + CoinGecko + World Bank) SÓ quando você clica
-# em "Run workflow". Atualiza web/data/graph.json e faz commit — o que dispara
-# o deploy automático. Nada é agendado.
+# ⚠️ POLÍTICA: este é o ÚNICO ponto que chama APIs externas, e roda SOMENTE manual.
+# - Sem `schedule` (cron) de propósito — nada de rodar sozinho.
+# - `workflow_dispatch` = só quem tem acesso de escrita ao repo (você) consegue disparar.
+# - Visitantes do site NUNCA acionam isto (o site só lê o graph.json estático).
+# NÃO adicione `schedule:` aqui sem querer aumentar a frequência de requisições.
 on:
   workflow_dispatch: {}
 
 permissions:
   contents: write
+
+# Impede rodadas simultâneas (se clicar 2x, colapsa em 1) — evita estouro de requisições.
+concurrency:
+  group: refresh-data
+  cancel-in-progress: true
 
 jobs:
   refresh:

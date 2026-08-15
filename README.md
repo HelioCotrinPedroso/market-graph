@@ -122,6 +122,22 @@ Qualquer host de site estático serve — conecte o repo e configure **Output/Pu
 (sem build). Ex.: Cloudflare Pages (aceita repo privado) ou Netlify. No caso da Vercel, o plano
 grátis (Hobby) é apenas para uso **não-comercial**.
 
+## Política de atualização de dados (importante)
+
+Os dados são atualizados **só sob demanda e só pelo dono do repo** — nada automático,
+para não estourar as APIs gratuitas:
+
+- **Sem agenda (cron).** Nenhum workflow roda sozinho.
+- **Só manual.** O `refresh-data` é `workflow_dispatch` — no GitHub, só quem tem **acesso de
+  escrita** ao repo (você) pode disparar. Visitantes não conseguem.
+- **Visitantes não geram requisições externas.** O site é estático: o navegador do público só
+  baixa o `graph.json` do próprio Pages/CDN — **não** chama yfinance/CoinGecko/World Bank.
+  Pode viralizar que o custo de API continua zero.
+- **Rodadas não se acumulam.** `concurrency` no workflow colapsa cliques repetidos em uma execução.
+
+Ou seja: o único momento em que as APIs são chamadas é quando **você** roda o pipeline
+(local via Docker, ou o botão "Atualizar dados" no Actions).
+
 ## Fontes de dados
 
 | Bloco | Métrica | Fonte | Chave |
