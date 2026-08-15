@@ -2,24 +2,43 @@ block,entity,date,headline,kind
 privado,nvidia,2025-09,Nvidia anuncia compromisso de até US$100B com a OpenAI,deal
 privado,openai,2025-09,OpenAI fecha contrato de compute com Oracle (Stargate),deal
 privado,anthropic,2025-11,Anthropic amplia acordo de compute com Google (TPU),deal
+privado,anthropic,2025-03,Rodada eleva valuation da Anthropic para US$183B,funding
 privado,lilly,2025-08,Eli Lilly dispara com boom dos emagrecedores (GLP-1),product
+privado,novo,2025-05,Novo Nordisk corre atrás na disputa dos emagrecedores,product
 privado,aramco,2025-06,Aramco mantém domínio do petróleo e investe em gás,move
 privado,anduril,2025-06,Anduril amplia contratos de defesa autônoma,deal
 privado,palantir,2025-11,Palantir bate recorde com demanda por IA corporativa,move
 privado,broadcom,2025-09,Broadcom fecha cliente bilionário de chips de IA,deal
 privado,apple,2024-06,Apple integra ChatGPT ao iOS via parceria com OpenAI,deal
 privado,tsmc,2025-10,TSMC eleva capex com demanda por chips de IA,deal
+privado,walmart,2025-07,Walmart cresce com e-commerce e defende margens,move
+privado,berkshire,2025-05,Berkshire acumula caixa recorde à espera de oportunidades,move
+privado,lockheed,2025-09,Defesa em alta impulsiona encomendas da Lockheed,deal
+privado,databricks,2025-12,Databricks integra modelos Anthropic ao lakehouse,deal
 publico,eua,2025-09,Fed inicia ciclo de corte de juros de olho no emprego,juros
 publico,china,2025-10,China amplia estímulo para reanimar o crescimento,pib
+publico,alemanha,2025-06,Alemanha sai da estagnação com pacote de investimento,pib
 publico,brasil,2026-01,Copom mantém Selic elevada para conter inflação,juros
 publico,japao,2025-07,Japão sobe juros e encerra política ultrafrouxa,juros
+publico,argentina,2025-08,Argentina desacelera inflação após ajuste fiscal,infl
 publico,india,2025-11,Índia lidera crescimento entre grandes economias,pib
 publico,turquia,2025-05,Turquia mantém juros altíssimos contra a inflação,juros
-publico,japao,2025-06,Japão segue como maior credor externo dos EUA,macro
+publico,reinounido,2025-09,Reino Unido corta juros com inflação em queda,juros
 publico,africasul,2025-10,África do Sul enfrenta desemprego recorde,emprego
+publico,japao,2025-06,Japão segue como maior credor externo dos EUA,macro
+publico,china,2025-05,China reduz gradualmente sua carteira de Treasuries,macro
+publico,alemanha,2025-09,BCE sinaliza pausa após ciclo de cortes,juros
+publico,eua,2026-02,Mercado de trabalho dos EUA esfria gradualmente,emprego
 cripto,btc,2025-01,Bitcoin renova máxima com forte entrada em ETFs à vista,preco
+cripto,eth,2025-05,Ethereum avança com upgrade e queda de custos em L2,produto
+cripto,sol,2025-03,Solana lidera atividade de varejo e memecoins,produto
 cripto,usdt,2025-09,Tether vira um dos maiores compradores de T-bills dos EUA,macro
 cripto,usdc,2025-06,Circle (USDC) estreia em bolsa e valoriza forte,move
+cripto,xrp,2025-02,XRP dispara após clareza regulatória nos EUA,regra
+cripto,ondo,2026-01,Ondo cresce com tokenização de ativos reais,produto
+cripto,link,2025-08,Chainlink fecha parcerias com bancos para RWA,deal
 cripto,btc,2022-06,Inverno cripto: Bitcoin despenca com colapsos no setor,preco
 cripto,eth,2022-09,Ethereum conclui a fusão (The Merge),produto
-cripto,ondo,2026-01,Ondo cresce com tokenização de ativos reais,produto
+cripto,doge,2025-04,Dogecoin sobe com onda de memecoins,preco
+cripto,tao,2025-10,Bittensor puxa narrativa de IA descentralizada,produto
+cripto,usdc,2025-07,Stablecoins ganham marco regulatório nos EUA,regra

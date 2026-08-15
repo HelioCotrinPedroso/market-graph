@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-15T19:30:12.899555+00:00",
+ "generated_at": "2026-08-15T19:40:29.356660+00:00",
  "source_note": "Valores de mercado/PIB via APIs quando o cache existe; caso contrário, valores-semente dos CSVs. Valuations privados, relações e notícias são curados manualmente.",
  "years": [
   2020,
@@ -294,6 +294,16 @@
      "ticker": ""
     },
     {
+     "id": "tencent",
+     "name": "Tencent",
+     "sector": 0,
+     "type": "public",
+     "value": 450.0,
+     "m": 0.8,
+     "p": 66,
+     "ticker": "0700.HK"
+    },
+    {
      "id": "palantir",
      "name": "Palantir",
      "sector": 0,
@@ -302,6 +312,26 @@
      "m": 1.5,
      "p": 82,
      "ticker": "PLTR"
+    },
+    {
+     "id": "sap",
+     "name": "SAP",
+     "sector": 0,
+     "type": "public",
+     "value": 350.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "SAP"
+    },
+    {
+     "id": "salesforce",
+     "name": "Salesforce",
+     "sector": 0,
+     "type": "public",
+     "value": 300.0,
+     "m": 0.7,
+     "p": 64,
+     "ticker": "CRM"
     },
     {
      "id": "anthropic",
@@ -374,6 +404,16 @@
      "ticker": "ASML"
     },
     {
+     "id": "samsung",
+     "name": "Samsung",
+     "sector": 1,
+     "type": "public",
+     "value": 400.0,
+     "m": 0.7,
+     "p": 66,
+     "ticker": "005930.KS"
+    },
+    {
      "id": "amd",
      "name": "AMD",
      "sector": 1,
@@ -382,6 +422,16 @@
      "m": 1.1,
      "p": 72,
      "ticker": "AMD"
+    },
+    {
+     "id": "cisco",
+     "name": "Cisco",
+     "sector": 1,
+     "type": "public",
+     "value": 250.0,
+     "m": 0.6,
+     "p": 55,
+     "ticker": "CSCO"
     },
     {
      "id": "qualcomm",
@@ -464,6 +514,36 @@
      "ticker": "BAC"
     },
     {
+     "id": "icbc",
+     "name": "ICBC",
+     "sector": 2,
+     "type": "public",
+     "value": 280.0,
+     "m": 0.5,
+     "p": 55,
+     "ticker": "1398.HK"
+    },
+    {
+     "id": "morganstanley",
+     "name": "Morgan Stanley",
+     "sector": 2,
+     "type": "public",
+     "value": 220.0,
+     "m": 0.8,
+     "p": 64,
+     "ticker": "MS"
+    },
+    {
+     "id": "hsbc",
+     "name": "HSBC",
+     "sector": 2,
+     "type": "public",
+     "value": 180.0,
+     "m": 0.6,
+     "p": 58,
+     "ticker": "HSBC"
+    },
+    {
      "id": "goldman",
      "name": "Goldman Sachs",
      "sector": 2,
@@ -514,6 +594,26 @@
      "ticker": "SHEL"
     },
     {
+     "id": "petrochina",
+     "name": "PetroChina",
+     "sector": 3,
+     "type": "public",
+     "value": 240.0,
+     "m": 0.6,
+     "p": 56,
+     "ticker": "0857.HK"
+    },
+    {
+     "id": "total",
+     "name": "TotalEnergies",
+     "sector": 3,
+     "type": "public",
+     "value": 160.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "TTE"
+    },
+    {
      "id": "nextera",
      "name": "NextEra",
      "sector": 3,
@@ -532,6 +632,16 @@
      "m": 0.9,
      "p": 62,
      "ticker": "PBR"
+    },
+    {
+     "id": "bp",
+     "name": "BP",
+     "sector": 3,
+     "type": "public",
+     "value": 100.0,
+     "m": 0.6,
+     "p": 55,
+     "ticker": "BP"
     },
     {
      "id": "lilly",
@@ -574,6 +684,26 @@
      "ticker": "UNH"
     },
     {
+     "id": "abbvie",
+     "name": "AbbVie",
+     "sector": 4,
+     "type": "public",
+     "value": 350.0,
+     "m": 0.8,
+     "p": 66,
+     "ticker": "ABBV"
+    },
+    {
+     "id": "roche",
+     "name": "Roche",
+     "sector": 4,
+     "type": "public",
+     "value": 260.0,
+     "m": 0.6,
+     "p": 60,
+     "ticker": "ROG.SW"
+    },
+    {
      "id": "merck",
      "name": "Merck",
      "sector": 4,
@@ -582,6 +712,16 @@
      "m": 0.8,
      "p": 66,
      "ticker": "MRK"
+    },
+    {
+     "id": "astrazeneca",
+     "name": "AstraZeneca",
+     "sector": 4,
+     "type": "public",
+     "value": 240.0,
+     "m": 0.9,
+     "p": 70,
+     "ticker": "AZN"
     },
     {
      "id": "pfizer",
@@ -604,6 +744,16 @@
      "ticker": "GE"
     },
     {
+     "id": "siemens",
+     "name": "Siemens",
+     "sector": 5,
+     "type": "public",
+     "value": 200.0,
+     "m": 0.8,
+     "p": 66,
+     "ticker": "SIE.DE"
+    },
+    {
      "id": "rtx",
      "name": "RTX",
      "sector": 5,
@@ -622,6 +772,16 @@
      "m": 0.8,
      "p": 64,
      "ticker": "CAT"
+    },
+    {
+     "id": "honeywell",
+     "name": "Honeywell",
+     "sector": 5,
+     "type": "public",
+     "value": 140.0,
+     "m": 0.7,
+     "p": 62,
+     "ticker": "HON"
     },
     {
      "id": "boeing",
@@ -674,6 +834,16 @@
      "ticker": "COST"
     },
     {
+     "id": "homedepot",
+     "name": "Home Depot",
+     "sector": 6,
+     "type": "public",
+     "value": 400.0,
+     "m": 0.7,
+     "p": 62,
+     "ticker": "HD"
+    },
+    {
      "id": "pg",
      "name": "P&G",
      "sector": 6,
@@ -684,6 +854,16 @@
      "ticker": "PG"
     },
     {
+     "id": "lvmh",
+     "name": "LVMH",
+     "sector": 6,
+     "type": "public",
+     "value": 350.0,
+     "m": 0.8,
+     "p": 68,
+     "ticker": "MC.PA"
+    },
+    {
      "id": "cocacola",
      "name": "Coca-Cola",
      "sector": 6,
@@ -692,6 +872,16 @@
      "m": 0.6,
      "p": 58,
      "ticker": "KO"
+    },
+    {
+     "id": "nestle",
+     "name": "Nestlé",
+     "sector": 6,
+     "type": "public",
+     "value": 280.0,
+     "m": 0.5,
+     "p": 56,
+     "ticker": "NESN.SW"
     },
     {
      "id": "mcdonalds",
@@ -744,6 +934,16 @@
      "ticker": "FCX"
     },
     {
+     "id": "newmont",
+     "name": "Newmont",
+     "sector": 7,
+     "type": "public",
+     "value": 60.0,
+     "m": 0.9,
+     "p": 64,
+     "ticker": "NEM"
+    },
+    {
      "id": "vale",
      "name": "Vale",
      "sector": 7,
@@ -754,14 +954,24 @@
      "ticker": "VALE"
     },
     {
-     "id": "newmont",
-     "name": "Newmont",
+     "id": "nutrien",
+     "name": "Nutrien",
      "sector": 7,
      "type": "public",
-     "value": 60.0,
-     "m": 0.9,
-     "p": 64,
-     "ticker": "NEM"
+     "value": 30.0,
+     "m": 0.7,
+     "p": 58,
+     "ticker": "NTR"
+    },
+    {
+     "id": "adm",
+     "name": "ADM",
+     "sector": 7,
+     "type": "public",
+     "value": 30.0,
+     "m": 0.6,
+     "p": 55,
+     "ticker": "ADM"
     }
    ],
    "edges": [
@@ -794,12 +1004,26 @@
      "amt": 10.0
     },
     {
+     "s": "microsoft",
+     "t": "anthropic",
+     "type": "investimento",
+     "year": 2025,
+     "amt": 5.0
+    },
+    {
      "s": "nvidia",
      "t": "openai",
      "type": "investimento",
      "year": 2025,
      "amt": 100.0,
      "label": "Compute+equity"
+    },
+    {
+     "s": "nvidia",
+     "t": "xai",
+     "type": "investimento",
+     "year": 2025,
+     "amt": 2.0
     },
     {
      "s": "openai",
@@ -841,6 +1065,14 @@
      "label": "Trainium"
     },
     {
+     "s": "anthropic",
+     "t": "alphabet",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 12.0,
+     "label": "TPU"
+    },
+    {
      "s": "meta",
      "t": "nvidia",
      "type": "fornecimento",
@@ -863,12 +1095,34 @@
      "label": "Fab"
     },
     {
+     "s": "broadcom",
+     "t": "tsmc",
+     "type": "fornecimento",
+     "year": 2024,
+     "amt": 12.0
+    },
+    {
+     "s": "amd",
+     "t": "tsmc",
+     "type": "fornecimento",
+     "year": 2024,
+     "amt": 8.0
+    },
+    {
      "s": "apple",
      "t": "tsmc",
      "type": "fornecimento",
      "year": 2024,
      "amt": 20.0,
      "label": "Chips"
+    },
+    {
+     "s": "nvidia",
+     "t": "samsung",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 5.0,
+     "label": "Memória HBM"
     },
     {
      "s": "apple",
@@ -893,6 +1147,14 @@
      "year": 2024,
      "amt": null,
      "label": "Defesa + dados"
+    },
+    {
+     "s": "anduril",
+     "t": "microsoft",
+     "type": "parceria",
+     "year": 2025,
+     "amt": null,
+     "label": "Defesa"
     },
     {
      "s": "exxon",
@@ -923,9 +1185,21 @@
      "k": "deal"
     },
     {
+     "c": "anthropic",
+     "d": "2025-03",
+     "hl": "Rodada eleva valuation da Anthropic para US$183B",
+     "k": "funding"
+    },
+    {
      "c": "lilly",
      "d": "2025-08",
      "hl": "Eli Lilly dispara com boom dos emagrecedores (GLP-1)",
+     "k": "product"
+    },
+    {
+     "c": "novo",
+     "d": "2025-05",
+     "hl": "Novo Nordisk corre atrás na disputa dos emagrecedores",
      "k": "product"
     },
     {
@@ -962,6 +1236,30 @@
      "c": "tsmc",
      "d": "2025-10",
      "hl": "TSMC eleva capex com demanda por chips de IA",
+     "k": "deal"
+    },
+    {
+     "c": "walmart",
+     "d": "2025-07",
+     "hl": "Walmart cresce com e-commerce e defende margens",
+     "k": "move"
+    },
+    {
+     "c": "berkshire",
+     "d": "2025-05",
+     "hl": "Berkshire acumula caixa recorde à espera de oportunidades",
+     "k": "move"
+    },
+    {
+     "c": "lockheed",
+     "d": "2025-09",
+     "hl": "Defesa em alta impulsiona encomendas da Lockheed",
+     "k": "deal"
+    },
+    {
+     "c": "databricks",
+     "d": "2025-12",
+     "hl": "Databricks integra modelos Anthropic ao lakehouse",
      "k": "deal"
     }
    ]
@@ -1520,11 +1818,41 @@
     },
     {
      "s": "eua",
+     "t": "alemanha",
+     "type": "alianca",
+     "year": 2021,
+     "amt": null,
+     "label": "OTAN"
+    },
+    {
+     "s": "eua",
+     "t": "reinounido",
+     "type": "alianca",
+     "year": 2021,
+     "amt": null
+    },
+    {
+     "s": "eua",
      "t": "japao",
      "type": "alianca",
      "year": 2021,
      "amt": null,
      "label": "Segurança"
+    },
+    {
+     "s": "eua",
+     "t": "coreia",
+     "type": "alianca",
+     "year": 2021,
+     "amt": null
+    },
+    {
+     "s": "eua",
+     "t": "india",
+     "type": "alianca",
+     "year": 2023,
+     "amt": null,
+     "label": "Aproximação"
     },
     {
      "s": "china",
@@ -1543,6 +1871,22 @@
      "label": "Eixo"
     },
     {
+     "s": "china",
+     "t": "africasul",
+     "type": "comercio",
+     "year": 2021,
+     "amt": 60.0,
+     "label": "Nova Rota da Seda"
+    },
+    {
+     "s": "china",
+     "t": "arabia",
+     "type": "comercio",
+     "year": 2023,
+     "amt": 90.0,
+     "label": "Petróleo"
+    },
+    {
      "s": "russia",
      "t": "alemanha",
      "type": "tensao",
@@ -1551,12 +1895,52 @@
      "label": "Energia e sanções"
     },
     {
+     "s": "russia",
+     "t": "india",
+     "type": "comercio",
+     "year": 2022,
+     "amt": 60.0,
+     "label": "Petróleo com desconto"
+    },
+    {
+     "s": "alemanha",
+     "t": "franca",
+     "type": "alianca",
+     "year": 2021,
+     "amt": null,
+     "label": "Núcleo da UE"
+    },
+    {
      "s": "arabia",
      "t": "eua",
      "type": "comercio",
      "year": 2021,
      "amt": 70.0,
      "label": "Petróleo & defesa"
+    },
+    {
+     "s": "emirados",
+     "t": "india",
+     "type": "comercio",
+     "year": 2023,
+     "amt": 85.0,
+     "label": "Corredor comercial"
+    },
+    {
+     "s": "brasil",
+     "t": "argentina",
+     "type": "comercio",
+     "year": 2021,
+     "amt": 30.0,
+     "label": "Mercosul"
+    },
+    {
+     "s": "india",
+     "t": "paquistao",
+     "type": "tensao",
+     "year": 2021,
+     "amt": null,
+     "label": "Tensão regional"
     },
     {
      "s": "japao",
@@ -1581,14 +1965,6 @@
      "year": 2022,
      "amt": 740.0,
      "label": "Treasuries"
-    },
-    {
-     "s": "india",
-     "t": "paquistao",
-     "type": "tensao",
-     "year": 2021,
-     "amt": null,
-     "label": "Tensão regional"
     }
    ],
    "news": [
@@ -1605,6 +1981,12 @@
      "k": "pib"
     },
     {
+     "c": "alemanha",
+     "d": "2025-06",
+     "hl": "Alemanha sai da estagnação com pacote de investimento",
+     "k": "pib"
+    },
+    {
      "c": "brasil",
      "d": "2026-01",
      "hl": "Copom mantém Selic elevada para conter inflação",
@@ -1615,6 +1997,12 @@
      "d": "2025-07",
      "hl": "Japão sobe juros e encerra política ultrafrouxa",
      "k": "juros"
+    },
+    {
+     "c": "argentina",
+     "d": "2025-08",
+     "hl": "Argentina desacelera inflação após ajuste fiscal",
+     "k": "infl"
     },
     {
      "c": "india",
@@ -1629,15 +2017,39 @@
      "k": "juros"
     },
     {
+     "c": "reinounido",
+     "d": "2025-09",
+     "hl": "Reino Unido corta juros com inflação em queda",
+     "k": "juros"
+    },
+    {
+     "c": "africasul",
+     "d": "2025-10",
+     "hl": "África do Sul enfrenta desemprego recorde",
+     "k": "emprego"
+    },
+    {
      "c": "japao",
      "d": "2025-06",
      "hl": "Japão segue como maior credor externo dos EUA",
      "k": "macro"
     },
     {
-     "c": "africasul",
-     "d": "2025-10",
-     "hl": "África do Sul enfrenta desemprego recorde",
+     "c": "china",
+     "d": "2025-05",
+     "hl": "China reduz gradualmente sua carteira de Treasuries",
+     "k": "macro"
+    },
+    {
+     "c": "alemanha",
+     "d": "2025-09",
+     "hl": "BCE sinaliza pausa após ciclo de cortes",
+     "k": "juros"
+    },
+    {
+     "c": "eua",
+     "d": "2026-02",
+     "hl": "Mercado de trabalho dos EUA esfria gradualmente",
      "k": "emprego"
     }
    ]
@@ -2021,6 +2433,36 @@
      "amt": 6.0
     },
     {
+     "s": "matic",
+     "t": "eth",
+     "type": "liquidacao",
+     "year": 2022,
+     "amt": 7.0
+    },
+    {
+     "s": "uni",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2021,
+     "amt": null,
+     "label": "DEX"
+    },
+    {
+     "s": "aave",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2021,
+     "amt": null
+    },
+    {
+     "s": "lido",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2021,
+     "amt": null,
+     "label": "Staking"
+    },
+    {
      "s": "usdt",
      "t": "eth",
      "type": "lastro",
@@ -2036,12 +2478,26 @@
      "amt": 40.0
     },
     {
-     "s": "uni",
+     "s": "usdt",
+     "t": "sol",
+     "type": "ponte",
+     "year": 2023,
+     "amt": 10.0,
+     "label": "Multi-chain"
+    },
+    {
+     "s": "usdc",
+     "t": "sol",
+     "type": "ponte",
+     "year": 2023,
+     "amt": 12.0
+    },
+    {
+     "s": "dai",
      "t": "eth",
-     "type": "integracao",
+     "type": "lastro",
      "year": 2021,
-     "amt": null,
-     "label": "DEX"
+     "amt": 8.0
     },
     {
      "s": "link",
@@ -2050,6 +2506,22 @@
      "year": 2021,
      "amt": null,
      "label": "Oráculos"
+    },
+    {
+     "s": "ondo",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2024,
+     "amt": null,
+     "label": "RWA"
+    },
+    {
+     "s": "pepe",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2023,
+     "amt": null,
+     "label": "ERC-20"
     },
     {
      "s": "doge",
@@ -2068,6 +2540,18 @@
      "k": "preco"
     },
     {
+     "c": "eth",
+     "d": "2025-05",
+     "hl": "Ethereum avança com upgrade e queda de custos em L2",
+     "k": "produto"
+    },
+    {
+     "c": "sol",
+     "d": "2025-03",
+     "hl": "Solana lidera atividade de varejo e memecoins",
+     "k": "produto"
+    },
+    {
      "c": "usdt",
      "d": "2025-09",
      "hl": "Tether vira um dos maiores compradores de T-bills dos EUA",
@@ -2078,6 +2562,24 @@
      "d": "2025-06",
      "hl": "Circle (USDC) estreia em bolsa e valoriza forte",
      "k": "move"
+    },
+    {
+     "c": "xrp",
+     "d": "2025-02",
+     "hl": "XRP dispara após clareza regulatória nos EUA",
+     "k": "regra"
+    },
+    {
+     "c": "ondo",
+     "d": "2026-01",
+     "hl": "Ondo cresce com tokenização de ativos reais",
+     "k": "produto"
+    },
+    {
+     "c": "link",
+     "d": "2025-08",
+     "hl": "Chainlink fecha parcerias com bancos para RWA",
+     "k": "deal"
     },
     {
      "c": "btc",
@@ -2092,10 +2594,22 @@
      "k": "produto"
     },
     {
-     "c": "ondo",
-     "d": "2026-01",
-     "hl": "Ondo cresce com tokenização de ativos reais",
+     "c": "doge",
+     "d": "2025-04",
+     "hl": "Dogecoin sobe com onda de memecoins",
+     "k": "preco"
+    },
+    {
+     "c": "tao",
+     "d": "2025-10",
+     "hl": "Bittensor puxa narrativa de IA descentralizada",
      "k": "produto"
+    },
+    {
+     "c": "usdc",
+     "d": "2025-07",
+     "hl": "Stablecoins ganham marco regulatório nos EUA",
+     "k": "regra"
     }
    ]
   }

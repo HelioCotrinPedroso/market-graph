@@ -3,36 +3,61 @@ privado,microsoft,openai,investimento,13,2023,
 privado,amazon,anthropic,investimento,8,2024,
 privado,alphabet,anthropic,investimento,3,2025,
 privado,nvidia,anthropic,investimento,10,2025,
+privado,microsoft,anthropic,investimento,5,2025,
 privado,nvidia,openai,investimento,100,2025,Compute+equity
+privado,nvidia,xai,investimento,2,2025,
 privado,openai,oracle,fornecimento,300,2025,Stargate
 privado,openai,amazon,fornecimento,38,2025,Compute
 privado,openai,broadcom,fornecimento,10,2025,Chips customizados
 privado,openai,nvidia,fornecimento,20,2025,
 privado,anthropic,amazon,fornecimento,15,2025,Trainium
+privado,anthropic,alphabet,fornecimento,12,2025,TPU
 privado,meta,nvidia,fornecimento,20,2025,
 privado,microsoft,nvidia,fornecimento,25,2025,
 privado,nvidia,tsmc,fornecimento,30,2024,Fab
+privado,broadcom,tsmc,fornecimento,12,2024,
+privado,amd,tsmc,fornecimento,8,2024,
 privado,apple,tsmc,fornecimento,20,2024,Chips
+privado,nvidia,samsung,fornecimento,5,2025,Memória HBM
 privado,apple,openai,parceria,,2024,ChatGPT no iOS
 privado,databricks,anthropic,parceria,,2025,Lakehouse
 privado,palantir,lockheed,parceria,,2024,Defesa + dados
+privado,anduril,microsoft,parceria,,2025,Defesa
 privado,exxon,caterpillar,fornecimento,6,2023,Equipamento
 publico,eua,china,tensao,,2021,Rivalidade comercial e de chips
 publico,eua,canada,comercio,900,2021,USMCA
 publico,eua,mexico,comercio,800,2021,USMCA
+publico,eua,alemanha,alianca,,2021,OTAN
+publico,eua,reinounido,alianca,,2021,
 publico,eua,japao,alianca,,2021,Segurança
+publico,eua,coreia,alianca,,2021,
+publico,eua,india,alianca,,2023,Aproximação
 publico,china,brasil,comercio,150,2021,Commodities (BRICS)
 publico,china,russia,alianca,,2022,Eixo
+publico,china,africasul,comercio,60,2021,Nova Rota da Seda
+publico,china,arabia,comercio,90,2023,Petróleo
 publico,russia,alemanha,tensao,,2022,Energia e sanções
+publico,russia,india,comercio,60,2022,Petróleo com desconto
+publico,alemanha,franca,alianca,,2021,Núcleo da UE
 publico,arabia,eua,comercio,70,2021,Petróleo & defesa
+publico,emirados,india,comercio,85,2023,Corredor comercial
+publico,brasil,argentina,comercio,30,2021,Mercosul
+publico,india,paquistao,tensao,,2021,Tensão regional
 publico,japao,eua,titulos,1130,2021,Maior detentor de Treasuries
 publico,china,eua,titulos,770,2021,Reduzindo Treasuries
 publico,reinounido,eua,titulos,740,2022,Treasuries
-publico,india,paquistao,tensao,,2021,Tensão regional
 cripto,arb,eth,liquidacao,8,2023,Rollup na Ethereum
 cripto,op,eth,liquidacao,6,2023,
+cripto,matic,eth,liquidacao,7,2022,
+cripto,uni,eth,integracao,,2021,DEX
+cripto,aave,eth,integracao,,2021,
+cripto,lido,eth,integracao,,2021,Staking
 cripto,usdt,eth,lastro,60,2021,Emitido na Ethereum
 cripto,usdc,eth,lastro,40,2021,
-cripto,uni,eth,integracao,,2021,DEX
+cripto,usdt,sol,ponte,10,2023,Multi-chain
+cripto,usdc,sol,ponte,12,2023,
+cripto,dai,eth,lastro,8,2021,
 cripto,link,eth,integracao,,2021,Oráculos
+cripto,ondo,eth,integracao,,2024,RWA
+cripto,pepe,eth,integracao,,2023,ERC-20
 cripto,doge,btc,integracao,,2021,Proof-of-Work
