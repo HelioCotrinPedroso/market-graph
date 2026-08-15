@@ -1,0 +1,25 @@
+block,entity,date,headline,kind
+privado,nvidia,2025-09,Nvidia anuncia compromisso de até US$100B com a OpenAI,deal
+privado,openai,2025-09,OpenAI fecha contrato de compute com Oracle (Stargate),deal
+privado,anthropic,2025-11,Anthropic amplia acordo de compute com Google (TPU),deal
+privado,lilly,2025-08,Eli Lilly dispara com boom dos emagrecedores (GLP-1),product
+privado,aramco,2025-06,Aramco mantém domínio do petróleo e investe em gás,move
+privado,anduril,2025-06,Anduril amplia contratos de defesa autônoma,deal
+privado,palantir,2025-11,Palantir bate recorde com demanda por IA corporativa,move
+privado,broadcom,2025-09,Broadcom fecha cliente bilionário de chips de IA,deal
+privado,apple,2024-06,Apple integra ChatGPT ao iOS via parceria com OpenAI,deal
+privado,tsmc,2025-10,TSMC eleva capex com demanda por chips de IA,deal
+publico,eua,2025-09,Fed inicia ciclo de corte de juros de olho no emprego,juros
+publico,china,2025-10,China amplia estímulo para reanimar o crescimento,pib
+publico,brasil,2026-01,Copom mantém Selic elevada para conter inflação,juros
+publico,japao,2025-07,Japão sobe juros e encerra política ultrafrouxa,juros
+publico,india,2025-11,Índia lidera crescimento entre grandes economias,pib
+publico,turquia,2025-05,Turquia mantém juros altíssimos contra a inflação,juros
+publico,japao,2025-06,Japão segue como maior credor externo dos EUA,macro
+publico,africasul,2025-10,África do Sul enfrenta desemprego recorde,emprego
+cripto,btc,2025-01,Bitcoin renova máxima com forte entrada em ETFs à vista,preco
+cripto,usdt,2025-09,Tether vira um dos maiores compradores de T-bills dos EUA,macro
+cripto,usdc,2025-06,Circle (USDC) estreia em bolsa e valoriza forte,move
+cripto,btc,2022-06,Inverno cripto: Bitcoin despenca com colapsos no setor,preco
+cripto,eth,2022-09,Ethereum conclui a fusão (The Merge),produto
+cripto,ondo,2026-01,Ondo cresce com tokenização de ativos reais,produto

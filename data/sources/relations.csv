@@ -1,0 +1,38 @@
+block,source,target,type,amount_b,year,label
+privado,microsoft,openai,investimento,13,2023,
+privado,amazon,anthropic,investimento,8,2024,
+privado,alphabet,anthropic,investimento,3,2025,
+privado,nvidia,anthropic,investimento,10,2025,
+privado,nvidia,openai,investimento,100,2025,Compute+equity
+privado,openai,oracle,fornecimento,300,2025,Stargate
+privado,openai,amazon,fornecimento,38,2025,Compute
+privado,openai,broadcom,fornecimento,10,2025,Chips customizados
+privado,openai,nvidia,fornecimento,20,2025,
+privado,anthropic,amazon,fornecimento,15,2025,Trainium
+privado,meta,nvidia,fornecimento,20,2025,
+privado,microsoft,nvidia,fornecimento,25,2025,
+privado,nvidia,tsmc,fornecimento,30,2024,Fab
+privado,apple,tsmc,fornecimento,20,2024,Chips
+privado,apple,openai,parceria,,2024,ChatGPT no iOS
+privado,databricks,anthropic,parceria,,2025,Lakehouse
+privado,palantir,lockheed,parceria,,2024,Defesa + dados
+privado,exxon,caterpillar,fornecimento,6,2023,Equipamento
+publico,eua,china,tensao,,2021,Rivalidade comercial e de chips
+publico,eua,canada,comercio,900,2021,USMCA
+publico,eua,mexico,comercio,800,2021,USMCA
+publico,eua,japao,alianca,,2021,Segurança
+publico,china,brasil,comercio,150,2021,Commodities (BRICS)
+publico,china,russia,alianca,,2022,Eixo
+publico,russia,alemanha,tensao,,2022,Energia e sanções
+publico,arabia,eua,comercio,70,2021,Petróleo & defesa
+publico,japao,eua,titulos,1130,2021,Maior detentor de Treasuries
+publico,china,eua,titulos,770,2021,Reduzindo Treasuries
+publico,reinounido,eua,titulos,740,2022,Treasuries
+publico,india,paquistao,tensao,,2021,Tensão regional
+cripto,arb,eth,liquidacao,8,2023,Rollup na Ethereum
+cripto,op,eth,liquidacao,6,2023,
+cripto,usdt,eth,lastro,60,2021,Emitido na Ethereum
+cripto,usdc,eth,lastro,40,2021,
+cripto,uni,eth,integracao,,2021,DEX
+cripto,link,eth,integracao,,2021,Oráculos
+cripto,doge,btc,integracao,,2021,Proof-of-Work

@@ -1,0 +1,27 @@
+id,name,iso3,region_id,region_name,bloco_id,bloco_name,type,seed_gdp_b,juros,desemprego,idh,gini,arch,bank
+eua,EUA,USA,0,América do Norte,0,G7 / Ocidente,avancada,29000,4.0,4.1,0.93,41,ADV,Fed
+canada,Canadá,CAN,0,América do Norte,0,G7 / Ocidente,avancada,2200,2.75,6.5,0.94,33,COMMOD,BoC
+mexico,México,MEX,0,América do Norte,4,América Latina,emergente,1900,8.0,2.9,0.78,45,MFG,Banxico
+alemanha,Alemanha,DEU,1,Europa,1,União Europeia,avancada,4700,2.4,6.1,0.95,32,MFG,BCE
+reinounido,Reino Unido,GBR,1,Europa,0,G7 / Ocidente,avancada,3600,4.25,4.4,0.94,35,SERV,BoE
+franca,França,FRA,1,Europa,1,União Europeia,avancada,3200,2.4,7.3,0.90,32,ADV,BCE
+italia,Itália,ITA,1,Europa,1,União Europeia,avancada,2300,2.4,6.5,0.89,36,MFG,BCE
+espanha,Espanha,ESP,1,Europa,1,União Europeia,avancada,1700,2.4,10.5,0.90,34,SERV,BCE
+russia,Rússia,RUS,1,Europa,2,BRICS+,emergente,2200,18.0,2.6,0.82,36,OIL,CBR
+china,China,CHN,2,Ásia-Pacífico,2,BRICS+,emergente,19000,3.1,5.1,0.79,38,MFG,PBoC
+japao,Japão,JPN,2,Ásia-Pacífico,0,G7 / Ocidente,avancada,4200,0.5,2.5,0.92,33,MFG,BoJ
+coreia,Coreia do Sul,KOR,2,Ásia-Pacífico,0,G7 / Ocidente,avancada,1900,2.75,2.8,0.93,31,MFG,BoK
+australia,Austrália,AUS,2,Ásia-Pacífico,0,G7 / Ocidente,avancada,1800,3.6,4.2,0.95,34,COMMOD,RBA
+indonesia,Indonésia,IDN,2,Ásia-Pacífico,2,BRICS+,emergente,1500,5.5,5.0,0.71,38,COMMOD,BI
+brasil,Brasil,BRA,3,América Latina,2,BRICS+,emergente,2300,12.0,6.5,0.76,52,COMMOD,BCB · Copom
+argentina,Argentina,ARG,3,América Latina,4,América Latina,emergente,650,29.0,6.9,0.85,42,COMMOD,BCRA
+chile,Chile,CHL,3,América Latina,4,América Latina,emergente,350,5.0,8.5,0.86,44,COMMOD,BCCh
+colombia,Colômbia,COL,3,América Latina,4,América Latina,emergente,400,9.25,9.5,0.76,51,COMMOD,BanRep
+arabia,Arábia Saudita,SAU,4,Oriente Médio & África,3,Golfo / OPEP,emergente,1100,4.75,3.5,0.88,46,OIL,SAMA
+emirados,Emirados,ARE,4,Oriente Médio & África,3,Golfo / OPEP,emergente,550,4.4,2.7,0.94,33,OIL,CBUAE
+turquia,Turquia,TUR,4,Oriente Médio & África,5,Emergentes,emergente,1300,40.0,8.8,0.84,42,EMERG,CBRT
+africasul,África do Sul,ZAF,4,Oriente Médio & África,2,BRICS+,emergente,400,7.25,32.0,0.72,63,COMMOD,SARB
+nigeria,Nigéria,NGA,4,Oriente Médio & África,3,Golfo / OPEP,emergente,250,27.0,5.0,0.55,35,OIL,CBN
+india,Índia,IND,5,Sul da Ásia,2,BRICS+,emergente,4100,5.5,7.8,0.64,35,SERV,RBI
+paquistao,Paquistão,PAK,5,Sul da Ásia,5,Emergentes,emergente,400,11.0,6.3,0.54,33,EMERG,SBP
+bangladesh,Bangladesh,BGD,5,Sul da Ásia,5,Emergentes,emergente,460,10.0,5.1,0.67,33,MFG,BB

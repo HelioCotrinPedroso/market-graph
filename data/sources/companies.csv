@@ -1,0 +1,55 @@
+id,name,sector,type,ticker,seed_value_b,momentum,potential
+microsoft,Microsoft,0,public,MSFT,3100,0.9,78
+apple,Apple,0,public,AAPL,3400,0.6,62
+alphabet,Alphabet,0,public,GOOGL,2200,0.9,80
+amazon,Amazon,0,public,AMZN,2000,0.9,76
+meta,Meta,0,public,META,1500,1.0,74
+oracle,Oracle,0,public,ORCL,700,1.1,70
+openai,OpenAI,0,private,,500,1.6,95
+palantir,Palantir,0,public,PLTR,400,1.5,82
+anthropic,Anthropic,0,private,,183,1.7,96
+databricks,Databricks,0,private,,100,1.4,85
+xai,xAI,0,private,,50,1.6,88
+nvidia,Nvidia,1,public,NVDA,4200,1.3,90
+broadcom,Broadcom,1,public,AVGO,1100,1.2,78
+tsmc,TSMC,1,public,TSM,1050,1.0,80
+asml,ASML,1,public,ASML,400,0.9,75
+amd,AMD,1,public,AMD,250,1.1,72
+qualcomm,Qualcomm,1,public,QCOM,200,0.7,60
+arm,Arm,1,public,ARM,170,1.0,70
+micron,Micron,1,public,MU,130,1.1,68
+berkshire,Berkshire,2,public,BRK-B,1050,0.7,66
+jpmorgan,JPMorgan,2,public,JPM,750,0.9,72
+visa,Visa,2,public,V,650,0.9,74
+mastercard,Mastercard,2,public,MA,500,0.9,73
+bofa,Bank of America,2,public,BAC,350,0.7,62
+goldman,Goldman Sachs,2,public,GS,180,0.9,66
+aramco,Saudi Aramco,3,public,2222.SR,1800,0.6,60
+exxon,ExxonMobil,3,public,XOM,550,0.8,64
+chevron,Chevron,3,public,CVX,320,0.7,62
+shell,Shell,3,public,SHEL,250,0.7,60
+nextera,NextEra,3,public,NEE,160,1.0,72
+petrobras,Petrobras,3,public,PBR,110,0.9,62
+lilly,Eli Lilly,4,public,LLY,850,1.5,88
+novo,Novo Nordisk,4,public,NVO,400,1.3,84
+jnj,J&J,4,public,JNJ,380,0.6,60
+unh,UnitedHealth,4,public,UNH,350,0.7,64
+merck,Merck,4,public,MRK,240,0.8,66
+pfizer,Pfizer,4,public,PFE,160,0.5,54
+geaero,GE Aerospace,5,public,GE,200,1.1,72
+rtx,RTX,5,public,RTX,180,0.9,68
+caterpillar,Caterpillar,5,public,CAT,180,0.8,64
+boeing,Boeing,5,public,BA,120,0.7,60
+lockheed,Lockheed Martin,5,public,LMT,110,0.8,66
+anduril,Anduril,5,private,,30,1.6,86
+walmart,Walmart,6,public,WMT,700,0.8,66
+costco,Costco,6,public,COST,400,0.9,70
+pg,P&G,6,public,PG,400,0.6,60
+cocacola,Coca-Cola,6,public,KO,300,0.6,58
+mcdonalds,McDonald's,6,public,MCD,220,0.7,60
+bhp,BHP,7,public,BHP,150,0.8,62
+riotinto,Rio Tinto,7,public,RIO,110,0.7,60
+glencore,Glencore,7,public,GLEN.L,60,0.8,60
+freeport,Freeport,7,public,FCX,60,1.0,66
+vale,Vale,7,public,VALE,45,0.8,60
+newmont,Newmont,7,public,NEM,60,0.9,64

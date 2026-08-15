@@ -1,0 +1,25 @@
+id,name,sector,sector_name,coingecko_id,type,seed_mcap_b,vol_b,dominance
+btc,Bitcoin,0,Layer 1,bitcoin,estabelecido,2000,45,56
+eth,Ethereum,0,Layer 1,ethereum,estabelecido,500,22,14
+sol,Solana,0,Layer 1,solana,estabelecido,120,8,3.4
+bnb,BNB,0,Layer 1,binancecoin,estabelecido,110,3,3.1
+xrp,XRP,0,Layer 1,ripple,estabelecido,150,6,4.2
+ada,Cardano,0,Layer 1,cardano,emergente,30,1.2,0.8
+sui,Sui,0,Layer 1,sui,emergente,20,1.5,0.6
+arb,Arbitrum,1,Layer 2 & Scaling,arbitrum,emergente,8,0.7,0.2
+op,Optimism,1,Layer 2 & Scaling,optimism,emergente,6,0.5,0.17
+matic,Polygon,1,Layer 2 & Scaling,matic-network,emergente,7,0.6,0.2
+uni,Uniswap,2,DeFi,uniswap,estabelecido,9,1.0,0.25
+aave,Aave,2,DeFi,aave,estabelecido,6,0.6,0.17
+lido,Lido,2,DeFi,lido-dao,estabelecido,8,0.4,0.22
+usdt,Tether,3,Stablecoins,tether,estabelecido,140,80,3.9
+usdc,USDC (Circle),3,Stablecoins,usd-coin,estabelecido,60,40,1.7
+dai,Dai,3,Stablecoins,dai,estabelecido,8,5,0.22
+link,Chainlink,4,RWA & Infra,chainlink,estabelecido,15,1.0,0.4
+ondo,Ondo,4,RWA & Infra,ondo-finance,emergente,6,0.4,0.17
+doge,Dogecoin,5,Memecoins,dogecoin,emergente,30,3,0.8
+shib,Shiba Inu,5,Memecoins,shiba-inu,emergente,12,1.2,0.34
+pepe,Pepe,5,Memecoins,pepe,emergente,8,1.5,0.22
+tao,Bittensor,6,IA-Cripto,bittensor,emergente,6,0.5,0.17
+render,Render,6,IA-Cripto,render-token,emergente,4,0.3,0.11
+fet,Fetch.ai,6,IA-Cripto,fetch-ai,emergente,3,0.25,0.08

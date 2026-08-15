@@ -1,0 +1,2103 @@
+{
+ "generated_at": "2026-08-15T19:30:12.899555+00:00",
+ "source_note": "Valores de mercado/PIB via APIs quando o cache existe; caso contrário, valores-semente dos CSVs. Valuations privados, relações e notícias são curados manualmente.",
+ "years": [
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025,
+  2026
+ ],
+ "sectors": [
+  {
+   "id": 0,
+   "name": "Tecnologia & IA",
+   "color": "#3987e5"
+  },
+  {
+   "id": 1,
+   "name": "Semicondutores & Hardware",
+   "color": "#d95926"
+  },
+  {
+   "id": 2,
+   "name": "Financeiro & Bancos",
+   "color": "#199e70"
+  },
+  {
+   "id": 3,
+   "name": "Energia & Petróleo",
+   "color": "#c98500"
+  },
+  {
+   "id": 4,
+   "name": "Saúde & Farma",
+   "color": "#d55181"
+  },
+  {
+   "id": 5,
+   "name": "Indústria & Defesa",
+   "color": "#008300"
+  },
+  {
+   "id": 6,
+   "name": "Consumo & Varejo",
+   "color": "#9085e9"
+  },
+  {
+   "id": 7,
+   "name": "Commodities & Mineração",
+   "color": "#e66767"
+  }
+ ],
+ "arch": {
+  "ADV": {
+   "0": 0.2,
+   "1": 0.05,
+   "2": 0.2,
+   "3": 0.06,
+   "4": 0.15,
+   "5": 0.14,
+   "6": 0.16,
+   "7": 0.04
+  },
+  "MFG": {
+   "0": 0.12,
+   "1": 0.08,
+   "2": 0.12,
+   "3": 0.06,
+   "4": 0.08,
+   "5": 0.3,
+   "6": 0.16,
+   "7": 0.08
+  },
+  "OIL": {
+   "0": 0.03,
+   "1": 0.01,
+   "2": 0.1,
+   "3": 0.52,
+   "4": 0.04,
+   "5": 0.08,
+   "6": 0.14,
+   "7": 0.08
+  },
+  "COMMOD": {
+   "0": 0.05,
+   "1": 0.01,
+   "2": 0.13,
+   "3": 0.08,
+   "4": 0.06,
+   "5": 0.1,
+   "6": 0.22,
+   "7": 0.35
+  },
+  "SERV": {
+   "0": 0.16,
+   "1": 0.02,
+   "2": 0.3,
+   "3": 0.04,
+   "4": 0.1,
+   "5": 0.08,
+   "6": 0.26,
+   "7": 0.04
+  },
+  "EMERG": {
+   "0": 0.1,
+   "1": 0.03,
+   "2": 0.16,
+   "3": 0.1,
+   "4": 0.08,
+   "5": 0.16,
+   "6": 0.27,
+   "7": 0.1
+  }
+ },
+ "macro_edges": [
+  {
+   "s": "publico",
+   "t": "privado",
+   "label": "Juros & custo de capital"
+  },
+  {
+   "s": "privado",
+   "t": "publico",
+   "label": "IPOs, impostos e empregos"
+  },
+  {
+   "s": "publico",
+   "t": "cripto",
+   "label": "Regulação & ETFs"
+  },
+  {
+   "s": "cripto",
+   "t": "publico",
+   "label": "Stablecoins compram T-bills"
+  },
+  {
+   "s": "privado",
+   "t": "cripto",
+   "label": "VCs financiam infra cripto"
+  },
+  {
+   "s": "cripto",
+   "t": "privado",
+   "label": "Tesourarias corporativas em BTC"
+  }
+ ],
+ "blocks": {
+  "privado": {
+   "curves": {
+    "0": {
+     "2020": 0.3,
+     "2021": 0.42,
+     "2022": 0.4,
+     "2023": 0.52,
+     "2024": 0.72,
+     "2025": 0.9,
+     "2026": 1
+    },
+    "1": {
+     "2020": 0.2,
+     "2021": 0.28,
+     "2022": 0.32,
+     "2023": 0.45,
+     "2024": 0.66,
+     "2025": 0.87,
+     "2026": 1
+    },
+    "2": {
+     "2020": 0.66,
+     "2021": 0.72,
+     "2022": 0.7,
+     "2023": 0.8,
+     "2024": 0.88,
+     "2025": 0.95,
+     "2026": 1
+    },
+    "3": {
+     "2020": 0.6,
+     "2021": 0.72,
+     "2022": 0.98,
+     "2023": 0.86,
+     "2024": 0.9,
+     "2025": 0.96,
+     "2026": 1
+    },
+    "4": {
+     "2020": 0.62,
+     "2021": 0.7,
+     "2022": 0.78,
+     "2023": 0.85,
+     "2024": 0.92,
+     "2025": 0.97,
+     "2026": 1
+    },
+    "5": {
+     "2020": 0.66,
+     "2021": 0.74,
+     "2022": 0.8,
+     "2023": 0.86,
+     "2024": 0.92,
+     "2025": 0.97,
+     "2026": 1
+    },
+    "6": {
+     "2020": 0.78,
+     "2021": 0.84,
+     "2022": 0.86,
+     "2023": 0.9,
+     "2024": 0.95,
+     "2025": 0.98,
+     "2026": 1
+    },
+    "7": {
+     "2020": 0.7,
+     "2021": 0.86,
+     "2022": 1.0,
+     "2023": 0.88,
+     "2024": 0.92,
+     "2025": 0.97,
+     "2026": 1
+    }
+   },
+   "nodes": [
+    {
+     "id": "microsoft",
+     "name": "Microsoft",
+     "sector": 0,
+     "type": "public",
+     "value": 3100.0,
+     "m": 0.9,
+     "p": 78,
+     "ticker": "MSFT"
+    },
+    {
+     "id": "apple",
+     "name": "Apple",
+     "sector": 0,
+     "type": "public",
+     "value": 3400.0,
+     "m": 0.6,
+     "p": 62,
+     "ticker": "AAPL"
+    },
+    {
+     "id": "alphabet",
+     "name": "Alphabet",
+     "sector": 0,
+     "type": "public",
+     "value": 2200.0,
+     "m": 0.9,
+     "p": 80,
+     "ticker": "GOOGL"
+    },
+    {
+     "id": "amazon",
+     "name": "Amazon",
+     "sector": 0,
+     "type": "public",
+     "value": 2000.0,
+     "m": 0.9,
+     "p": 76,
+     "ticker": "AMZN"
+    },
+    {
+     "id": "meta",
+     "name": "Meta",
+     "sector": 0,
+     "type": "public",
+     "value": 1500.0,
+     "m": 1.0,
+     "p": 74,
+     "ticker": "META"
+    },
+    {
+     "id": "oracle",
+     "name": "Oracle",
+     "sector": 0,
+     "type": "public",
+     "value": 700.0,
+     "m": 1.1,
+     "p": 70,
+     "ticker": "ORCL"
+    },
+    {
+     "id": "openai",
+     "name": "OpenAI",
+     "sector": 0,
+     "type": "private",
+     "value": 500.0,
+     "m": 1.6,
+     "p": 95,
+     "ticker": ""
+    },
+    {
+     "id": "palantir",
+     "name": "Palantir",
+     "sector": 0,
+     "type": "public",
+     "value": 400.0,
+     "m": 1.5,
+     "p": 82,
+     "ticker": "PLTR"
+    },
+    {
+     "id": "anthropic",
+     "name": "Anthropic",
+     "sector": 0,
+     "type": "private",
+     "value": 183.0,
+     "m": 1.7,
+     "p": 96,
+     "ticker": ""
+    },
+    {
+     "id": "databricks",
+     "name": "Databricks",
+     "sector": 0,
+     "type": "private",
+     "value": 100.0,
+     "m": 1.4,
+     "p": 85,
+     "ticker": ""
+    },
+    {
+     "id": "xai",
+     "name": "xAI",
+     "sector": 0,
+     "type": "private",
+     "value": 50.0,
+     "m": 1.6,
+     "p": 88,
+     "ticker": ""
+    },
+    {
+     "id": "nvidia",
+     "name": "Nvidia",
+     "sector": 1,
+     "type": "public",
+     "value": 4200.0,
+     "m": 1.3,
+     "p": 90,
+     "ticker": "NVDA"
+    },
+    {
+     "id": "broadcom",
+     "name": "Broadcom",
+     "sector": 1,
+     "type": "public",
+     "value": 1100.0,
+     "m": 1.2,
+     "p": 78,
+     "ticker": "AVGO"
+    },
+    {
+     "id": "tsmc",
+     "name": "TSMC",
+     "sector": 1,
+     "type": "public",
+     "value": 1050.0,
+     "m": 1.0,
+     "p": 80,
+     "ticker": "TSM"
+    },
+    {
+     "id": "asml",
+     "name": "ASML",
+     "sector": 1,
+     "type": "public",
+     "value": 400.0,
+     "m": 0.9,
+     "p": 75,
+     "ticker": "ASML"
+    },
+    {
+     "id": "amd",
+     "name": "AMD",
+     "sector": 1,
+     "type": "public",
+     "value": 250.0,
+     "m": 1.1,
+     "p": 72,
+     "ticker": "AMD"
+    },
+    {
+     "id": "qualcomm",
+     "name": "Qualcomm",
+     "sector": 1,
+     "type": "public",
+     "value": 200.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "QCOM"
+    },
+    {
+     "id": "arm",
+     "name": "Arm",
+     "sector": 1,
+     "type": "public",
+     "value": 170.0,
+     "m": 1.0,
+     "p": 70,
+     "ticker": "ARM"
+    },
+    {
+     "id": "micron",
+     "name": "Micron",
+     "sector": 1,
+     "type": "public",
+     "value": 130.0,
+     "m": 1.1,
+     "p": 68,
+     "ticker": "MU"
+    },
+    {
+     "id": "berkshire",
+     "name": "Berkshire",
+     "sector": 2,
+     "type": "public",
+     "value": 1050.0,
+     "m": 0.7,
+     "p": 66,
+     "ticker": "BRK-B"
+    },
+    {
+     "id": "jpmorgan",
+     "name": "JPMorgan",
+     "sector": 2,
+     "type": "public",
+     "value": 750.0,
+     "m": 0.9,
+     "p": 72,
+     "ticker": "JPM"
+    },
+    {
+     "id": "visa",
+     "name": "Visa",
+     "sector": 2,
+     "type": "public",
+     "value": 650.0,
+     "m": 0.9,
+     "p": 74,
+     "ticker": "V"
+    },
+    {
+     "id": "mastercard",
+     "name": "Mastercard",
+     "sector": 2,
+     "type": "public",
+     "value": 500.0,
+     "m": 0.9,
+     "p": 73,
+     "ticker": "MA"
+    },
+    {
+     "id": "bofa",
+     "name": "Bank of America",
+     "sector": 2,
+     "type": "public",
+     "value": 350.0,
+     "m": 0.7,
+     "p": 62,
+     "ticker": "BAC"
+    },
+    {
+     "id": "goldman",
+     "name": "Goldman Sachs",
+     "sector": 2,
+     "type": "public",
+     "value": 180.0,
+     "m": 0.9,
+     "p": 66,
+     "ticker": "GS"
+    },
+    {
+     "id": "aramco",
+     "name": "Saudi Aramco",
+     "sector": 3,
+     "type": "public",
+     "value": 1800.0,
+     "m": 0.6,
+     "p": 60,
+     "ticker": "2222.SR"
+    },
+    {
+     "id": "exxon",
+     "name": "ExxonMobil",
+     "sector": 3,
+     "type": "public",
+     "value": 550.0,
+     "m": 0.8,
+     "p": 64,
+     "ticker": "XOM"
+    },
+    {
+     "id": "chevron",
+     "name": "Chevron",
+     "sector": 3,
+     "type": "public",
+     "value": 320.0,
+     "m": 0.7,
+     "p": 62,
+     "ticker": "CVX"
+    },
+    {
+     "id": "shell",
+     "name": "Shell",
+     "sector": 3,
+     "type": "public",
+     "value": 250.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "SHEL"
+    },
+    {
+     "id": "nextera",
+     "name": "NextEra",
+     "sector": 3,
+     "type": "public",
+     "value": 160.0,
+     "m": 1.0,
+     "p": 72,
+     "ticker": "NEE"
+    },
+    {
+     "id": "petrobras",
+     "name": "Petrobras",
+     "sector": 3,
+     "type": "public",
+     "value": 110.0,
+     "m": 0.9,
+     "p": 62,
+     "ticker": "PBR"
+    },
+    {
+     "id": "lilly",
+     "name": "Eli Lilly",
+     "sector": 4,
+     "type": "public",
+     "value": 850.0,
+     "m": 1.5,
+     "p": 88,
+     "ticker": "LLY"
+    },
+    {
+     "id": "novo",
+     "name": "Novo Nordisk",
+     "sector": 4,
+     "type": "public",
+     "value": 400.0,
+     "m": 1.3,
+     "p": 84,
+     "ticker": "NVO"
+    },
+    {
+     "id": "jnj",
+     "name": "J&J",
+     "sector": 4,
+     "type": "public",
+     "value": 380.0,
+     "m": 0.6,
+     "p": 60,
+     "ticker": "JNJ"
+    },
+    {
+     "id": "unh",
+     "name": "UnitedHealth",
+     "sector": 4,
+     "type": "public",
+     "value": 350.0,
+     "m": 0.7,
+     "p": 64,
+     "ticker": "UNH"
+    },
+    {
+     "id": "merck",
+     "name": "Merck",
+     "sector": 4,
+     "type": "public",
+     "value": 240.0,
+     "m": 0.8,
+     "p": 66,
+     "ticker": "MRK"
+    },
+    {
+     "id": "pfizer",
+     "name": "Pfizer",
+     "sector": 4,
+     "type": "public",
+     "value": 160.0,
+     "m": 0.5,
+     "p": 54,
+     "ticker": "PFE"
+    },
+    {
+     "id": "geaero",
+     "name": "GE Aerospace",
+     "sector": 5,
+     "type": "public",
+     "value": 200.0,
+     "m": 1.1,
+     "p": 72,
+     "ticker": "GE"
+    },
+    {
+     "id": "rtx",
+     "name": "RTX",
+     "sector": 5,
+     "type": "public",
+     "value": 180.0,
+     "m": 0.9,
+     "p": 68,
+     "ticker": "RTX"
+    },
+    {
+     "id": "caterpillar",
+     "name": "Caterpillar",
+     "sector": 5,
+     "type": "public",
+     "value": 180.0,
+     "m": 0.8,
+     "p": 64,
+     "ticker": "CAT"
+    },
+    {
+     "id": "boeing",
+     "name": "Boeing",
+     "sector": 5,
+     "type": "public",
+     "value": 120.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "BA"
+    },
+    {
+     "id": "lockheed",
+     "name": "Lockheed Martin",
+     "sector": 5,
+     "type": "public",
+     "value": 110.0,
+     "m": 0.8,
+     "p": 66,
+     "ticker": "LMT"
+    },
+    {
+     "id": "anduril",
+     "name": "Anduril",
+     "sector": 5,
+     "type": "private",
+     "value": 30.0,
+     "m": 1.6,
+     "p": 86,
+     "ticker": ""
+    },
+    {
+     "id": "walmart",
+     "name": "Walmart",
+     "sector": 6,
+     "type": "public",
+     "value": 700.0,
+     "m": 0.8,
+     "p": 66,
+     "ticker": "WMT"
+    },
+    {
+     "id": "costco",
+     "name": "Costco",
+     "sector": 6,
+     "type": "public",
+     "value": 400.0,
+     "m": 0.9,
+     "p": 70,
+     "ticker": "COST"
+    },
+    {
+     "id": "pg",
+     "name": "P&G",
+     "sector": 6,
+     "type": "public",
+     "value": 400.0,
+     "m": 0.6,
+     "p": 60,
+     "ticker": "PG"
+    },
+    {
+     "id": "cocacola",
+     "name": "Coca-Cola",
+     "sector": 6,
+     "type": "public",
+     "value": 300.0,
+     "m": 0.6,
+     "p": 58,
+     "ticker": "KO"
+    },
+    {
+     "id": "mcdonalds",
+     "name": "McDonald's",
+     "sector": 6,
+     "type": "public",
+     "value": 220.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "MCD"
+    },
+    {
+     "id": "bhp",
+     "name": "BHP",
+     "sector": 7,
+     "type": "public",
+     "value": 150.0,
+     "m": 0.8,
+     "p": 62,
+     "ticker": "BHP"
+    },
+    {
+     "id": "riotinto",
+     "name": "Rio Tinto",
+     "sector": 7,
+     "type": "public",
+     "value": 110.0,
+     "m": 0.7,
+     "p": 60,
+     "ticker": "RIO"
+    },
+    {
+     "id": "glencore",
+     "name": "Glencore",
+     "sector": 7,
+     "type": "public",
+     "value": 60.0,
+     "m": 0.8,
+     "p": 60,
+     "ticker": "GLEN.L"
+    },
+    {
+     "id": "freeport",
+     "name": "Freeport",
+     "sector": 7,
+     "type": "public",
+     "value": 60.0,
+     "m": 1.0,
+     "p": 66,
+     "ticker": "FCX"
+    },
+    {
+     "id": "vale",
+     "name": "Vale",
+     "sector": 7,
+     "type": "public",
+     "value": 45.0,
+     "m": 0.8,
+     "p": 60,
+     "ticker": "VALE"
+    },
+    {
+     "id": "newmont",
+     "name": "Newmont",
+     "sector": 7,
+     "type": "public",
+     "value": 60.0,
+     "m": 0.9,
+     "p": 64,
+     "ticker": "NEM"
+    }
+   ],
+   "edges": [
+    {
+     "s": "microsoft",
+     "t": "openai",
+     "type": "investimento",
+     "year": 2023,
+     "amt": 13.0
+    },
+    {
+     "s": "amazon",
+     "t": "anthropic",
+     "type": "investimento",
+     "year": 2024,
+     "amt": 8.0
+    },
+    {
+     "s": "alphabet",
+     "t": "anthropic",
+     "type": "investimento",
+     "year": 2025,
+     "amt": 3.0
+    },
+    {
+     "s": "nvidia",
+     "t": "anthropic",
+     "type": "investimento",
+     "year": 2025,
+     "amt": 10.0
+    },
+    {
+     "s": "nvidia",
+     "t": "openai",
+     "type": "investimento",
+     "year": 2025,
+     "amt": 100.0,
+     "label": "Compute+equity"
+    },
+    {
+     "s": "openai",
+     "t": "oracle",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 300.0,
+     "label": "Stargate"
+    },
+    {
+     "s": "openai",
+     "t": "amazon",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 38.0,
+     "label": "Compute"
+    },
+    {
+     "s": "openai",
+     "t": "broadcom",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 10.0,
+     "label": "Chips customizados"
+    },
+    {
+     "s": "openai",
+     "t": "nvidia",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 20.0
+    },
+    {
+     "s": "anthropic",
+     "t": "amazon",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 15.0,
+     "label": "Trainium"
+    },
+    {
+     "s": "meta",
+     "t": "nvidia",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 20.0
+    },
+    {
+     "s": "microsoft",
+     "t": "nvidia",
+     "type": "fornecimento",
+     "year": 2025,
+     "amt": 25.0
+    },
+    {
+     "s": "nvidia",
+     "t": "tsmc",
+     "type": "fornecimento",
+     "year": 2024,
+     "amt": 30.0,
+     "label": "Fab"
+    },
+    {
+     "s": "apple",
+     "t": "tsmc",
+     "type": "fornecimento",
+     "year": 2024,
+     "amt": 20.0,
+     "label": "Chips"
+    },
+    {
+     "s": "apple",
+     "t": "openai",
+     "type": "parceria",
+     "year": 2024,
+     "amt": null,
+     "label": "ChatGPT no iOS"
+    },
+    {
+     "s": "databricks",
+     "t": "anthropic",
+     "type": "parceria",
+     "year": 2025,
+     "amt": null,
+     "label": "Lakehouse"
+    },
+    {
+     "s": "palantir",
+     "t": "lockheed",
+     "type": "parceria",
+     "year": 2024,
+     "amt": null,
+     "label": "Defesa + dados"
+    },
+    {
+     "s": "exxon",
+     "t": "caterpillar",
+     "type": "fornecimento",
+     "year": 2023,
+     "amt": 6.0,
+     "label": "Equipamento"
+    }
+   ],
+   "news": [
+    {
+     "c": "nvidia",
+     "d": "2025-09",
+     "hl": "Nvidia anuncia compromisso de até US$100B com a OpenAI",
+     "k": "deal"
+    },
+    {
+     "c": "openai",
+     "d": "2025-09",
+     "hl": "OpenAI fecha contrato de compute com Oracle (Stargate)",
+     "k": "deal"
+    },
+    {
+     "c": "anthropic",
+     "d": "2025-11",
+     "hl": "Anthropic amplia acordo de compute com Google (TPU)",
+     "k": "deal"
+    },
+    {
+     "c": "lilly",
+     "d": "2025-08",
+     "hl": "Eli Lilly dispara com boom dos emagrecedores (GLP-1)",
+     "k": "product"
+    },
+    {
+     "c": "aramco",
+     "d": "2025-06",
+     "hl": "Aramco mantém domínio do petróleo e investe em gás",
+     "k": "move"
+    },
+    {
+     "c": "anduril",
+     "d": "2025-06",
+     "hl": "Anduril amplia contratos de defesa autônoma",
+     "k": "deal"
+    },
+    {
+     "c": "palantir",
+     "d": "2025-11",
+     "hl": "Palantir bate recorde com demanda por IA corporativa",
+     "k": "move"
+    },
+    {
+     "c": "broadcom",
+     "d": "2025-09",
+     "hl": "Broadcom fecha cliente bilionário de chips de IA",
+     "k": "deal"
+    },
+    {
+     "c": "apple",
+     "d": "2024-06",
+     "hl": "Apple integra ChatGPT ao iOS via parceria com OpenAI",
+     "k": "deal"
+    },
+    {
+     "c": "tsmc",
+     "d": "2025-10",
+     "hl": "TSMC eleva capex com demanda por chips de IA",
+     "k": "deal"
+    }
+   ]
+  },
+  "publico": {
+   "curves": {
+    "0": {
+     "2020": 0.82,
+     "2021": 0.86,
+     "2022": 0.9,
+     "2023": 0.93,
+     "2024": 0.96,
+     "2025": 0.98,
+     "2026": 1
+    },
+    "1": {
+     "2020": 0.88,
+     "2021": 0.9,
+     "2022": 0.92,
+     "2023": 0.94,
+     "2024": 0.96,
+     "2025": 0.98,
+     "2026": 1
+    },
+    "2": {
+     "2020": 0.78,
+     "2021": 0.82,
+     "2022": 0.86,
+     "2023": 0.9,
+     "2024": 0.93,
+     "2025": 0.97,
+     "2026": 1
+    },
+    "3": {
+     "2020": 0.8,
+     "2021": 0.84,
+     "2022": 0.88,
+     "2023": 0.91,
+     "2024": 0.94,
+     "2025": 0.97,
+     "2026": 1
+    },
+    "4": {
+     "2020": 0.76,
+     "2021": 0.8,
+     "2022": 0.85,
+     "2023": 0.89,
+     "2024": 0.93,
+     "2025": 0.97,
+     "2026": 1
+    },
+    "5": {
+     "2020": 0.62,
+     "2021": 0.68,
+     "2022": 0.74,
+     "2023": 0.8,
+     "2024": 0.87,
+     "2025": 0.94,
+     "2026": 1
+    }
+   },
+   "regions": [
+    {
+     "id": 0,
+     "name": "América do Norte"
+    },
+    {
+     "id": 1,
+     "name": "Europa"
+    },
+    {
+     "id": 2,
+     "name": "Ásia-Pacífico"
+    },
+    {
+     "id": 3,
+     "name": "América Latina"
+    },
+    {
+     "id": 4,
+     "name": "Oriente Médio & África"
+    },
+    {
+     "id": 5,
+     "name": "Sul da Ásia"
+    }
+   ],
+   "blocos": [
+    {
+     "id": 0,
+     "name": "G7 / Ocidente"
+    },
+    {
+     "id": 1,
+     "name": "União Europeia"
+    },
+    {
+     "id": 2,
+     "name": "BRICS+"
+    },
+    {
+     "id": 3,
+     "name": "Golfo / OPEP"
+    },
+    {
+     "id": 4,
+     "name": "América Latina"
+    },
+    {
+     "id": 5,
+     "name": "Emergentes"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "eua",
+     "name": "EUA",
+     "iso3": "USA",
+     "cont": 0,
+     "bloco": 0,
+     "type": "avancada",
+     "value": 29000.0,
+     "juros": 4.0,
+     "desemp": 4.1,
+     "idh": 0.93,
+     "gini": 41.0,
+     "arch": "ADV",
+     "bank": "Fed",
+     "m": 1.0
+    },
+    {
+     "id": "canada",
+     "name": "Canadá",
+     "iso3": "CAN",
+     "cont": 0,
+     "bloco": 0,
+     "type": "avancada",
+     "value": 2200.0,
+     "juros": 2.75,
+     "desemp": 6.5,
+     "idh": 0.94,
+     "gini": 33.0,
+     "arch": "COMMOD",
+     "bank": "BoC",
+     "m": 1.0
+    },
+    {
+     "id": "mexico",
+     "name": "México",
+     "iso3": "MEX",
+     "cont": 0,
+     "bloco": 4,
+     "type": "emergente",
+     "value": 1900.0,
+     "juros": 8.0,
+     "desemp": 2.9,
+     "idh": 0.78,
+     "gini": 45.0,
+     "arch": "MFG",
+     "bank": "Banxico",
+     "m": 1.0
+    },
+    {
+     "id": "alemanha",
+     "name": "Alemanha",
+     "iso3": "DEU",
+     "cont": 1,
+     "bloco": 1,
+     "type": "avancada",
+     "value": 4700.0,
+     "juros": 2.4,
+     "desemp": 6.1,
+     "idh": 0.95,
+     "gini": 32.0,
+     "arch": "MFG",
+     "bank": "BCE",
+     "m": 1.0
+    },
+    {
+     "id": "reinounido",
+     "name": "Reino Unido",
+     "iso3": "GBR",
+     "cont": 1,
+     "bloco": 0,
+     "type": "avancada",
+     "value": 3600.0,
+     "juros": 4.25,
+     "desemp": 4.4,
+     "idh": 0.94,
+     "gini": 35.0,
+     "arch": "SERV",
+     "bank": "BoE",
+     "m": 1.0
+    },
+    {
+     "id": "franca",
+     "name": "França",
+     "iso3": "FRA",
+     "cont": 1,
+     "bloco": 1,
+     "type": "avancada",
+     "value": 3200.0,
+     "juros": 2.4,
+     "desemp": 7.3,
+     "idh": 0.9,
+     "gini": 32.0,
+     "arch": "ADV",
+     "bank": "BCE",
+     "m": 1.0
+    },
+    {
+     "id": "italia",
+     "name": "Itália",
+     "iso3": "ITA",
+     "cont": 1,
+     "bloco": 1,
+     "type": "avancada",
+     "value": 2300.0,
+     "juros": 2.4,
+     "desemp": 6.5,
+     "idh": 0.89,
+     "gini": 36.0,
+     "arch": "MFG",
+     "bank": "BCE",
+     "m": 1.0
+    },
+    {
+     "id": "espanha",
+     "name": "Espanha",
+     "iso3": "ESP",
+     "cont": 1,
+     "bloco": 1,
+     "type": "avancada",
+     "value": 1700.0,
+     "juros": 2.4,
+     "desemp": 10.5,
+     "idh": 0.9,
+     "gini": 34.0,
+     "arch": "SERV",
+     "bank": "BCE",
+     "m": 1.0
+    },
+    {
+     "id": "russia",
+     "name": "Rússia",
+     "iso3": "RUS",
+     "cont": 1,
+     "bloco": 2,
+     "type": "emergente",
+     "value": 2200.0,
+     "juros": 18.0,
+     "desemp": 2.6,
+     "idh": 0.82,
+     "gini": 36.0,
+     "arch": "OIL",
+     "bank": "CBR",
+     "m": 1.0
+    },
+    {
+     "id": "china",
+     "name": "China",
+     "iso3": "CHN",
+     "cont": 2,
+     "bloco": 2,
+     "type": "emergente",
+     "value": 19000.0,
+     "juros": 3.1,
+     "desemp": 5.1,
+     "idh": 0.79,
+     "gini": 38.0,
+     "arch": "MFG",
+     "bank": "PBoC",
+     "m": 1.0
+    },
+    {
+     "id": "japao",
+     "name": "Japão",
+     "iso3": "JPN",
+     "cont": 2,
+     "bloco": 0,
+     "type": "avancada",
+     "value": 4200.0,
+     "juros": 0.5,
+     "desemp": 2.5,
+     "idh": 0.92,
+     "gini": 33.0,
+     "arch": "MFG",
+     "bank": "BoJ",
+     "m": 1.0
+    },
+    {
+     "id": "coreia",
+     "name": "Coreia do Sul",
+     "iso3": "KOR",
+     "cont": 2,
+     "bloco": 0,
+     "type": "avancada",
+     "value": 1900.0,
+     "juros": 2.75,
+     "desemp": 2.8,
+     "idh": 0.93,
+     "gini": 31.0,
+     "arch": "MFG",
+     "bank": "BoK",
+     "m": 1.0
+    },
+    {
+     "id": "australia",
+     "name": "Austrália",
+     "iso3": "AUS",
+     "cont": 2,
+     "bloco": 0,
+     "type": "avancada",
+     "value": 1800.0,
+     "juros": 3.6,
+     "desemp": 4.2,
+     "idh": 0.95,
+     "gini": 34.0,
+     "arch": "COMMOD",
+     "bank": "RBA",
+     "m": 1.0
+    },
+    {
+     "id": "indonesia",
+     "name": "Indonésia",
+     "iso3": "IDN",
+     "cont": 2,
+     "bloco": 2,
+     "type": "emergente",
+     "value": 1500.0,
+     "juros": 5.5,
+     "desemp": 5.0,
+     "idh": 0.71,
+     "gini": 38.0,
+     "arch": "COMMOD",
+     "bank": "BI",
+     "m": 1.0
+    },
+    {
+     "id": "brasil",
+     "name": "Brasil",
+     "iso3": "BRA",
+     "cont": 3,
+     "bloco": 2,
+     "type": "emergente",
+     "value": 2300.0,
+     "juros": 12.0,
+     "desemp": 6.5,
+     "idh": 0.76,
+     "gini": 52.0,
+     "arch": "COMMOD",
+     "bank": "BCB · Copom",
+     "m": 1.0
+    },
+    {
+     "id": "argentina",
+     "name": "Argentina",
+     "iso3": "ARG",
+     "cont": 3,
+     "bloco": 4,
+     "type": "emergente",
+     "value": 650.0,
+     "juros": 29.0,
+     "desemp": 6.9,
+     "idh": 0.85,
+     "gini": 42.0,
+     "arch": "COMMOD",
+     "bank": "BCRA",
+     "m": 1.0
+    },
+    {
+     "id": "chile",
+     "name": "Chile",
+     "iso3": "CHL",
+     "cont": 3,
+     "bloco": 4,
+     "type": "emergente",
+     "value": 350.0,
+     "juros": 5.0,
+     "desemp": 8.5,
+     "idh": 0.86,
+     "gini": 44.0,
+     "arch": "COMMOD",
+     "bank": "BCCh",
+     "m": 1.0
+    },
+    {
+     "id": "colombia",
+     "name": "Colômbia",
+     "iso3": "COL",
+     "cont": 3,
+     "bloco": 4,
+     "type": "emergente",
+     "value": 400.0,
+     "juros": 9.25,
+     "desemp": 9.5,
+     "idh": 0.76,
+     "gini": 51.0,
+     "arch": "COMMOD",
+     "bank": "BanRep",
+     "m": 1.0
+    },
+    {
+     "id": "arabia",
+     "name": "Arábia Saudita",
+     "iso3": "SAU",
+     "cont": 4,
+     "bloco": 3,
+     "type": "emergente",
+     "value": 1100.0,
+     "juros": 4.75,
+     "desemp": 3.5,
+     "idh": 0.88,
+     "gini": 46.0,
+     "arch": "OIL",
+     "bank": "SAMA",
+     "m": 1.0
+    },
+    {
+     "id": "emirados",
+     "name": "Emirados",
+     "iso3": "ARE",
+     "cont": 4,
+     "bloco": 3,
+     "type": "emergente",
+     "value": 550.0,
+     "juros": 4.4,
+     "desemp": 2.7,
+     "idh": 0.94,
+     "gini": 33.0,
+     "arch": "OIL",
+     "bank": "CBUAE",
+     "m": 1.0
+    },
+    {
+     "id": "turquia",
+     "name": "Turquia",
+     "iso3": "TUR",
+     "cont": 4,
+     "bloco": 5,
+     "type": "emergente",
+     "value": 1300.0,
+     "juros": 40.0,
+     "desemp": 8.8,
+     "idh": 0.84,
+     "gini": 42.0,
+     "arch": "EMERG",
+     "bank": "CBRT",
+     "m": 1.0
+    },
+    {
+     "id": "africasul",
+     "name": "África do Sul",
+     "iso3": "ZAF",
+     "cont": 4,
+     "bloco": 2,
+     "type": "emergente",
+     "value": 400.0,
+     "juros": 7.25,
+     "desemp": 32.0,
+     "idh": 0.72,
+     "gini": 63.0,
+     "arch": "COMMOD",
+     "bank": "SARB",
+     "m": 1.0
+    },
+    {
+     "id": "nigeria",
+     "name": "Nigéria",
+     "iso3": "NGA",
+     "cont": 4,
+     "bloco": 3,
+     "type": "emergente",
+     "value": 250.0,
+     "juros": 27.0,
+     "desemp": 5.0,
+     "idh": 0.55,
+     "gini": 35.0,
+     "arch": "OIL",
+     "bank": "CBN",
+     "m": 1.0
+    },
+    {
+     "id": "india",
+     "name": "Índia",
+     "iso3": "IND",
+     "cont": 5,
+     "bloco": 2,
+     "type": "emergente",
+     "value": 4100.0,
+     "juros": 5.5,
+     "desemp": 7.8,
+     "idh": 0.64,
+     "gini": 35.0,
+     "arch": "SERV",
+     "bank": "RBI",
+     "m": 1.0
+    },
+    {
+     "id": "paquistao",
+     "name": "Paquistão",
+     "iso3": "PAK",
+     "cont": 5,
+     "bloco": 5,
+     "type": "emergente",
+     "value": 400.0,
+     "juros": 11.0,
+     "desemp": 6.3,
+     "idh": 0.54,
+     "gini": 33.0,
+     "arch": "EMERG",
+     "bank": "SBP",
+     "m": 1.0
+    },
+    {
+     "id": "bangladesh",
+     "name": "Bangladesh",
+     "iso3": "BGD",
+     "cont": 5,
+     "bloco": 5,
+     "type": "emergente",
+     "value": 460.0,
+     "juros": 10.0,
+     "desemp": 5.1,
+     "idh": 0.67,
+     "gini": 33.0,
+     "arch": "MFG",
+     "bank": "BB",
+     "m": 1.0
+    }
+   ],
+   "edges": [
+    {
+     "s": "eua",
+     "t": "china",
+     "type": "tensao",
+     "year": 2021,
+     "amt": null,
+     "label": "Rivalidade comercial e de chips"
+    },
+    {
+     "s": "eua",
+     "t": "canada",
+     "type": "comercio",
+     "year": 2021,
+     "amt": 900.0,
+     "label": "USMCA"
+    },
+    {
+     "s": "eua",
+     "t": "mexico",
+     "type": "comercio",
+     "year": 2021,
+     "amt": 800.0,
+     "label": "USMCA"
+    },
+    {
+     "s": "eua",
+     "t": "japao",
+     "type": "alianca",
+     "year": 2021,
+     "amt": null,
+     "label": "Segurança"
+    },
+    {
+     "s": "china",
+     "t": "brasil",
+     "type": "comercio",
+     "year": 2021,
+     "amt": 150.0,
+     "label": "Commodities (BRICS)"
+    },
+    {
+     "s": "china",
+     "t": "russia",
+     "type": "alianca",
+     "year": 2022,
+     "amt": null,
+     "label": "Eixo"
+    },
+    {
+     "s": "russia",
+     "t": "alemanha",
+     "type": "tensao",
+     "year": 2022,
+     "amt": null,
+     "label": "Energia e sanções"
+    },
+    {
+     "s": "arabia",
+     "t": "eua",
+     "type": "comercio",
+     "year": 2021,
+     "amt": 70.0,
+     "label": "Petróleo & defesa"
+    },
+    {
+     "s": "japao",
+     "t": "eua",
+     "type": "titulos",
+     "year": 2021,
+     "amt": 1130.0,
+     "label": "Maior detentor de Treasuries"
+    },
+    {
+     "s": "china",
+     "t": "eua",
+     "type": "titulos",
+     "year": 2021,
+     "amt": 770.0,
+     "label": "Reduzindo Treasuries"
+    },
+    {
+     "s": "reinounido",
+     "t": "eua",
+     "type": "titulos",
+     "year": 2022,
+     "amt": 740.0,
+     "label": "Treasuries"
+    },
+    {
+     "s": "india",
+     "t": "paquistao",
+     "type": "tensao",
+     "year": 2021,
+     "amt": null,
+     "label": "Tensão regional"
+    }
+   ],
+   "news": [
+    {
+     "c": "eua",
+     "d": "2025-09",
+     "hl": "Fed inicia ciclo de corte de juros de olho no emprego",
+     "k": "juros"
+    },
+    {
+     "c": "china",
+     "d": "2025-10",
+     "hl": "China amplia estímulo para reanimar o crescimento",
+     "k": "pib"
+    },
+    {
+     "c": "brasil",
+     "d": "2026-01",
+     "hl": "Copom mantém Selic elevada para conter inflação",
+     "k": "juros"
+    },
+    {
+     "c": "japao",
+     "d": "2025-07",
+     "hl": "Japão sobe juros e encerra política ultrafrouxa",
+     "k": "juros"
+    },
+    {
+     "c": "india",
+     "d": "2025-11",
+     "hl": "Índia lidera crescimento entre grandes economias",
+     "k": "pib"
+    },
+    {
+     "c": "turquia",
+     "d": "2025-05",
+     "hl": "Turquia mantém juros altíssimos contra a inflação",
+     "k": "juros"
+    },
+    {
+     "c": "japao",
+     "d": "2025-06",
+     "hl": "Japão segue como maior credor externo dos EUA",
+     "k": "macro"
+    },
+    {
+     "c": "africasul",
+     "d": "2025-10",
+     "hl": "África do Sul enfrenta desemprego recorde",
+     "k": "emprego"
+    }
+   ]
+  },
+  "cripto": {
+   "curves": {
+    "0": {
+     "2020": 0.3,
+     "2021": 0.55,
+     "2022": 0.28,
+     "2023": 0.45,
+     "2024": 0.7,
+     "2025": 0.88,
+     "2026": 1
+    },
+    "1": {
+     "2020": 0.08,
+     "2021": 0.3,
+     "2022": 0.18,
+     "2023": 0.35,
+     "2024": 0.6,
+     "2025": 0.85,
+     "2026": 1
+    },
+    "2": {
+     "2020": 0.2,
+     "2021": 0.6,
+     "2022": 0.22,
+     "2023": 0.35,
+     "2024": 0.55,
+     "2025": 0.8,
+     "2026": 1
+    },
+    "3": {
+     "2020": 0.28,
+     "2021": 0.48,
+     "2022": 0.55,
+     "2023": 0.62,
+     "2024": 0.75,
+     "2025": 0.9,
+     "2026": 1
+    },
+    "4": {
+     "2020": 0.06,
+     "2021": 0.18,
+     "2022": 0.16,
+     "2023": 0.3,
+     "2024": 0.55,
+     "2025": 0.82,
+     "2026": 1
+    },
+    "5": {
+     "2020": 0.04,
+     "2021": 0.24,
+     "2022": 0.1,
+     "2023": 0.28,
+     "2024": 0.62,
+     "2025": 0.86,
+     "2026": 1
+    },
+    "6": {
+     "2020": 0.02,
+     "2021": 0.06,
+     "2022": 0.09,
+     "2023": 0.24,
+     "2024": 0.55,
+     "2025": 0.85,
+     "2026": 1
+    }
+   },
+   "sectors": [
+    {
+     "id": 0,
+     "name": "Layer 1"
+    },
+    {
+     "id": 1,
+     "name": "Layer 2 & Scaling"
+    },
+    {
+     "id": 2,
+     "name": "DeFi"
+    },
+    {
+     "id": 3,
+     "name": "Stablecoins"
+    },
+    {
+     "id": 4,
+     "name": "RWA & Infra"
+    },
+    {
+     "id": 5,
+     "name": "Memecoins"
+    },
+    {
+     "id": 6,
+     "name": "IA-Cripto"
+    }
+   ],
+   "nodes": [
+    {
+     "id": "btc",
+     "name": "Bitcoin",
+     "sector": 0,
+     "type": "estabelecido",
+     "value": 2000.0,
+     "vol": 45.0,
+     "dom": 56.0,
+     "coingecko_id": "bitcoin",
+     "m": 1.0
+    },
+    {
+     "id": "eth",
+     "name": "Ethereum",
+     "sector": 0,
+     "type": "estabelecido",
+     "value": 500.0,
+     "vol": 22.0,
+     "dom": 14.0,
+     "coingecko_id": "ethereum",
+     "m": 1.0
+    },
+    {
+     "id": "sol",
+     "name": "Solana",
+     "sector": 0,
+     "type": "estabelecido",
+     "value": 120.0,
+     "vol": 8.0,
+     "dom": 3.4,
+     "coingecko_id": "solana",
+     "m": 1.0
+    },
+    {
+     "id": "bnb",
+     "name": "BNB",
+     "sector": 0,
+     "type": "estabelecido",
+     "value": 110.0,
+     "vol": 3.0,
+     "dom": 3.1,
+     "coingecko_id": "binancecoin",
+     "m": 1.0
+    },
+    {
+     "id": "xrp",
+     "name": "XRP",
+     "sector": 0,
+     "type": "estabelecido",
+     "value": 150.0,
+     "vol": 6.0,
+     "dom": 4.2,
+     "coingecko_id": "ripple",
+     "m": 1.0
+    },
+    {
+     "id": "ada",
+     "name": "Cardano",
+     "sector": 0,
+     "type": "emergente",
+     "value": 30.0,
+     "vol": 1.2,
+     "dom": 0.8,
+     "coingecko_id": "cardano",
+     "m": 1.0
+    },
+    {
+     "id": "sui",
+     "name": "Sui",
+     "sector": 0,
+     "type": "emergente",
+     "value": 20.0,
+     "vol": 1.5,
+     "dom": 0.6,
+     "coingecko_id": "sui",
+     "m": 1.0
+    },
+    {
+     "id": "arb",
+     "name": "Arbitrum",
+     "sector": 1,
+     "type": "emergente",
+     "value": 8.0,
+     "vol": 0.7,
+     "dom": 0.2,
+     "coingecko_id": "arbitrum",
+     "m": 1.0
+    },
+    {
+     "id": "op",
+     "name": "Optimism",
+     "sector": 1,
+     "type": "emergente",
+     "value": 6.0,
+     "vol": 0.5,
+     "dom": 0.17,
+     "coingecko_id": "optimism",
+     "m": 1.0
+    },
+    {
+     "id": "matic",
+     "name": "Polygon",
+     "sector": 1,
+     "type": "emergente",
+     "value": 7.0,
+     "vol": 0.6,
+     "dom": 0.2,
+     "coingecko_id": "matic-network",
+     "m": 1.0
+    },
+    {
+     "id": "uni",
+     "name": "Uniswap",
+     "sector": 2,
+     "type": "estabelecido",
+     "value": 9.0,
+     "vol": 1.0,
+     "dom": 0.25,
+     "coingecko_id": "uniswap",
+     "m": 1.0
+    },
+    {
+     "id": "aave",
+     "name": "Aave",
+     "sector": 2,
+     "type": "estabelecido",
+     "value": 6.0,
+     "vol": 0.6,
+     "dom": 0.17,
+     "coingecko_id": "aave",
+     "m": 1.0
+    },
+    {
+     "id": "lido",
+     "name": "Lido",
+     "sector": 2,
+     "type": "estabelecido",
+     "value": 8.0,
+     "vol": 0.4,
+     "dom": 0.22,
+     "coingecko_id": "lido-dao",
+     "m": 1.0
+    },
+    {
+     "id": "usdt",
+     "name": "Tether",
+     "sector": 3,
+     "type": "estabelecido",
+     "value": 140.0,
+     "vol": 80.0,
+     "dom": 3.9,
+     "coingecko_id": "tether",
+     "m": 1.0
+    },
+    {
+     "id": "usdc",
+     "name": "USDC (Circle)",
+     "sector": 3,
+     "type": "estabelecido",
+     "value": 60.0,
+     "vol": 40.0,
+     "dom": 1.7,
+     "coingecko_id": "usd-coin",
+     "m": 1.0
+    },
+    {
+     "id": "dai",
+     "name": "Dai",
+     "sector": 3,
+     "type": "estabelecido",
+     "value": 8.0,
+     "vol": 5.0,
+     "dom": 0.22,
+     "coingecko_id": "dai",
+     "m": 1.0
+    },
+    {
+     "id": "link",
+     "name": "Chainlink",
+     "sector": 4,
+     "type": "estabelecido",
+     "value": 15.0,
+     "vol": 1.0,
+     "dom": 0.4,
+     "coingecko_id": "chainlink",
+     "m": 1.0
+    },
+    {
+     "id": "ondo",
+     "name": "Ondo",
+     "sector": 4,
+     "type": "emergente",
+     "value": 6.0,
+     "vol": 0.4,
+     "dom": 0.17,
+     "coingecko_id": "ondo-finance",
+     "m": 1.0
+    },
+    {
+     "id": "doge",
+     "name": "Dogecoin",
+     "sector": 5,
+     "type": "emergente",
+     "value": 30.0,
+     "vol": 3.0,
+     "dom": 0.8,
+     "coingecko_id": "dogecoin",
+     "m": 1.0
+    },
+    {
+     "id": "shib",
+     "name": "Shiba Inu",
+     "sector": 5,
+     "type": "emergente",
+     "value": 12.0,
+     "vol": 1.2,
+     "dom": 0.34,
+     "coingecko_id": "shiba-inu",
+     "m": 1.0
+    },
+    {
+     "id": "pepe",
+     "name": "Pepe",
+     "sector": 5,
+     "type": "emergente",
+     "value": 8.0,
+     "vol": 1.5,
+     "dom": 0.22,
+     "coingecko_id": "pepe",
+     "m": 1.0
+    },
+    {
+     "id": "tao",
+     "name": "Bittensor",
+     "sector": 6,
+     "type": "emergente",
+     "value": 6.0,
+     "vol": 0.5,
+     "dom": 0.17,
+     "coingecko_id": "bittensor",
+     "m": 1.0
+    },
+    {
+     "id": "render",
+     "name": "Render",
+     "sector": 6,
+     "type": "emergente",
+     "value": 4.0,
+     "vol": 0.3,
+     "dom": 0.11,
+     "coingecko_id": "render-token",
+     "m": 1.0
+    },
+    {
+     "id": "fet",
+     "name": "Fetch.ai",
+     "sector": 6,
+     "type": "emergente",
+     "value": 3.0,
+     "vol": 0.25,
+     "dom": 0.08,
+     "coingecko_id": "fetch-ai",
+     "m": 1.0
+    }
+   ],
+   "edges": [
+    {
+     "s": "arb",
+     "t": "eth",
+     "type": "liquidacao",
+     "year": 2023,
+     "amt": 8.0,
+     "label": "Rollup na Ethereum"
+    },
+    {
+     "s": "op",
+     "t": "eth",
+     "type": "liquidacao",
+     "year": 2023,
+     "amt": 6.0
+    },
+    {
+     "s": "usdt",
+     "t": "eth",
+     "type": "lastro",
+     "year": 2021,
+     "amt": 60.0,
+     "label": "Emitido na Ethereum"
+    },
+    {
+     "s": "usdc",
+     "t": "eth",
+     "type": "lastro",
+     "year": 2021,
+     "amt": 40.0
+    },
+    {
+     "s": "uni",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2021,
+     "amt": null,
+     "label": "DEX"
+    },
+    {
+     "s": "link",
+     "t": "eth",
+     "type": "integracao",
+     "year": 2021,
+     "amt": null,
+     "label": "Oráculos"
+    },
+    {
+     "s": "doge",
+     "t": "btc",
+     "type": "integracao",
+     "year": 2021,
+     "amt": null,
+     "label": "Proof-of-Work"
+    }
+   ],
+   "news": [
+    {
+     "c": "btc",
+     "d": "2025-01",
+     "hl": "Bitcoin renova máxima com forte entrada em ETFs à vista",
+     "k": "preco"
+    },
+    {
+     "c": "usdt",
+     "d": "2025-09",
+     "hl": "Tether vira um dos maiores compradores de T-bills dos EUA",
+     "k": "macro"
+    },
+    {
+     "c": "usdc",
+     "d": "2025-06",
+     "hl": "Circle (USDC) estreia em bolsa e valoriza forte",
+     "k": "move"
+    },
+    {
+     "c": "btc",
+     "d": "2022-06",
+     "hl": "Inverno cripto: Bitcoin despenca com colapsos no setor",
+     "k": "preco"
+    },
+    {
+     "c": "eth",
+     "d": "2022-09",
+     "hl": "Ethereum conclui a fusão (The Merge)",
+     "k": "produto"
+    },
+    {
+     "c": "ondo",
+     "d": "2026-01",
+     "hl": "Ondo cresce com tokenização de ativos reais",
+     "k": "produto"
+    }
+   ]
+  }
+ }
+}
