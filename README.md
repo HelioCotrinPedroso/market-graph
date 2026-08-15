@@ -1,5 +1,7 @@
 # Terminal Macro do Ecossistema
 
+### ▶ Acessar a plataforma ao vivo: **https://heliocotrinpedroso.github.io/market-graph/**
+
 Plataforma analítica em **grafo** para um canal de investidores em tecnologia — narrada ao vivo.
 Três mundos que se conectam pela camada de **setor**:
 
