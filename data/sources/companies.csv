@@ -74,3 +74,23 @@ newmont,Newmont,7,public,NEM,60,0.9,64
 vale,Vale,7,public,VALE,45,0.8,60
 nutrien,Nutrien,7,public,NTR,30,0.7,58
 adm,ADM,7,public,ADM,30,0.6,55
+servicenow,ServiceNow,0,public,NOW,200,1.1,74
+adobe,Adobe,0,public,ADBE,240,0.8,70
+netflix,Netflix,0,public,NFLX,380,1.0,72
+alibaba,Alibaba,0,public,BABA,250,0.8,66
+intel,Intel,1,public,INTC,100,0.6,55
+ti,Texas Instruments,1,public,TXN,170,0.7,62
+appliedmat,Applied Materials,1,public,AMAT,160,0.9,66
+wells,Wells Fargo,2,public,WFC,240,0.7,62
+blackrock,BlackRock,2,public,BLK,160,0.9,70
+citi,Citigroup,2,public,C,130,0.7,58
+conoco,ConocoPhillips,3,public,COP,130,0.8,62
+enbridge,Enbridge,3,public,ENB,90,0.7,60
+thermo,Thermo Fisher,4,public,TMO,220,0.8,68
+novartis,Novartis,4,public,NVS,230,0.7,64
+amgen,Amgen,4,public,AMGN,160,0.7,62
+deere,Deere,5,public,DE,120,0.8,64
+pepsi,PepsiCo,6,public,PEP,230,0.6,60
+nike,Nike,6,public,NKE,110,0.7,60
+toyota,Toyota,6,public,TM,300,0.7,64
+southerncopper,Southern Copper,7,public,SCCO,80,0.9,64

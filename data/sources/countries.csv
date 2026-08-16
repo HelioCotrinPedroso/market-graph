@@ -25,3 +25,13 @@ nigeria,Nigéria,NGA,4,Oriente Médio & África,3,Golfo / OPEP,emergente,250,27.
 india,Índia,IND,5,Sul da Ásia,2,BRICS+,emergente,4100,5.5,7.8,0.64,35,SERV,RBI
 paquistao,Paquistão,PAK,5,Sul da Ásia,5,Emergentes,emergente,400,11.0,6.3,0.54,33,EMERG,SBP
 bangladesh,Bangladesh,BGD,5,Sul da Ásia,5,Emergentes,emergente,460,10.0,5.1,0.67,33,MFG,BB
+holanda,Países Baixos,NLD,1,Europa,1,União Europeia,avancada,1200,2.4,3.6,0.95,28,SERV,BCE
+suica,Suíça,CHE,1,Europa,0,G7 / Ocidente,avancada,900,1.0,2.2,0.97,33,SERV,SNB
+suecia,Suécia,SWE,1,Europa,1,União Europeia,avancada,600,3.0,8.0,0.95,30,MFG,Riksbank
+polonia,Polônia,POL,1,Europa,1,União Europeia,emergente,850,5.75,5.0,0.88,30,MFG,NBP
+taiwan,Taiwan,TWN,2,Ásia-Pacífico,0,G7 / Ocidente,avancada,800,2.0,3.4,0.93,34,MFG,CBC
+singapura,Singapura,SGP,2,Ásia-Pacífico,0,G7 / Ocidente,avancada,550,3.5,2.0,0.95,37,SERV,MAS
+israel,Israel,ISR,4,Oriente Médio & África,0,G7 / Ocidente,avancada,550,4.5,3.5,0.92,39,SERV,BoI
+egito,Egito,EGY,4,Oriente Médio & África,2,BRICS+,emergente,400,27.0,7.0,0.73,32,EMERG,CBE
+vietna,Vietnã,VNM,2,Ásia-Pacífico,5,Emergentes,emergente,470,4.5,2.3,0.73,36,MFG,SBV
+tailandia,Tailândia,THA,2,Ásia-Pacífico,5,Emergentes,emergente,550,2.25,1.0,0.80,35,MFG,BOT
