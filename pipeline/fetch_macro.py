@@ -7,7 +7,7 @@ fetch_macro.py — PIB (World Bank) + JUROS reais (FRED / BCB), tudo sem chave d
 Grava data/cache/macro.json com gdp_b e/ou juros por país. Desemprego/IDH seguem curados.
 Uso:  python pipeline/fetch_macro.py    |   Requer: pip install requests
 """
-import csv, json, os, sys, time
+import csv, json, os, sys, time, subprocess
 
 # país -> série FRED (taxa de política, %). BCE é a mesma taxa p/ toda a zona do euro.
 FRED_RATES = {"eua":"FEDFUNDS","alemanha":"ECBDFR","franca":"ECBDFR","italia":"ECBDFR","espanha":"ECBDFR","holanda":"ECBDFR"}
@@ -57,11 +57,16 @@ def main():
 
     # ---- JUROS reais ----
     def fred_latest(series):
+        # O FRED bloqueia o cliente do requests (WAF/fingerprint) mas libera o curl —
+        # então usamos curl (presente no host e no runner ubuntu do GitHub Actions).
         try:
-            r = sess.get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + series, timeout=20)
-            if r.status_code != 200:
+            out = subprocess.run(
+                ["curl", "-s", "--max-time", "20",
+                 "https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + series],
+                capture_output=True, text=True, timeout=25).stdout
+            if not out or "<html" in out[:200].lower():
                 return None
-            for line in reversed(r.text.strip().splitlines()[1:]):
+            for line in reversed(out.strip().splitlines()[1:]):
                 parts = line.split(",")
                 if len(parts) >= 2:
                     try:
