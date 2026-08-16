@@ -62,15 +62,34 @@ def main():
             return None
         return mc * r
 
-    def info_with_retry(tk, tries=3):
+    def get_mc(tk, tries=4):
+        t = yf.Ticker(tk)
         for i in range(tries):
             try:
-                info = yf.Ticker(tk).info
+                info = t.info
                 if info and info.get("marketCap"):
-                    return info
+                    return {"mc": info["marketCap"], "cur": info.get("currency"), "name": info.get("shortName")}
             except Exception:
                 pass
-            time.sleep(0.8)
+            # fallback: fast_info (market_cap direto, ou preço × ações)
+            try:
+                fi = t.fast_info
+                mc = None
+                try: mc = fi.get("market_cap")
+                except Exception: mc = None
+                if not mc:
+                    try:
+                        px = fi.get("last_price"); sh = fi.get("shares")
+                        if px and sh: mc = px * sh
+                    except Exception: pass
+                if mc:
+                    cur = None
+                    try: cur = fi.get("currency")
+                    except Exception: cur = None
+                    return {"mc": mc, "cur": cur, "name": None}
+            except Exception:
+                pass
+            time.sleep(1.0)
         return None
 
     rows = [r for r in csv.DictReader(open(SRC, encoding="utf-8")) if r.get("ticker")]
@@ -79,14 +98,14 @@ def main():
         tk = r["ticker"].strip()
         if not tk:
             continue
-        info = info_with_retry(tk)
+        info = get_mc(tk)
         if not info:
             print(f"  {r['name']:<18} {tk:<11} (sem dado — mantém semente)")
             continue
-        mc = info["marketCap"]
-        usd = to_usd(mc, info.get("currency"))
+        mc = info["mc"]
+        usd = to_usd(mc, info.get("cur"))
         if usd is None or usd > MAX_USD_B * 1e9 or usd <= 0:
-            print(f"  {r['name']:<18} {tk:<11} (moeda {info.get('currency')} não convertida — mantém semente)")
+            print(f"  {r['name']:<18} {tk:<11} (moeda {info.get('cur')} não convertida — mantém semente)")
             continue
         vb = round(usd / 1e9, 1)
         # rede de segurança: desvio grosseiro vs semente curada = provável erro de dado/moeda
@@ -94,7 +113,7 @@ def main():
         if seed > 0 and (vb / seed > 3 or vb / seed < 0.33):
             print(f"  {r['name']:<18} {tk:<11} ${vb:>9}B  (fora de faixa vs semente {seed:.0f} — mantém semente)")
             continue
-        out[r["id"]] = {"value_b": vb, "name": info.get("shortName") or r["name"], "ticker": tk, "currency": info.get("currency")}
+        out[r["id"]] = {"value_b": vb, "name": info.get("name") or r["name"], "ticker": tk, "currency": info.get("cur")}
         print(f"  {r['name']:<18} {tk:<11} ${vb:>9}B")
         time.sleep(0.15)
 

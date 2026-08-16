@@ -70,13 +70,17 @@ def build():
     for r in read_csv("countries.csv"):
         cid = r["id"]
         gdp = num(r["seed_gdp_b"])
-        if cid in mac_cache and mac_cache[cid].get("gdp_b"):
-            gdp = round(mac_cache[cid]["gdp_b"])
+        juros = num(r["juros"])
+        mc = mac_cache.get(cid, {})
+        if mc.get("gdp_b"):
+            gdp = round(mc["gdp_b"])
+        if mc.get("juros") is not None:
+            juros = mc["juros"]
         pub_nodes.append({
             "id": cid, "name": r["name"], "iso3": r["iso3"],
             "cont": int(r["region_id"]), "bloco": int(r["bloco_id"]),
             "type": r["type"], "value": gdp,
-            "juros": num(r["juros"]), "desemp": num(r["desemprego"]),
+            "juros": juros, "desemp": num(r["desemprego"]),
             "idh": num(r["idh"]), "gini": num(r["gini"]),
             "arch": r["arch"], "bank": r["bank"], "m": 1.0,
         })

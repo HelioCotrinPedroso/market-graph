@@ -1,13 +1,16 @@
 #!/usr/bin/env python3
 """
-fetch_macro.py — PIB nominal (US$) por país via API do Banco Mundial (grátis, sem chave).
-Indicador NY.GDP.MKTP.CD. Faz UMA chamada em lote (todos os países), com retry — bem
-mais robusto do que uma chamada por país. Lê iso3 de countries.csv -> data/cache/macro.json.
-
-Juros/desemprego/IDH seguem vindo do CSV (curadoria) nesta fase.
+fetch_macro.py — PIB (World Bank) + JUROS reais (FRED / BCB), tudo sem chave de API.
+- PIB nominal US$: World Bank NY.GDP.MKTP.CD (lote, fail-fast).
+- Juros de política: FRED via fredgraph CSV (keyless) — Fed (FEDFUNDS) e BCE (ECBDFR, zona do euro);
+  Selic do Brasil via API do BCB (série 432). Demais países: juros seguem curados no CSV.
+Grava data/cache/macro.json com gdp_b e/ou juros por país. Desemprego/IDH seguem curados.
 Uso:  python pipeline/fetch_macro.py    |   Requer: pip install requests
 """
 import csv, json, os, sys, time
+
+# país -> série FRED (taxa de política, %). BCE é a mesma taxa p/ toda a zona do euro.
+FRED_RATES = {"eua":"FEDFUNDS","alemanha":"ECBDFR","franca":"ECBDFR","italia":"ECBDFR","espanha":"ECBDFR","holanda":"ECBDFR"}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "sources", "countries.csv")
@@ -52,16 +55,54 @@ def main():
     if not out:
         print("  Banco Mundial indisponível agora — PIB mantém as sementes curadas (dado anual).")
 
+    # ---- JUROS reais ----
+    def fred_latest(series):
+        try:
+            r = sess.get("https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + series, timeout=20)
+            if r.status_code != 200:
+                return None
+            for line in reversed(r.text.strip().splitlines()[1:]):
+                parts = line.split(",")
+                if len(parts) >= 2:
+                    try:
+                        return round(float(parts[1]), 2)
+                    except ValueError:
+                        continue
+        except Exception:
+            return None
+        return None
+
+    fred_cache = {}
+    for cid, series in FRED_RATES.items():
+        if cid not in iso_to_id.values():
+            continue
+        v = fred_cache.get(series)
+        if v is None:
+            v = fred_latest(series); fred_cache[series] = v
+        if v is not None:
+            out.setdefault(cid, {})["juros"] = v
+            print(f"  juros {cid:<10} {series:<10} {v}%")
+
+    # Selic (Brasil) via BCB (série 432 = meta Selic, % a.a.)
+    try:
+        r = sess.get("https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json", timeout=20)
+        if r.status_code == 200 and r.json():
+            sel = round(float(r.json()[-1]["valor"]), 2)
+            out.setdefault("brasil", {})["juros"] = sel
+            print(f"  juros brasil     BCB-432    {sel}%")
+    except Exception:
+        pass
+
     for iso, name in iso_to_name.items():
         loc = iso_to_id[iso]
-        if loc in out:
-            print(f"  {name:<16} {iso}  ${out[loc]['gdp_b']:>9}B  ({out[loc]['year']})")
-        else:
-            print(f"  {name:<16} {iso}  (sem dado — mantém semente)")
+        e = out.get(loc, {})
+        gdp = ("$%.0fB" % e["gdp_b"]) if e.get("gdp_b") else "PIB curado"
+        jr = (" · juros %.2f%%" % e["juros"]) if e.get("juros") is not None else ""
+        print(f"  {name:<16} {iso}  {gdp}{jr}")
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"OK {len(out)} países -> {OUT}")
+    print(f"OK {len(out)} países c/ dado real -> {OUT}")
 
 
 if __name__ == "__main__":
