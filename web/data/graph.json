@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T03:54:08.168190+00:00",
+ "generated_at": "2026-08-16T20:53:15.434438+00:00",
  "source_note": "Valores de mercado/PIB via APIs quando o cache existe; caso contrário, valores-semente dos CSVs. Valuations privados, relações e notícias são curados manualmente.",
  "years": [
   2020,
@@ -1586,6 +1586,9 @@
      "desemp": 4.1,
      "idh": 0.93,
      "gini": 41.0,
+     "pop": 335.0,
+     "dividaPib": 123.0,
+     "consumo": 68.0,
      "arch": "ADV",
      "bank": "Fed",
      "m": 1.0
@@ -1602,6 +1605,9 @@
      "desemp": 6.5,
      "idh": 0.94,
      "gini": 33.0,
+     "pop": 41.0,
+     "dividaPib": 106.0,
+     "consumo": 56.0,
      "arch": "COMMOD",
      "bank": "BoC",
      "m": 1.0
@@ -1618,6 +1624,9 @@
      "desemp": 2.9,
      "idh": 0.78,
      "gini": 45.0,
+     "pop": 130.0,
+     "dividaPib": 55.0,
+     "consumo": 68.0,
      "arch": "MFG",
      "bank": "Banxico",
      "m": 1.0
@@ -1634,6 +1643,9 @@
      "desemp": 6.1,
      "idh": 0.95,
      "gini": 32.0,
+     "pop": 84.0,
+     "dividaPib": 63.0,
+     "consumo": 50.0,
      "arch": "MFG",
      "bank": "BCE",
      "m": 1.0
@@ -1650,6 +1662,9 @@
      "desemp": 4.4,
      "idh": 0.94,
      "gini": 35.0,
+     "pop": 68.0,
+     "dividaPib": 101.0,
+     "consumo": 62.0,
      "arch": "SERV",
      "bank": "BoE",
      "m": 1.0
@@ -1666,6 +1681,9 @@
      "desemp": 7.3,
      "idh": 0.9,
      "gini": 32.0,
+     "pop": 68.0,
+     "dividaPib": 111.0,
+     "consumo": 54.0,
      "arch": "ADV",
      "bank": "BCE",
      "m": 1.0
@@ -1682,6 +1700,9 @@
      "desemp": 6.5,
      "idh": 0.89,
      "gini": 36.0,
+     "pop": 59.0,
+     "dividaPib": 137.0,
+     "consumo": 60.0,
      "arch": "MFG",
      "bank": "BCE",
      "m": 1.0
@@ -1698,6 +1719,9 @@
      "desemp": 10.5,
      "idh": 0.9,
      "gini": 34.0,
+     "pop": 48.0,
+     "dividaPib": 105.0,
+     "consumo": 57.0,
      "arch": "SERV",
      "bank": "BCE",
      "m": 1.0
@@ -1714,6 +1738,9 @@
      "desemp": 2.6,
      "idh": 0.82,
      "gini": 36.0,
+     "pop": 144.0,
+     "dividaPib": 20.0,
+     "consumo": 50.0,
      "arch": "OIL",
      "bank": "CBR",
      "m": 1.0
@@ -1730,6 +1757,9 @@
      "desemp": 5.1,
      "idh": 0.79,
      "gini": 38.0,
+     "pop": 1410.0,
+     "dividaPib": 84.0,
+     "consumo": 38.0,
      "arch": "MFG",
      "bank": "PBoC",
      "m": 1.0
@@ -1746,6 +1776,9 @@
      "desemp": 2.5,
      "idh": 0.92,
      "gini": 33.0,
+     "pop": 124.0,
+     "dividaPib": 250.0,
+     "consumo": 55.0,
      "arch": "MFG",
      "bank": "BoJ",
      "m": 1.0
@@ -1762,6 +1795,9 @@
      "desemp": 2.8,
      "idh": 0.93,
      "gini": 31.0,
+     "pop": 52.0,
+     "dividaPib": 55.0,
+     "consumo": 48.0,
      "arch": "MFG",
      "bank": "BoK",
      "m": 1.0
@@ -1778,6 +1814,9 @@
      "desemp": 4.2,
      "idh": 0.95,
      "gini": 34.0,
+     "pop": 27.0,
+     "dividaPib": 50.0,
+     "consumo": 51.0,
      "arch": "COMMOD",
      "bank": "RBA",
      "m": 1.0
@@ -1794,6 +1833,9 @@
      "desemp": 5.0,
      "idh": 0.71,
      "gini": 38.0,
+     "pop": 278.0,
+     "dividaPib": 39.0,
+     "consumo": 57.0,
      "arch": "COMMOD",
      "bank": "BI",
      "m": 1.0
@@ -1810,6 +1852,9 @@
      "desemp": 6.5,
      "idh": 0.76,
      "gini": 52.0,
+     "pop": 216.0,
+     "dividaPib": 87.0,
+     "consumo": 63.0,
      "arch": "COMMOD",
      "bank": "BCB · Copom",
      "m": 1.0
@@ -1826,6 +1871,9 @@
      "desemp": 6.9,
      "idh": 0.85,
      "gini": 42.0,
+     "pop": 46.0,
+     "dividaPib": 85.0,
+     "consumo": 66.0,
      "arch": "COMMOD",
      "bank": "BCRA",
      "m": 1.0
@@ -1842,6 +1890,9 @@
      "desemp": 8.5,
      "idh": 0.86,
      "gini": 44.0,
+     "pop": 20.0,
+     "dividaPib": 40.0,
+     "consumo": 62.0,
      "arch": "COMMOD",
      "bank": "BCCh",
      "m": 1.0
@@ -1858,6 +1909,9 @@
      "desemp": 9.5,
      "idh": 0.76,
      "gini": 51.0,
+     "pop": 52.0,
+     "dividaPib": 55.0,
+     "consumo": 68.0,
      "arch": "COMMOD",
      "bank": "BanRep",
      "m": 1.0
@@ -1874,6 +1928,9 @@
      "desemp": 3.5,
      "idh": 0.88,
      "gini": 46.0,
+     "pop": 37.0,
+     "dividaPib": 30.0,
+     "consumo": 40.0,
      "arch": "OIL",
      "bank": "SAMA",
      "m": 1.0
@@ -1890,6 +1947,9 @@
      "desemp": 2.7,
      "idh": 0.94,
      "gini": 33.0,
+     "pop": 10.0,
+     "dividaPib": 30.0,
+     "consumo": 35.0,
      "arch": "OIL",
      "bank": "CBUAE",
      "m": 1.0
@@ -1906,6 +1966,9 @@
      "desemp": 8.8,
      "idh": 0.84,
      "gini": 42.0,
+     "pop": 85.0,
+     "dividaPib": 30.0,
+     "consumo": 57.0,
      "arch": "EMERG",
      "bank": "CBRT",
      "m": 1.0
@@ -1922,6 +1985,9 @@
      "desemp": 32.0,
      "idh": 0.72,
      "gini": 63.0,
+     "pop": 60.0,
+     "dividaPib": 74.0,
+     "consumo": 60.0,
      "arch": "COMMOD",
      "bank": "SARB",
      "m": 1.0
@@ -1938,6 +2004,9 @@
      "desemp": 5.0,
      "idh": 0.55,
      "gini": 35.0,
+     "pop": 223.0,
+     "dividaPib": 46.0,
+     "consumo": 60.0,
      "arch": "OIL",
      "bank": "CBN",
      "m": 1.0
@@ -1954,6 +2023,9 @@
      "desemp": 7.8,
      "idh": 0.64,
      "gini": 35.0,
+     "pop": 1430.0,
+     "dividaPib": 82.0,
+     "consumo": 60.0,
      "arch": "SERV",
      "bank": "RBI",
      "m": 1.0
@@ -1970,6 +2042,9 @@
      "desemp": 6.3,
      "idh": 0.54,
      "gini": 33.0,
+     "pop": 240.0,
+     "dividaPib": 70.0,
+     "consumo": 82.0,
      "arch": "EMERG",
      "bank": "SBP",
      "m": 1.0
@@ -1986,6 +2061,9 @@
      "desemp": 5.1,
      "idh": 0.67,
      "gini": 33.0,
+     "pop": 173.0,
+     "dividaPib": 39.0,
+     "consumo": 68.0,
      "arch": "MFG",
      "bank": "BB",
      "m": 1.0
@@ -2002,6 +2080,9 @@
      "desemp": 3.6,
      "idh": 0.95,
      "gini": 28.0,
+     "pop": 18.0,
+     "dividaPib": 46.0,
+     "consumo": 44.0,
      "arch": "SERV",
      "bank": "BCE",
      "m": 1.0
@@ -2018,6 +2099,9 @@
      "desemp": 2.2,
      "idh": 0.97,
      "gini": 33.0,
+     "pop": 9.0,
+     "dividaPib": 38.0,
+     "consumo": 52.0,
      "arch": "SERV",
      "bank": "SNB",
      "m": 1.0
@@ -2034,6 +2118,9 @@
      "desemp": 8.0,
      "idh": 0.95,
      "gini": 30.0,
+     "pop": 10.5,
+     "dividaPib": 33.0,
+     "consumo": 44.0,
      "arch": "MFG",
      "bank": "Riksbank",
      "m": 1.0
@@ -2050,6 +2137,9 @@
      "desemp": 5.0,
      "idh": 0.88,
      "gini": 30.0,
+     "pop": 37.0,
+     "dividaPib": 50.0,
+     "consumo": 57.0,
      "arch": "MFG",
      "bank": "NBP",
      "m": 1.0
@@ -2066,6 +2156,9 @@
      "desemp": 3.4,
      "idh": 0.93,
      "gini": 34.0,
+     "pop": 23.0,
+     "dividaPib": 28.0,
+     "consumo": 45.0,
      "arch": "MFG",
      "bank": "CBC",
      "m": 1.0
@@ -2082,6 +2175,9 @@
      "desemp": 2.0,
      "idh": 0.95,
      "gini": 37.0,
+     "pop": 6.0,
+     "dividaPib": 168.0,
+     "consumo": 35.0,
      "arch": "SERV",
      "bank": "MAS",
      "m": 1.0
@@ -2098,6 +2194,9 @@
      "desemp": 3.5,
      "idh": 0.92,
      "gini": 39.0,
+     "pop": 9.8,
+     "dividaPib": 60.0,
+     "consumo": 50.0,
      "arch": "SERV",
      "bank": "BoI",
      "m": 1.0
@@ -2114,6 +2213,9 @@
      "desemp": 7.0,
      "idh": 0.73,
      "gini": 32.0,
+     "pop": 112.0,
+     "dividaPib": 90.0,
+     "consumo": 84.0,
      "arch": "EMERG",
      "bank": "CBE",
      "m": 1.0
@@ -2130,6 +2232,9 @@
      "desemp": 2.3,
      "idh": 0.73,
      "gini": 36.0,
+     "pop": 100.0,
+     "dividaPib": 34.0,
+     "consumo": 63.0,
      "arch": "MFG",
      "bank": "SBV",
      "m": 1.0
@@ -2146,6 +2251,9 @@
      "desemp": 1.0,
      "idh": 0.8,
      "gini": 35.0,
+     "pop": 72.0,
+     "dividaPib": 62.0,
+     "consumo": 52.0,
      "arch": "MFG",
      "bank": "BOT",
      "m": 1.0

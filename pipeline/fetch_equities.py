@@ -68,7 +68,8 @@ def main():
             try:
                 info = t.info
                 if info and info.get("marketCap"):
-                    return {"mc": info["marketCap"], "cur": info.get("currency"), "name": info.get("shortName")}
+                    return {"mc": info["marketCap"], "cur": info.get("currency"), "name": info.get("shortName"),
+                            "dte": info.get("debtToEquity"), "td": info.get("totalDebt")}
             except Exception:
                 pass
             # fallback: fast_info (market_cap direto, ou preço × ações)
@@ -113,7 +114,16 @@ def main():
         if seed > 0 and (vb / seed > 3 or vb / seed < 0.33):
             print(f"  {r['name']:<18} {tk:<11} ${vb:>9}B  (fora de faixa vs semente {seed:.0f} — mantém semente)")
             continue
-        out[r["id"]] = {"value_b": vb, "name": info.get("name") or r["name"], "ticker": tk, "currency": info.get("cur")}
+        rec = {"value_b": vb, "name": info.get("name") or r["name"], "ticker": tk, "currency": info.get("cur")}
+        # alavancagem (dívida/patrimônio, %) e dívida total em USD B
+        if info.get("dte") is not None:
+            try: rec["d2e"] = round(float(info["dte"]), 1)
+            except (TypeError, ValueError): pass
+        if info.get("td"):
+            td_usd = to_usd(info["td"], info.get("cur"))
+            if td_usd and td_usd > 0:
+                rec["debt_b"] = round(td_usd / 1e9, 1)
+        out[r["id"]] = rec
         print(f"  {r['name']:<18} {tk:<11} ${vb:>9}B")
         time.sleep(0.15)
 

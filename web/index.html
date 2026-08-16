@@ -355,7 +355,9 @@
       {id:"torque",label:"Torque",scale:"sqrt",val:function(n){return torque(n);},fmt:function(n){return fmtMoney(torque(n))+"/a";}},
       {id:"potencial",label:"Potencial",scale:"linear",val:function(n){return n.p;},fmt:function(n){return n.p+"/100";}},
       {id:"entrada",label:"Entrada ↓",scale:"sqrt",val:function(n){return inflow(n);},fmt:function(n){return "↓ "+fmtMoney(inflow(n));}},
-      {id:"saida",label:"Saída ↑",scale:"sqrt",val:function(n){return outflow(n);},fmt:function(n){return "↑ "+fmtMoney(outflow(n));}}
+      {id:"saida",label:"Saída ↑",scale:"sqrt",val:function(n){return outflow(n);},fmt:function(n){return "↑ "+fmtMoney(outflow(n));}},
+      {id:"alavancagem",label:"Alavancagem",scale:"linear",val:function(n){return n.alav||0;},fmt:function(n){return (n.alav!=null)?Math.round(n.alav)+"% dív/PL":"n/d";}},
+      {id:"divida",label:"Dívida",scale:"sqrt",val:function(n){return n.divida||0;},fmt:function(n){return n.divida?fmtMoney(n.divida):"n/d";}}
     ],
     stats:function(vis){ var total=vis.reduce(function(a,n){return a+sizeNow(n);},0); var eq=0,su=0; AB.edges.forEach(function(e){ if(e.year<=currentYear&&e.amt){ if(e.type==="investimento")eq+=e.amt; if(e.type==="fornecimento")su+=e.amt; } });
       return [ {label:"Valor total",value:fmtMoney(total),hint:"soma no período",hero:true},{label:"Empresas visíveis",value:vis.length,hint:"de "+AB.nodes.length+" mapeadas"},{label:"Capital equity",value:fmtMoney(eq),hint:"investimentos acum."},{label:"Capital compute",value:fmtMoney(su),hint:"contratos acum."} ]; },
@@ -416,7 +418,11 @@
       {id:"crescimento",label:"Crescimento",scale:"linear",val:function(n){return Math.max(0,growth(n));},fmt:function(n){return pct(growth(n));}},
       {id:"juros",label:"Juros",scale:"linear",val:function(n){return n.juros;},fmt:function(n){return n.juros.toFixed(1)+"%";}},
       {id:"desemprego",label:"Desemprego",scale:"linear",val:function(n){return n.desemp;},fmt:function(n){return n.desemp.toFixed(1)+"%";}},
-      {id:"social",label:"Social (IDH)",scale:"linear",val:function(n){return n.idh*100;},fmt:function(n){return n.idh.toFixed(3)+" IDH";}}
+      {id:"social",label:"Social (IDH)",scale:"linear",val:function(n){return n.idh*100;},fmt:function(n){return n.idh.toFixed(3)+" IDH";}},
+      {id:"populacao",label:"População",scale:"sqrt",val:function(n){return n.pop||0;},fmt:function(n){return n.pop?(n.pop>=1000?(n.pop/1000).toFixed(2)+" bi":(n.pop%1?n.pop.toFixed(1):Math.round(n.pop))+" mi"):"n/d";}},
+      {id:"dividapib",label:"Dívida/PIB",scale:"linear",val:function(n){return n.dividaPib||0;},fmt:function(n){return n.dividaPib?Math.round(n.dividaPib)+"% do PIB":"n/d";}},
+      {id:"consumo",label:"Consumo",scale:"linear",val:function(n){return n.consumo||0;},fmt:function(n){return n.consumo?Math.round(n.consumo)+"% do PIB":"n/d";}},
+      {id:"desigualdade",label:"Desigualdade",scale:"linear",val:function(n){return n.gini||0;},fmt:function(n){return n.gini?"Gini "+Math.round(n.gini):"n/d";}}
     ],
     stats:function(vis){ var total=vis.reduce(function(a,n){return a+sizeNow(n);},0); var jm=vis.reduce(function(a,n){return a+n.juros;},0)/(vis.length||1); var dm=vis.reduce(function(a,n){return a+n.desemp;},0)/(vis.length||1);
       return [ {label:"PIB total",value:fmtMoney(total),hint:"soma no período",hero:true},{label:"Países visíveis",value:vis.length,hint:"de "+AB.nodes.length+" mapeados"},{label:"Juro médio",value:jm.toFixed(1)+"%",hint:"taxa de política"},{label:"Desemprego médio",value:dm.toFixed(1)+"%",hint:"força de trabalho"} ]; },

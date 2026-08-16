@@ -56,14 +56,21 @@ def build():
     for r in read_csv("companies.csv"):
         cid = r["id"]
         val = num(r["seed_value_b"])
-        if cid in eq_cache and eq_cache[cid].get("value_b"):
-            val = round(eq_cache[cid]["value_b"])
-        priv_nodes.append({
+        ec = eq_cache.get(cid, {})
+        if ec.get("value_b"):
+            val = round(ec["value_b"])
+        n = {
             "id": cid, "name": r["name"], "sector": int(r["sector"]),
             "type": r["type"], "value": val,
             "m": num(r["momentum"], 1.0), "p": int(num(r["potential"], 60)),
             "ticker": r.get("ticker", ""),
-        })
+        }
+        # endividamento / alavancagem (só via pipeline; aparece após rodar fetch_equities)
+        if ec.get("debt_b") is not None:
+            n["divida"] = ec["debt_b"]
+        if ec.get("d2e") is not None:
+            n["alav"] = ec["d2e"]
+        priv_nodes.append(n)
 
     # ---------- PÚBLICO ----------
     pub_nodes = []
@@ -82,6 +89,7 @@ def build():
             "type": r["type"], "value": gdp,
             "juros": juros, "desemp": num(r["desemprego"]),
             "idh": num(r["idh"]), "gini": num(r["gini"]),
+            "pop": num(r.get("pop")), "dividaPib": num(r.get("divida_pib")), "consumo": num(r.get("consumo")),
             "arch": r["arch"], "bank": r["bank"], "m": 1.0,
         })
     regions = _distinct(read_csv("countries.csv"), "region_id", "region_name")
