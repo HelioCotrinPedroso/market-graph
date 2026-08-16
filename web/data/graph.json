@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-16T03:40:58.468374+00:00",
+ "generated_at": "2026-08-16T03:43:17.773764+00:00",
  "source_note": "Valores de mercado/PIB via APIs quando o cache existe; caso contrário, valores-semente dos CSVs. Valuations privados, relações e notícias são curados manualmente.",
  "years": [
   2020,
@@ -1806,7 +1806,7 @@
      "bloco": 2,
      "type": "emergente",
      "value": 2300.0,
-     "juros": 12.0,
+     "juros": 14.0,
      "desemp": 6.5,
      "idh": 0.76,
      "gini": 52.0,
@@ -2516,8 +2516,8 @@
      "name": "Bitcoin",
      "sector": 0,
      "type": "estabelecido",
-     "value": 1265.86,
-     "vol": 9.79,
+     "value": 1265.84,
+     "vol": 9.8,
      "dom": 56.18,
      "coingecko_id": "bitcoin",
      "m": 1.0
@@ -2527,8 +2527,8 @@
      "name": "Ethereum",
      "sector": 0,
      "type": "estabelecido",
-     "value": 227.14,
-     "vol": 2.76,
+     "value": 227.09,
+     "vol": 2.78,
      "dom": 10.08,
      "coingecko_id": "ethereum",
      "m": 1.0
@@ -2560,7 +2560,7 @@
      "name": "XRP",
      "sector": 0,
      "type": "estabelecido",
-     "value": 62.78,
+     "value": 62.77,
      "vol": 0.41,
      "dom": 2.79,
      "coingecko_id": "ripple",
@@ -2660,7 +2660,7 @@
      "sector": 3,
      "type": "estabelecido",
      "value": 183.02,
-     "vol": 16.82,
+     "vol": 16.83,
      "dom": 8.12,
      "coingecko_id": "tether",
      "m": 1.0
@@ -2714,7 +2714,7 @@
      "name": "Dogecoin",
      "sector": 5,
      "type": "emergente",
-     "value": 10.85,
+     "value": 10.86,
      "vol": 0.16,
      "dom": 0.48,
      "coingecko_id": "dogecoin",
@@ -2737,7 +2737,7 @@
      "sector": 5,
      "type": "emergente",
      "value": 1.1,
-     "vol": 0.06,
+     "vol": 0.05,
      "dom": 0.05,
      "coingecko_id": "pepe",
      "m": 1.0
