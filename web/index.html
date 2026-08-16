@@ -157,6 +157,21 @@
   #tooltip b{font-size:12px; color:var(--accent);}
   footer.note{font-size:10.5px; color:var(--ink-3); text-align:center;}
   @media (max-width:820px){ .stats{grid-template-columns:repeat(2,1fr);} .masthead .sub{display:none;} .relkey{margin-left:0;} .macroinfo .flows{grid-template-columns:1fr;} }
+  @media (max-width:680px){
+    .app{padding:10px 10px 26px; gap:8px;}
+    /* grafo primeiro: nada de rolar para achá-lo */
+    .masthead{order:0;} .blockbar{order:1;} .graph-shell{order:2; height:58vh; min-height:360px;} #timeline{order:3;} .stats{order:4;} #deck1{order:5;} #deck2{order:6;} #macroInfo{order:4;} .radar{order:7;} footer.note{order:8;}
+    .blockbar button{font-size:12px; padding:11px 6px;}
+    /* stats numa faixa deslizável */
+    .stats{display:flex; overflow-x:auto; gap:8px; -webkit-overflow-scrolling:touch; scrollbar-width:none;} .stats::-webkit-scrollbar{display:none;} .stats .stat{min-width:46%; flex:0 0 auto;}
+    /* alvos de toque grandes */
+    .seg button{padding:10px 14px; font-size:13px;} .zchip{padding:10px 13px; font-size:12.5px;} .btn{padding:11px 14px; font-size:12.5px;} .search input{width:100%;}
+    #deck1,#deck2{gap:8px;}
+    /* painel de detalhe vira bottom-sheet fixo (id + bottom = vence a cascata, sem transform) */
+    #panel{position:fixed; z-index:60; top:auto; left:0; right:0; bottom:-110vh; width:auto; height:auto; max-height:78vh; transform:none; transition:bottom .28s ease; border-left:none; border-top:1px solid var(--border); border-radius:16px 16px 0 0; box-shadow:0 -10px 30px rgba(0,0,0,.5);}
+    #panel.open{bottom:0;}
+    .setleg{font-size:9.5px; gap:8px; left:8px; right:8px; bottom:8px; flex-wrap:wrap;}
+  }
 </style>
 
 <div class="app">
@@ -497,6 +512,23 @@
     if(mode!=="macro" && ev.deltaY>0 && view.scale<=0.55){ zoomOutToMacro(); return; }
     var d=ev.deltaY>0?0.9:1.1; view.scale=Math.max(0.30,Math.min(2.6,view.scale*d)); applyView();
   },{passive:false});
+  // --- toque: 1 dedo = arrastar (pan) · 2 dedos = pinça (zoom + entrar/sair de bloco) ---
+  var tState={mode:null,dist:0,pan:null};
+  function tdist(t){ var dx=t[0].clientX-t[1].clientX,dy=t[0].clientY-t[1].clientY; return Math.sqrt(dx*dx+dy*dy); }
+  function tmid(t){ return {clientX:(t[0].clientX+t[1].clientX)/2,clientY:(t[0].clientY+t[1].clientY)/2}; }
+  svg.addEventListener("touchstart",function(ev){ if(navBusy)return;
+    if(ev.touches.length===1){ var t=ev.touches[0]; tState.mode="pan"; tState.pan={x:t.clientX,y:t.clientY,vx:view.x,vy:view.y}; }
+    else if(ev.touches.length>=2){ tState.mode="pinch"; tState.dist=tdist(ev.touches); }
+  },{passive:true});
+  svg.addEventListener("touchmove",function(ev){ if(navBusy)return;
+    if(tState.mode==="pan" && ev.touches.length===1){ var t=ev.touches[0]; view.x=tState.pan.vx+(t.clientX-tState.pan.x)/view.scale; view.y=tState.pan.vy+(t.clientY-tState.pan.y)/view.scale; applyView(); ev.preventDefault(); }
+    else if(tState.mode==="pinch" && ev.touches.length>=2){ var d=tdist(ev.touches); if(tState.dist){ var ratio=d/tState.dist, ns=view.scale*ratio;
+      if(mode==="macro" && ratio>1 && ns>=1.4){ var b=macroBlockAt(tmid(ev.touches)); if(b){ zoomIntoBlock(b); tState.mode=null; ev.preventDefault(); return; } }
+      if(mode!=="macro" && ratio<1 && ns<=0.55){ zoomOutToMacro(); tState.mode=null; ev.preventDefault(); return; }
+      view.scale=Math.max(0.30,Math.min(2.6,ns)); applyView(); }
+      tState.dist=d; ev.preventDefault(); }
+  },{passive:false});
+  svg.addEventListener("touchend",function(ev){ if(ev.touches.length===0){ tState.mode=null; } else if(ev.touches.length===1){ var t=ev.touches[0]; tState.mode="pan"; tState.pan={x:t.clientX,y:t.clientY,vx:view.x,vy:view.y}; } });
   function applyView(){ viewport.setAttribute("transform","translate("+(view.x*view.scale)+","+(view.y*view.scale)+") scale("+view.scale+")"); updateLabels(); }
   function tweenView(ts,tx,ty,dur,done){ var s0=view.scale,x0=view.x,y0=view.y,t0=performance.now(); (function a(t){ var k=Math.min(1,(t-t0)/(dur||420)),e=1-Math.pow(1-k,3); view.scale=s0+(ts-s0)*e; view.x=x0+(tx-x0)*e; view.y=y0+(ty-y0)*e; applyView(); if(k<1)requestAnimationFrame(a); else if(done)done(); })(t0); }
   function centerOn(n){ var ts=Math.max(view.scale,1.3),tx=W/(2*ts)-n.x,ty=H/(2*ts)-n.y; tweenView(ts,tx,ty,420); }
