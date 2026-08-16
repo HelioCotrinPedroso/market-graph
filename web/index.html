@@ -151,6 +151,9 @@
   .newsitem .hl{font-size:12px; color:var(--ink-1); line-height:1.35;}
   .newsitem .sub{font-size:10px; color:var(--ink-3); margin-top:2px;}
   .newsitem .kind{font-size:8.5px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; padding:1px 6px; border-radius:99px; border:1px solid var(--border); color:var(--ink-2); flex:none;}
+  .insightsbox{display:flex; flex-wrap:wrap; gap:7px;}
+  .insightsbox .ins{font-size:11.5px; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--border-soft); border-radius:8px; padding:6px 10px; line-height:1.35;}
+  .insightsbox .ins b{color:var(--ink-1);} .insightsbox .ins .k{color:var(--ink-3); font-size:9.5px; text-transform:uppercase; letter-spacing:.04em; font-weight:700; display:block;}
   .macroinfo{background:linear-gradient(180deg,var(--surface),var(--surface-2)); border:1px solid var(--border); border-radius:12px; padding:13px 15px; display:none;}
   .macroinfo h4{margin:0 0 8px; font-size:13px;}
   .macroinfo .flows{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
@@ -229,7 +232,8 @@
   </div>
   <div class="macroinfo" id="macroInfo"><h4>Como os três blocos se conectam</h4><div class="flows" id="macroFlows"></div></div>
   <div class="radar" id="radar">
-    <div class="radar-head"><div class="t"><span class="live"></span>Radar de Notícias</div><div class="ctx" id="radarCtx">—</div></div>
+    <div class="radar-head"><div class="t">💡 Insights & Radar</div><div class="ctx" id="radarCtx">—</div></div>
+    <div class="insightsbox" id="insightsBox"></div>
     <div class="newslist" id="newsList"></div>
   </div>
   <footer class="note">Clique num bloco no topo · na aba Setores, o anel interno = países, meio = setores, externo = empresas · clique numa bolha/notícia pra navegar · dados ilustrativos</footer>
@@ -255,6 +259,8 @@
   function sizeNow(n){ return sizeAt(n,currentYear); }
   function growth(n){ var c=AB.curves[n.sector], y=currentYear, p=y-1; var g=(c[y]/c[p])-1; return g*(n.m||1); }
   function torque(n){ return sizeNow(n)*Math.max(0,growth(n)); }
+  function newsCount(n){ if(!AB||!AB.news)return 0; var y=currentYear; return AB.news.filter(function(x){return x.c===n.id && (+x.d.slice(0,4))<=y;}).length; }
+  function buzz(n){ return newsCount(n)*10 + Math.max(0,growth(n))*40; }
   function fmtMoney(v){ v=Math.abs(v)<0.0001?0:v; if(v>=1000) return "$"+(v/1000).toLocaleString("pt-BR",{minimumFractionDigits:1,maximumFractionDigits:1})+" T"; return "$"+Math.round(v).toLocaleString("pt-BR")+" B"; }
   function pct(x){ return (x>=0?"+":"")+Math.round(x*100)+"%"; }
   function capitalize(s){ return s.charAt(0).toUpperCase()+s.slice(1); }
@@ -423,6 +429,9 @@
     ]
   };
 
+  // lente "Em alta" (buzz = notícias no período + momentum) em todos os blocos
+  ["privado","publico","cripto"].forEach(function(k){ BLOCKS[k].lenses.push({id:"buzz",label:"Em alta 🔥",scale:"linear",val:function(n){return buzz(n);},fmt:function(n){var c=newsCount(n);return c+" notíc · "+pct(growth(n));}}); });
+
   var MACRO={
     nodes:[{id:"publico",name:"Público",sub:"Países & Macro",color:"var(--blk-publico)",anchor:[760,320]},{id:"privado",name:"Privado",sub:"Empresas & Setores",color:"var(--blk-privado)",anchor:[440,720]},{id:"cripto",name:"Cripto",sub:"Ativos digitais",color:"var(--blk-cripto)",anchor:[1080,720]}],
     edges:[{s:"publico",t:"privado",label:"Juros & custo de capital"},{s:"privado",t:"publico",label:"IPOs, impostos e empregos"},{s:"publico",t:"cripto",label:"Regulação & ETFs"},{s:"cripto",t:"publico",label:"Stablecoins compram T-bills"},{s:"privado",t:"cripto",label:"VCs financiam infra cripto"},{s:"cripto",t:"privado",label:"Tesourarias corporativas em BTC"}]
@@ -473,9 +482,20 @@
   function positionHulls(){ hullEls.forEach(function(he,i){ var z=zoneHull(he.sector.key); var zl=zlEls[i]; if(!z){ he.f.style.display="none"; he.st.style.display="none"; zl.g.style.display="none"; return; } he.f.style.display=""; he.st.style.display=""; zl.g.style.display=""; he.f.setAttribute("d",z.path); he.st.setAttribute("d",z.path); var ly=Math.max(30,z.top-14); zl.nm.setAttribute("x",z.cx+8); zl.nm.setAttribute("y",ly); zl.dot.setAttribute("cx",z.cx-4); zl.dot.setAttribute("cy",ly-4); zl.tt.setAttribute("x",z.cx+8); zl.tt.setAttribute("y",ly+13); }); }
   function positionAll(){ positionHulls(); positionNodes(); positionEdges(); }
 
-  function applyState(){ if(mode!=="block") return; computeLensMax(); nodeEls.forEach(function(ne){ ne.data.r=rFor(ne.data); }); for(var k=0;k<60;k++) tick(); positionAll(); nodeEls.forEach(function(ne){ var n=ne.data; var fresh=AB.news.some(function(x){return x.c===n.id&&(+x.d.slice(0,4))===currentYear;}); ne.el.classList.toggle("newsflag",fresh&&nodeVisible(n)); }); edgeEls.forEach(function(ee){ ee.el.classList.toggle("hidden",ee.data.year>currentYear); }); recomputeStats(); renderNews(); }
+  function applyState(){ if(mode!=="block") return; computeLensMax(); nodeEls.forEach(function(ne){ ne.data.r=rFor(ne.data); }); for(var k=0;k<60;k++) tick(); positionAll(); nodeEls.forEach(function(ne){ var n=ne.data; var fresh=AB.news.some(function(x){return x.c===n.id&&(+x.d.slice(0,4))===currentYear;}); ne.el.classList.toggle("newsflag",fresh&&nodeVisible(n)); }); edgeEls.forEach(function(ee){ ee.el.classList.toggle("hidden",ee.data.year>currentYear); }); recomputeStats(); renderInsights(); renderNews(); }
   function setStats(arr){ var wrap=document.getElementById("stats"); wrap.innerHTML=""; arr.forEach(function(s){ var d=document.createElement("div"); d.className="stat"+(s.hero?" hero":""); d.innerHTML="<div class='label'>"+s.label+"</div><div class='value num'>"+s.value+"</div><div class='hint'>"+(s.hint||"")+"</div>"; wrap.appendChild(d); }); }
   function recomputeStats(){ var vis=AB.nodes.filter(nodeVisible); var base=AB.stats(vis); var zt={}; AB.sectors.forEach(function(s){zt[s.key]=0;}); vis.forEach(function(n){ zt[n.sector]+=sizeNow(n); }); zlEls.forEach(function(zl){ zl.tt.textContent=fmtMoney(zt[zl.sector.key]||0); }); var top=vis.slice().sort(function(a,b){return metricVal(b)-metricVal(a);})[0]; base.push({label:"Destaque · "+activeLens().label, value:top?top.name:"—", hint:top?subFor(top):"—"}); setStats(base); }
+  function renderInsights(){ if(mode!=="block")return; var box=document.getElementById("insightsBox"); if(!box)return; var vis=AB.nodes.filter(nodeVisible); if(!vis.length){box.innerHTML="";return;}
+    function firstBy(f){ return vis.slice().sort(function(a,b){return f(b)-f(a);})[0]; }
+    var maior=firstBy(sizeNow), cresce=firstBy(growth), quente=firstBy(buzz);
+    var zt={}; AB.sectors.forEach(function(s){zt[s.key]=0;}); vis.forEach(function(n){zt[n.sector]+=sizeNow(n);}); var topSec=AB.sectors.slice().sort(function(a,b){return zt[b.key]-zt[a.key];})[0];
+    var ins=[
+      {k:"Maior",v:"<b>"+maior.name+"</b> "+fmtMoney(sizeNow(maior))},
+      {k:"Mais cresce",v:"<b>"+cresce.name+"</b> "+pct(growth(cresce))},
+      {k:"Mais quente 🔥",v:"<b>"+quente.name+"</b> · "+newsCount(quente)+" notíc."},
+      {k:"Zona líder",v:"<b>"+topSec.name.split(" ")[0]+"</b> "+fmtMoney(zt[topSec.key])}
+    ];
+    box.innerHTML=ins.map(function(o){return "<div class='ins'><span class='k'>"+o.k+"</span>"+o.v+"</div>";}).join(""); }
 
   function neighborsOf(id){ var nb={}; nb[id]=true; AB.edges.forEach(function(e){ if(e.s===id)nb[e.t]=true; if(e.t===id)nb[e.s]=true; }); return nb; }
   function hoverPreview(n){ edgeEls.forEach(function(ee){ var r=(ee.data.s===n.id||ee.data.t===n.id)&&!ee.el.classList.contains("hidden"); ee.el.classList.toggle("lit",r); ee.el.classList.toggle("faint",!r); if(ee.lbl)ee.lbl.classList.toggle("show",r); }); }
@@ -502,7 +522,7 @@
   function flash(n){ var ne=nodeEls.find(function(e){return e.data.id===(n.id||n);}); if(!ne)return; ne.el.classList.add("flash"); setTimeout(function(){ne.el.classList.remove("flash");},900); }
 
   function nodeVisible(n){ if(hidden[n.sector])return false; if(typeFilter!=="all"&&n.type!==typeFilter)return false; if(search&&n.name.toLowerCase().indexOf(search)<0)return false; return true; }
-  function applyFilters(){ if(mode!=="block") return; nodeEls.forEach(function(ne){ ne.el.classList.toggle("hidden",!nodeVisible(ne.data)); }); edgeEls.forEach(function(ee){ var h=(ee.data.year>currentYear)||!nodeVisible(byId[ee.data.s])||!nodeVisible(byId[ee.data.t]); ee.el.classList.toggle("hidden",h); }); positionHulls(); recomputeStats(); renderNews(); if(selected && !nodeVisible(selected)) clearSelection(); }
+  function applyFilters(){ if(mode!=="block") return; nodeEls.forEach(function(ne){ ne.el.classList.toggle("hidden",!nodeVisible(ne.data)); }); edgeEls.forEach(function(ee){ var h=(ee.data.year>currentYear)||!nodeVisible(byId[ee.data.s])||!nodeVisible(byId[ee.data.t]); ee.el.classList.toggle("hidden",h); }); positionHulls(); recomputeStats(); renderInsights(); renderNews(); if(selected && !nodeVisible(selected)) clearSelection(); }
 
   var tip=document.getElementById("tooltip");
   function showTip(ev,n){ tip.style.opacity="1"; var extra; if(mode==="macro") extra=n.sub; else if(mode==="setores") extra=(n._kind==="hub"?"Setor · "+fmtMoney(n._val):(n._kind==="pais"?"País · PIB "+fmtMoney(n._val):"Empresa · "+fmtMoney(n._val))); else extra=AB.sectors[n.sector].name+" · "+(AB.typeName[n.type]||"")+"<br>"+activeLens().label+": "+subFor(n); tip.innerHTML="<b>"+n.name+"</b><br>"+extra; moveTip(ev); }
