@@ -754,25 +754,28 @@
   /* ===================== STORY MODE (v1) ===================== */
   var stEl={}, stStory=null, stIdx=0, stAuto=true, stActive=false, stTimer=null, stBuilt=false;
   var AI_SET=["nvidia","openai","microsoft","oracle","amazon","anthropic","broadcom"];
+  var MOM_SET=["nvidia","broadcom","amd","openai","anthropic","xai","palantir"];
   var STORIES={ mundo:{ id:"mundo", title:"O mundo em 3 minutos", scenes:[
-    { block:"macro", cam:"fitAll", hi:{litAll:false}, duration:7000,
-      callout:{kicker:"O mundo em 3 minutos", headline:"Três economias movem o planeta — e se financiam entre si.", stat:"Público · Privado · Cripto", pos:"tl"} },
-    { block:"publico", year:2026, cam:"fitAll", hi:null, duration:9500,
+    { block:"macro", cam:"fitAll", hi:{litAll:false}, duration:8000,
+      callout:{kicker:"Siga o dinheiro", headline:"Todo o capital do mundo joga em três tabuleiros. E é o mesmo jogo.", stat:"Público · Privado · Cripto — US$ 154 tri em jogo", pos:"tl"} },
+    { block:"publico", year:2026, cam:"fitAll", hi:null, duration:10000,
       rail:{title:"Maiores economias · PIB", source:"publico", top:10},
-      callout:{kicker:"Onde está a riqueza", headline:"O PIB do mundo é concentrado em pouquíssimas economias.", stat:"EUA + China ≈ 42% do PIB global", pos:"tl"} },
-    { block:"privado", year:2026, lens:"valuation", cam:"fitAll", hi:null, duration:9500,
+      callout:{kicker:"O mito da economia global", headline:"“Economia global” é conversa: metade do PIB está em duas mãos.", stat:"EUA + China ≈ US$ 48 tri — quase metade do PIB mapeado", pos:"tl"} },
+    { block:"privado", year:2026, lens:"valuation", cam:"fitAll", hi:null, duration:10000,
       rail:{title:"Maiores empresas · valuation", source:"privado", top:10},
-      callout:{kicker:"Poder corporativo", headline:"Algumas empresas já valem mais que países inteiros.", stat:"As 7 maiores ≈ US$ 20 tri", pos:"tl"} },
-    { block:"privado", year:2026, lens:"valuation", cam:{fitNodes:AI_SET}, hi:{nodes:AI_SET}, duration:10000,
-      callout:{kicker:"A direção do dinheiro", headline:"O capital da IA circula num triângulo: chips → nuvem → modelos.", stat:"Nvidia → OpenAI: US$ 100B · OpenAI → Oracle: US$ 300B", pos:"tl"} },
+      callout:{kicker:"Empresa > país", headline:"Uma fabricante de chips vale um Japão inteiro. País ainda é o centro do poder?", stat:"Nvidia ≈ PIB do Japão (US$ 4,2 tri)", pos:"tl"} },
+    { block:"privado", year:2026, lens:"valuation", cam:{fitNodes:AI_SET}, hi:{nodes:AI_SET}, duration:11000,
+      callout:{kicker:"O motor — ou a bolha?", headline:"O dinheiro da IA anda em círculo: o chip vende pra nuvem, que paga o modelo, que volta pro chip.", stat:"Nvidia → OpenAI: US$ 100B · OpenAI → Oracle: US$ 300B (Stargate)", pos:"tl"} },
+    { block:"privado", year:2026, lens:"crescimento", cam:{fitNodes:MOM_SET}, hi:{nodes:MOM_SET}, duration:10000,
+      callout:{kicker:"Não é tamanho, é velocidade", headline:"O mercado parou de pagar por lucro — está pagando por quem corre mais rápido.", stat:"Semicondutores e IA puxam a alta; o resto observa.", pos:"tl"} },
     { block:"privado", year:2026, lens:"valuation", cam:{focusSector:3}, hi:{sector:3}, duration:9000,
-      callout:{kicker:"As narrativas", headline:"Energia e commodities ainda ancoram as potências exportadoras.", stat:"Saudi Aramco ≈ US$ 1,8 tri", pos:"tl"} },
-    { block:"macro", cam:{fitNodes:["cripto","publico"]}, hi:{nodes:["cripto","publico"]}, duration:9500,
-      callout:{kicker:"Liquidez & lastro", headline:"A cripto se plugou ao sistema: stablecoins compram dívida dos EUA.", stat:"Tether entre os maiores compradores de T-bills", pos:"tl"} },
-    { block:"macro", cam:"fitAll", hi:{litAll:true}, duration:8500,
-      callout:{kicker:"O mapa completo", headline:"Três mundos, um só fluxo de capital.", stat:"6 fluxos macro conectam tudo", pos:"tl"} },
+      callout:{kicker:"O poder que não saiu de cena", headline:"Enquanto todos olham a IA, o petróleo ainda banca países inteiros.", stat:"Saudi Aramco ≈ US$ 1,8 tri — sozinha, quase um setor.", pos:"tl"} },
+    { block:"macro", cam:{fitNodes:["cripto","publico"]}, hi:{nodes:["cripto","publico"]}, duration:10000,
+      callout:{kicker:"Cripto virou sistema", headline:"A “alternativa ao Estado” agora financia a dívida do Estado.", stat:"Tether entre os maiores compradores de T-bills dos EUA", pos:"tl"} },
+    { block:"macro", cam:"fitAll", hi:{litAll:true}, duration:9000,
+      callout:{kicker:"Um só organismo", headline:"Não existem três mercados. Existe um só — com três máscaras.", stat:"Juros, títulos, IPOs e lastro: os fios que ligam tudo", pos:"tl"} },
     { block:"macro", cam:"fitAll", hi:{litAll:false}, end:true,
-      callout:{headline:"Agora explore você mesmo.", stat:"Troque as lentes, dê zoom e siga o dinheiro.", pos:"center"} }
+      callout:{headline:"Agora pare de assistir. Comece a caçar o dinheiro.", stat:"Troque as lentes, dê zoom e clique nos fluxos.", pos:"center"} }
   ] } };
   stStory=STORIES.mundo;
 
