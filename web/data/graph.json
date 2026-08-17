@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-17T00:13:03.074824+00:00",
+ "generated_at": "2026-08-17T03:45:49.814662+00:00",
  "source_note": "Valores de mercado/PIB via APIs quando o cache existe; caso contrário, valores-semente dos CSVs. Valuations privados, relações e notícias são curados manualmente.",
  "years": [
   2020,
@@ -310,7 +310,7 @@
      "name": "Tencent",
      "sector": 0,
      "type": "public",
-     "value": 505,
+     "value": 514,
      "m": 0.8,
      "p": 66,
      "ticker": "0700.HK",
@@ -558,7 +558,7 @@
      "name": "ICBC",
      "sector": 2,
      "type": "public",
-     "value": 326,
+     "value": 328,
      "m": 0.5,
      "p": 55,
      "ticker": "1398.HK",
@@ -604,11 +604,11 @@
      "name": "Saudi Aramco",
      "sector": 3,
      "type": "public",
-     "value": 1724,
+     "value": 1723,
      "m": 0.6,
      "p": 60,
      "ticker": "2222.SR",
-     "divida": 94.7,
+     "divida": 94.6,
      "alav": 19.8
     },
     {
@@ -652,7 +652,7 @@
      "name": "PetroChina",
      "sector": 3,
      "type": "public",
-     "value": 220,
+     "value": 226,
      "m": 0.6,
      "p": 56,
      "ticker": "0857.HK",
@@ -957,7 +957,7 @@
      "name": "LVMH",
      "sector": 6,
      "type": "public",
-     "value": 261,
+     "value": 262,
      "m": 0.8,
      "p": 68,
      "ticker": "MC.PA",
@@ -985,7 +985,7 @@
      "m": 0.5,
      "p": 56,
      "ticker": "NESN.SW",
-     "divida": 77.5,
+     "divida": 77.4,
      "alav": 213.0
     },
     {
@@ -1032,7 +1032,7 @@
      "m": 0.8,
      "p": 60,
      "ticker": "GLEN.L",
-     "divida": 61.9,
+     "divida": 62.0,
      "alav": 124.2
     },
     {
@@ -1526,99 +1526,99 @@
    "news": [
     {
      "c": "nvidia",
-     "d": "2025-09",
-     "hl": "Nvidia anuncia compromisso de até US$100B com a OpenAI",
-     "k": "deal"
+     "d": "2026-08-17",
+     "hl": "5 Things The Steam Machine Can Do That Nvidia Shield Cant",
+     "k": "news",
+     "src": "bgr.com",
+     "url": "https://www.bgr.com/2234344/steam-machine-uses-nvidia-shield-cant-do/"
     },
     {
-     "c": "openai",
-     "d": "2025-09",
-     "hl": "OpenAI fecha contrato de compute com Oracle (Stargate)",
-     "k": "deal"
+     "c": "nvidia",
+     "d": "2026-08-17",
+     "hl": "Nvidia CEO daughter to visit LG factory for robotics talks",
+     "k": "news",
+     "src": "koreaherald.com",
+     "url": "https://www.koreaherald.com/article/10843011"
     },
     {
-     "c": "anthropic",
-     "d": "2025-11",
-     "hl": "Anthropic amplia acordo de compute com Google (TPU)",
-     "k": "deal"
+     "c": "alphabet",
+     "d": "2026-08-17",
+     "hl": "Trump makes America Inc grip on the world even tighter",
+     "k": "news",
+     "src": "theage.com.au",
+     "url": "https://www.theage.com.au/business/the-economy/trump-makes-america-inc-s-grip-on-the-world-even-tighter-20260817-p60ouz.html"
     },
     {
-     "c": "anthropic",
-     "d": "2025-03",
-     "hl": "Rodada eleva valuation da Anthropic para US$183B",
-     "k": "funding"
+     "c": "alphabet",
+     "d": "2026-08-17",
+     "hl": "Stripe clinches over $7 billion deal to buy AI firm OpenRouter",
+     "k": "news",
+     "src": "fortune.com",
+     "url": "https://fortune.com/2026/08/16/stripe-7-billion-deal-ai-firm-openrouter-acquisition/"
     },
     {
-     "c": "lilly",
-     "d": "2025-08",
-     "hl": "Eli Lilly dispara com boom dos emagrecedores (GLP-1)",
-     "k": "product"
+     "c": "jpmorgan",
+     "d": "2026-08-17",
+     "hl": "摩根大通 ： GLM - 5 . 3升级+DeepSeek提价重塑中国AI ， 上调智谱与MiniMax目标价",
+     "k": "news",
+     "src": "163.com",
+     "url": "https://www.163.com/dy/article/L4HED5VH05198NMR.html"
     },
     {
-     "c": "novo",
-     "d": "2025-05",
-     "hl": "Novo Nordisk corre atrás na disputa dos emagrecedores",
-     "k": "product"
-    },
-    {
-     "c": "aramco",
-     "d": "2025-06",
-     "hl": "Aramco mantém domínio do petróleo e investe em gás",
-     "k": "move"
-    },
-    {
-     "c": "anduril",
-     "d": "2025-06",
-     "hl": "Anduril amplia contratos de defesa autônoma",
-     "k": "deal"
-    },
-    {
-     "c": "palantir",
-     "d": "2025-11",
-     "hl": "Palantir bate recorde com demanda por IA corporativa",
-     "k": "move"
-    },
-    {
-     "c": "broadcom",
-     "d": "2025-09",
-     "hl": "Broadcom fecha cliente bilionário de chips de IA",
-     "k": "deal"
-    },
-    {
-     "c": "apple",
-     "d": "2024-06",
-     "hl": "Apple integra ChatGPT ao iOS via parceria com OpenAI",
-     "k": "deal"
-    },
-    {
-     "c": "tsmc",
-     "d": "2025-10",
-     "hl": "TSMC eleva capex com demanda por chips de IA",
-     "k": "deal"
+     "c": "jpmorgan",
+     "d": "2026-08-17",
+     "hl": "Oil Price Today ( August 17 ): Crude oil approaches $90 again amid no breakthrough in Iran war talks . What next ?",
+     "k": "news",
+     "src": "economictimes.indiatimes.com",
+     "url": "https://economictimes.indiatimes.com/markets/commodities/news/oil-price-today-august-17-crude-oil-approaches-90-again-amid-no-breakthrough-in-iran-war-talks-whats-next/articleshow/133284844.cms"
     },
     {
      "c": "walmart",
-     "d": "2025-07",
-     "hl": "Walmart cresce com e-commerce e defende margens",
-     "k": "move"
+     "d": "2026-08-17",
+     "hl": "The Worst White Wine Vinegar On Store Shelves Is Also ( Sadly ) The Cheapest",
+     "k": "news",
+     "src": "thedailymeal.com",
+     "url": "https://www.thedailymeal.com/2233725/worst-white-wine-vinegar-great-value-walmart/"
     },
     {
-     "c": "berkshire",
-     "d": "2025-05",
-     "hl": "Berkshire acumula caixa recorde à espera de oportunidades",
-     "k": "move"
+     "c": "walmart",
+     "d": "2026-08-17",
+     "hl": "Asian shares mark time as Iran war keeps oil prices up",
+     "k": "news",
+     "src": "businesstimes.com.sg",
+     "url": "https://www.businesstimes.com.sg/companies-markets/energy-commodities/asian-shares-mark-time-iran-war-keeps-oil-prices"
     },
     {
-     "c": "lockheed",
-     "d": "2025-09",
-     "hl": "Defesa em alta impulsiona encomendas da Lockheed",
-     "k": "deal"
+     "c": "mastercard",
+     "d": "2026-08-17",
+     "hl": "Mastercard CEO : Cybersecurity Is Our Fastest - Growing Business",
+     "k": "news",
+     "src": "finance.yahoo.com",
+     "url": "https://finance.yahoo.com/technology/ai/articles/mastercard-ceo-cybersecurity-fastest-growing-003437050.html"
     },
     {
-     "c": "databricks",
-     "d": "2025-12",
-     "hl": "Databricks integra modelos Anthropic ao lakehouse",
-     "k": "deal"
+     "c": "mastercard",
+     "d": "2026-08-16",
+     "hl": "Revolut chatbot goes rogue by charging users to cancel subscription",
+     "k": "news",
+     "src": "cityam.com",
+     "url": "https://www.cityam.com/revolut-chatbot-goes-rogue-by-charging-users-to-cancel-subscription/"
+    },
+    {
+     "c": "palantir",
+     "d": "2026-08-17",
+     "hl": "Trump makes America Inc grip on the world even tighter",
+     "k": "news",
+     "src": "theage.com.au",
+     "url": "https://www.theage.com.au/business/the-economy/trump-makes-america-inc-s-grip-on-the-world-even-tighter-20260817-p60ouz.html"
+    },
+    {
+     "c": "palantir",
+     "d": "2026-08-16",
+     "hl": "3 Reasons to Avoid RDN and 1 Stock to Buy Instead",
+     "k": "news",
+     "src": "finance.yahoo.com",
+     "url": "https://finance.yahoo.com/markets/stocks/articles/3-reasons-avoid-rdn-1-192500868.html"
     }
    ]
   },
@@ -2595,88 +2595,28 @@
    ],
    "news": [
     {
-     "c": "eua",
-     "d": "2025-09",
-     "hl": "Fed inicia ciclo de corte de juros de olho no emprego",
-     "k": "juros"
-    },
-    {
-     "c": "china",
-     "d": "2025-10",
-     "hl": "China amplia estímulo para reanimar o crescimento",
-     "k": "pib"
-    },
-    {
      "c": "alemanha",
-     "d": "2025-06",
-     "hl": "Alemanha sai da estagnação com pacote de investimento",
-     "k": "pib"
-    },
-    {
-     "c": "brasil",
-     "d": "2026-01",
-     "hl": "Copom mantém Selic elevada para conter inflação",
-     "k": "juros"
-    },
-    {
-     "c": "japao",
-     "d": "2025-07",
-     "hl": "Japão sobe juros e encerra política ultrafrouxa",
-     "k": "juros"
-    },
-    {
-     "c": "argentina",
-     "d": "2025-08",
-     "hl": "Argentina desacelera inflação após ajuste fiscal",
-     "k": "infl"
+     "d": "2026-06-15",
+     "hl": "Fifa urged to remove World Cup referee over  white supremacy  gesture",
+     "k": "news",
+     "src": "the42.ie",
+     "url": "https://www.the42.ie/shaun-evans-fifa-referee-white-supremacy-gesture-2-7071543-Jun2026/"
     },
     {
      "c": "india",
-     "d": "2025-11",
-     "hl": "Índia lidera crescimento entre grandes economias",
-     "k": "pib"
+     "d": "2026-07-28",
+     "hl": "WEF Nexus ( Water , Energy and Food ): an approach to the climate crisis",
+     "k": "news",
+     "src": "mundorama.net",
+     "url": "https://www.mundorama.net/p/wef-nexus-water-energy-and-food-an"
     },
     {
-     "c": "turquia",
-     "d": "2025-05",
-     "hl": "Turquia mantém juros altíssimos contra a inflação",
-     "k": "juros"
-    },
-    {
-     "c": "reinounido",
-     "d": "2025-09",
-     "hl": "Reino Unido corta juros com inflação em queda",
-     "k": "juros"
-    },
-    {
-     "c": "africasul",
-     "d": "2025-10",
-     "hl": "África do Sul enfrenta desemprego recorde",
-     "k": "emprego"
-    },
-    {
-     "c": "japao",
-     "d": "2025-06",
-     "hl": "Japão segue como maior credor externo dos EUA",
-     "k": "macro"
-    },
-    {
-     "c": "china",
-     "d": "2025-05",
-     "hl": "China reduz gradualmente sua carteira de Treasuries",
-     "k": "macro"
-    },
-    {
-     "c": "alemanha",
-     "d": "2025-09",
-     "hl": "BCE sinaliza pausa após ciclo de cortes",
-     "k": "juros"
-    },
-    {
-     "c": "eua",
-     "d": "2026-02",
-     "hl": "Mercado de trabalho dos EUA esfria gradualmente",
-     "k": "emprego"
+     "c": "india",
+     "d": "2026-06-17",
+     "hl": "Strait of Hormuz : A Constant in Iranian History",
+     "k": "news",
+     "src": "consortiumnews.com",
+     "url": "https://consortiumnews.com/2026/06/17/strait-of-hormuz-a-constant-in-iranian-history/"
     }
    ]
   },
@@ -2782,9 +2722,9 @@
      "name": "Bitcoin",
      "sector": 0,
      "type": "estabelecido",
-     "value": 1264.68,
-     "vol": 8.76,
-     "dom": 56.16,
+     "value": 1270.59,
+     "vol": 11.36,
+     "dom": 56.19,
      "coingecko_id": "bitcoin",
      "m": 1.0
     },
@@ -2793,9 +2733,9 @@
      "name": "Ethereum",
      "sector": 0,
      "type": "estabelecido",
-     "value": 226.97,
-     "vol": 2.96,
-     "dom": 10.08,
+     "value": 228.92,
+     "vol": 4.2,
+     "dom": 10.12,
      "coingecko_id": "ethereum",
      "m": 1.0
     },
@@ -2804,8 +2744,8 @@
      "name": "Solana",
      "sector": 0,
      "type": "estabelecido",
-     "value": 43.68,
-     "vol": 0.62,
+     "value": 43.96,
+     "vol": 0.84,
      "dom": 1.94,
      "coingecko_id": "solana",
      "m": 1.0
@@ -2815,9 +2755,9 @@
      "name": "BNB",
      "sector": 0,
      "type": "estabelecido",
-     "value": 80.53,
-     "vol": 0.49,
-     "dom": 3.58,
+     "value": 80.41,
+     "vol": 0.52,
+     "dom": 3.56,
      "coingecko_id": "binancecoin",
      "m": 1.0
     },
@@ -2826,9 +2766,9 @@
      "name": "XRP",
      "sector": 0,
      "type": "estabelecido",
-     "value": 62.62,
-     "vol": 0.43,
-     "dom": 2.78,
+     "value": 62.71,
+     "vol": 0.58,
+     "dom": 2.77,
      "coingecko_id": "ripple",
      "m": 1.0
     },
@@ -2838,7 +2778,7 @@
      "sector": 0,
      "type": "emergente",
      "value": 6.61,
-     "vol": 0.15,
+     "vol": 0.18,
      "dom": 0.29,
      "coingecko_id": "cardano",
      "m": 1.0
@@ -2848,8 +2788,8 @@
      "name": "Sui",
      "sector": 0,
      "type": "emergente",
-     "value": 2.75,
-     "vol": 0.07,
+     "value": 2.76,
+     "vol": 0.08,
      "dom": 0.12,
      "coingecko_id": "sui",
      "m": 1.0
@@ -2871,7 +2811,7 @@
      "sector": 1,
      "type": "emergente",
      "value": 0.19,
-     "vol": 0.01,
+     "vol": 0.02,
      "dom": 0.01,
      "coingecko_id": "optimism",
      "m": 1.0
@@ -2892,8 +2832,8 @@
      "name": "Uniswap",
      "sector": 2,
      "type": "estabelecido",
-     "value": 2.05,
-     "vol": 0.11,
+     "value": 2.04,
+     "vol": 0.13,
      "dom": 0.09,
      "coingecko_id": "uniswap",
      "m": 1.0
@@ -2903,8 +2843,8 @@
      "name": "Aave",
      "sector": 2,
      "type": "estabelecido",
-     "value": 1.33,
-     "vol": 0.1,
+     "value": 1.34,
+     "vol": 0.11,
      "dom": 0.06,
      "coingecko_id": "aave",
      "m": 1.0
@@ -2926,8 +2866,8 @@
      "sector": 3,
      "type": "estabelecido",
      "value": 183.01,
-     "vol": 15.77,
-     "dom": 8.13,
+     "vol": 19.24,
+     "dom": 8.09,
      "coingecko_id": "tether",
      "m": 1.0
     },
@@ -2936,9 +2876,9 @@
      "name": "USDC (Circle)",
      "sector": 3,
      "type": "estabelecido",
-     "value": 71.82,
-     "vol": 2.66,
-     "dom": 3.19,
+     "value": 71.84,
+     "vol": 3.84,
+     "dom": 3.18,
      "coingecko_id": "usd-coin",
      "m": 1.0
     },
@@ -2947,8 +2887,8 @@
      "name": "Dai",
      "sector": 3,
      "type": "estabelecido",
-     "value": 4.58,
-     "vol": 0.04,
+     "value": 4.56,
+     "vol": 0.05,
      "dom": 0.2,
      "coingecko_id": "dai",
      "m": 1.0
@@ -2958,8 +2898,8 @@
      "name": "Chainlink",
      "sector": 4,
      "type": "estabelecido",
-     "value": 7.06,
-     "vol": 0.23,
+     "value": 7.1,
+     "vol": 0.24,
      "dom": 0.31,
      "coingecko_id": "chainlink",
      "m": 1.0
@@ -2969,8 +2909,8 @@
      "name": "Ondo",
      "sector": 4,
      "type": "emergente",
-     "value": 1.61,
-     "vol": 0.04,
+     "value": 1.62,
+     "vol": 0.05,
      "dom": 0.07,
      "coingecko_id": "ondo-finance",
      "m": 1.0
@@ -2980,8 +2920,8 @@
      "name": "Dogecoin",
      "sector": 5,
      "type": "emergente",
-     "value": 10.86,
-     "vol": 0.17,
+     "value": 10.89,
+     "vol": 0.21,
      "dom": 0.48,
      "coingecko_id": "dogecoin",
      "m": 1.0
@@ -3002,7 +2942,7 @@
      "name": "Pepe",
      "sector": 5,
      "type": "emergente",
-     "value": 1.08,
+     "value": 1.1,
      "vol": 0.06,
      "dom": 0.05,
      "coingecko_id": "pepe",
@@ -3025,7 +2965,7 @@
      "sector": 6,
      "type": "emergente",
      "value": 0.66,
-     "vol": 0.01,
+     "vol": 0.02,
      "dom": 0.03,
      "coingecko_id": "render-token",
      "m": 1.0
@@ -3046,7 +2986,7 @@
      "name": "Toncoin",
      "sector": 0,
      "type": "estabelecido",
-     "value": 3.7,
+     "value": 3.68,
      "vol": 0.01,
      "dom": 0.16,
      "coingecko_id": "the-open-network",
@@ -3058,7 +2998,7 @@
      "sector": 0,
      "type": "emergente",
      "value": 0.45,
-     "vol": 0.02,
+     "vol": 0.03,
      "dom": 0.02,
      "coingecko_id": "aptos",
      "m": 1.0
@@ -3068,7 +3008,7 @@
      "name": "NEAR",
      "sector": 0,
      "type": "emergente",
-     "value": 2.09,
+     "value": 2.1,
      "vol": 0.05,
      "dom": 0.09,
      "coingecko_id": "near",
@@ -3079,8 +3019,8 @@
      "name": "Hedera",
      "sector": 0,
      "type": "emergente",
-     "value": 2.85,
-     "vol": 0.02,
+     "value": 2.84,
+     "vol": 0.03,
      "dom": 0.13,
      "coingecko_id": "hedera-hashgraph",
      "m": 1.0
@@ -3091,7 +3031,7 @@
      "sector": 0,
      "type": "estabelecido",
      "value": 3.44,
-     "vol": 0.1,
+     "vol": 0.11,
      "dom": 0.15,
      "coingecko_id": "litecoin",
      "m": 1.0
@@ -3101,8 +3041,8 @@
      "name": "Stellar",
      "sector": 0,
      "type": "estabelecido",
-     "value": 5.42,
-     "vol": 0.06,
+     "value": 5.46,
+     "vol": 0.07,
      "dom": 0.24,
      "coingecko_id": "stellar",
      "m": 1.0
@@ -3112,7 +3052,7 @@
      "name": "Kaspa",
      "sector": 0,
      "type": "emergente",
-     "value": 0.72,
+     "value": 0.71,
      "vol": 0.01,
      "dom": 0.03,
      "coingecko_id": "kaspa",
@@ -3124,7 +3064,7 @@
      "sector": 2,
      "type": "emergente",
      "value": 0.41,
-     "vol": 0.05,
+     "vol": 0.06,
      "dom": 0.02,
      "coingecko_id": "injective-protocol",
      "m": 1.0
@@ -3135,7 +3075,7 @@
      "sector": 2,
      "type": "emergente",
      "value": 0.82,
-     "vol": 0.04,
+     "vol": 0.05,
      "dom": 0.04,
      "coingecko_id": "ethena",
      "m": 1.0
@@ -3259,82 +3199,20 @@
    ],
    "news": [
     {
-     "c": "btc",
-     "d": "2025-01",
-     "hl": "Bitcoin renova máxima com forte entrada em ETFs à vista",
-     "k": "preco"
-    },
-    {
-     "c": "eth",
-     "d": "2025-05",
-     "hl": "Ethereum avança com upgrade e queda de custos em L2",
-     "k": "produto"
+     "c": "sol",
+     "d": "2026-08-17",
+     "hl": "Data of 54K Wallet Users Leaked , Clarity Odds Just 10 %: Hodler Digest , Aug . 16",
+     "k": "news",
+     "src": "cointelegraph.com",
+     "url": "https://cointelegraph.com/magazine/data-of-54000-wallet-users-leaked-clarity-odds-just-10-hodlers-digest"
     },
     {
      "c": "sol",
-     "d": "2025-03",
-     "hl": "Solana lidera atividade de varejo e memecoins",
-     "k": "produto"
-    },
-    {
-     "c": "usdt",
-     "d": "2025-09",
-     "hl": "Tether vira um dos maiores compradores de T-bills dos EUA",
-     "k": "macro"
-    },
-    {
-     "c": "usdc",
-     "d": "2025-06",
-     "hl": "Circle (USDC) estreia em bolsa e valoriza forte",
-     "k": "move"
-    },
-    {
-     "c": "xrp",
-     "d": "2025-02",
-     "hl": "XRP dispara após clareza regulatória nos EUA",
-     "k": "regra"
-    },
-    {
-     "c": "ondo",
-     "d": "2026-01",
-     "hl": "Ondo cresce com tokenização de ativos reais",
-     "k": "produto"
-    },
-    {
-     "c": "link",
-     "d": "2025-08",
-     "hl": "Chainlink fecha parcerias com bancos para RWA",
-     "k": "deal"
-    },
-    {
-     "c": "btc",
-     "d": "2022-06",
-     "hl": "Inverno cripto: Bitcoin despenca com colapsos no setor",
-     "k": "preco"
-    },
-    {
-     "c": "eth",
-     "d": "2022-09",
-     "hl": "Ethereum conclui a fusão (The Merge)",
-     "k": "produto"
-    },
-    {
-     "c": "doge",
-     "d": "2025-04",
-     "hl": "Dogecoin sobe com onda de memecoins",
-     "k": "preco"
-    },
-    {
-     "c": "tao",
-     "d": "2025-10",
-     "hl": "Bittensor puxa narrativa de IA descentralizada",
-     "k": "produto"
-    },
-    {
-     "c": "usdc",
-     "d": "2025-07",
-     "hl": "Stablecoins ganham marco regulatório nos EUA",
-     "k": "regra"
+     "d": "2026-08-16",
+     "hl": "Fibonaccis Ride upsets in Solana Beach Stakes",
+     "k": "news",
+     "src": "pasadenastarnews.com",
+     "url": "https://www.pasadenastarnews.com/2026/08/16/fibonaccis-ride-upsets-in-solana-beach-stakes/"
     }
    ]
   }
