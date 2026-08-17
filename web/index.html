@@ -266,6 +266,10 @@
   .ed-item .mini:hover{color:var(--ink-1);}
   .ed-hint{font-size:10px; color:var(--ink-3); line-height:1.45;}
   .ed-export{width:100%; height:120px; font-family:ui-monospace,monospace; font-size:10px; line-height:1.35;}
+  .datamsg{position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:9px; text-align:center; padding:24px; z-index:4;}
+  .datamsg b{font-size:16px; font-weight:600; color:var(--ink-1);}
+  .datamsg span{font-size:12.5px; color:var(--ink-3); max-width:380px; line-height:1.55;}
+  .datamsg code{background:var(--surface-3); padding:1px 6px; border-radius:5px; color:var(--ink-2);}
 </style>
 
 <div class="app">
@@ -800,11 +804,15 @@
     if(g.blocks.publico.blocos) g.blocks.publico.blocos.forEach(function(r){ if(BLOCOS[r.id]) BLOCOS[r.id].name=r.name; });
     if(g.generated_at){ var d=new Date(g.generated_at); var eb=document.querySelector(".eyebrow"); if(eb && !isNaN(d)) eb.textContent="Terminal macro · dados de "+d.toLocaleDateString("pt-BR"); }
   }
+  // DADOS 100% DO PIPELINE: zera qualquer dado embutido antes de carregar o graph.json.
+  ["privado","publico","cripto"].forEach(function(k){ BLOCKS[k].nodes=[]; BLOCKS[k].edges=[]; BLOCKS[k].news=[]; });
+  var _dataOk=false;
+  function showDataMessage(){ var shell=document.querySelector(".graph-shell"); if(shell && !shell.querySelector(".datamsg")){ var d=document.createElement("div"); d.className="datamsg"; d.innerHTML="<b>Dados não carregados</b><span>Este app usa 100% dados do pipeline — nada embutido. Rode <code>atualizar.bat</code> e abra via HTTP.</span>"; shell.appendChild(d); } var t=document.getElementById("title"); if(t)t.textContent="Sem dados do pipeline"; }
   fetch("data/graph.json",{cache:"no-store"})
     .then(function(r){ return r.ok?r.json():Promise.reject(new Error("HTTP "+r.status)); })
-    .then(function(g){ try{ applyGraph(g); }catch(e){ console.warn("graph.json inválido — usando dados embutidos.",e); } })
-    .catch(function(){ console.info("graph.json ausente/inacessível — usando dados embutidos. Rode o pipeline e sirva via HTTP."); })
-    .then(function(){ switchTo("macro"); stLoadStoriesJson().then(function(){ stMaybeAutoStart(); }); });
+    .then(function(g){ try{ applyGraph(g); _dataOk=!!(BLOCKS.privado.nodes&&BLOCKS.privado.nodes.length); }catch(e){ console.warn("graph.json inválido",e); _dataOk=false; } })
+    .catch(function(e){ console.warn("graph.json ausente/inacessível — sem dados embutidos.",e); _dataOk=false; })
+    .then(function(){ if(_dataOk){ switchTo("macro"); stLoadStoriesJson().then(function(){ stMaybeAutoStart(); }); } else { showDataMessage(); } });
 
   /* ===================== STORY MODE (v1) ===================== */
   var stEl={}, stStory=null, stIdx=0, stAuto=true, stActive=false, stTimer=null, stBuilt=false;

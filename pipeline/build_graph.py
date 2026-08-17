@@ -76,20 +76,22 @@ def build():
     pub_nodes = []
     for r in read_csv("countries.csv"):
         cid = r["id"]
-        gdp = num(r["seed_gdp_b"])
-        juros = num(r["juros"])
         mc = mac_cache.get(cid, {})
-        if mc.get("gdp_b"):
-            gdp = round(mc["gdp_b"])
-        if mc.get("juros") is not None:
-            juros = mc["juros"]
+        # macro real (World Bank/FRED/BCB) sobrepõe a semente do CSV quando disponível
+        def pick(key, csv_col, rnd=1):
+            return round(mc[key], rnd) if mc.get(key) is not None else num(r.get(csv_col))
         pub_nodes.append({
             "id": cid, "name": r["name"], "iso3": r["iso3"],
             "cont": int(r["region_id"]), "bloco": int(r["bloco_id"]),
-            "type": r["type"], "value": gdp,
-            "juros": juros, "desemp": num(r["desemprego"]),
-            "idh": num(r["idh"]), "gini": num(r["gini"]),
-            "pop": num(r.get("pop")), "dividaPib": num(r.get("divida_pib")), "consumo": num(r.get("consumo")),
+            "type": r["type"],
+            "value": round(mc["gdp_b"]) if mc.get("gdp_b") else num(r["seed_gdp_b"]),
+            "juros": mc["juros"] if mc.get("juros") is not None else num(r["juros"]),
+            "desemp": pick("desemp", "desemprego"),
+            "idh": num(r["idh"]),
+            "gini": pick("gini", "gini"),
+            "pop": pick("pop", "pop"),
+            "dividaPib": pick("dividaPib", "divida_pib"),
+            "consumo": pick("consumo", "consumo"),
             "arch": r["arch"], "bank": r["bank"], "m": 1.0,
         })
     regions = _distinct(read_csv("countries.csv"), "region_id", "region_name")
@@ -129,7 +131,13 @@ def build():
         edges[blk].append(e)
 
     news = {"privado": [], "publico": [], "cripto": []}
-    if os.path.exists(os.path.join(SRC, "news.csv")):
+    news_cache = load_cache("news.json")
+    cache_total = sum(len(news_cache.get(b, [])) for b in news)
+    if cache_total >= 15:
+        # notícias automáticas (GDELT) têm prioridade quando a coleta veio saudável
+        for b in news:
+            news[b] = news_cache.get(b, [])
+    elif os.path.exists(os.path.join(SRC, "news.csv")):
         for r in read_csv("news.csv"):
             blk = r["block"]
             if blk in news:

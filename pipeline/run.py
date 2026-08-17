@@ -16,6 +16,7 @@ FETCHERS = {
     "equities": "fetch_equities.py",
     "crypto": "fetch_crypto.py",
     "macro": "fetch_macro.py",
+    "news": "fetch_news.py",
 }
 
 

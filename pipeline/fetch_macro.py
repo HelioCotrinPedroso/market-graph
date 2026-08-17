@@ -1,16 +1,32 @@
 #!/usr/bin/env python3
 """
-fetch_macro.py — PIB (World Bank) + JUROS reais (FRED / BCB), tudo sem chave de API.
-- PIB nominal US$: World Bank NY.GDP.MKTP.CD (lote, fail-fast).
-- Juros de política: FRED via fredgraph CSV (keyless) — Fed (FEDFUNDS) e BCE (ECBDFR, zona do euro);
-  Selic do Brasil via API do BCB (série 432). Demais países: juros seguem curados no CSV.
-Grava data/cache/macro.json com gdp_b e/ou juros por país. Desemprego/IDH seguem curados.
-Uso:  python pipeline/fetch_macro.py    |   Requer: pip install requests
+fetch_macro.py — macro de países 100% automatizado, sem chave de API.
+
+World Bank (1 chamada em lote por indicador — sem estouro de requisição):
+  PIB US$        NY.GDP.MKTP.CD    -> gdp_b
+  População      SP.POP.TOTL       -> pop  (milhões)
+  Dívida/PIB     GC.DOD.TOTL.GD.ZS -> dividaPib (% do PIB)
+  Consumo/PIB    NE.CON.PRVT.ZS    -> consumo   (% do PIB)
+  Desemprego     SL.UEM.TOTL.ZS    -> desemp    (%)
+  Desigualdade   SI.POV.GINI       -> gini
+Juros de política (FRED keyless via curl): Fed (FEDFUNDS), BCE (ECBDFR); Selic via BCB (série 432).
+
+Usa `mrnev=1` (valor mais recente não-vazio) => tolera defasagem anual.
+Grava data/cache/macro.json por país. Só IDH segue curado (World Bank não tem HDI).
+Uso:  python pipeline/fetch_macro.py   |   Requer: pip install requests
 """
 import csv, json, os, sys, time, subprocess
 
-# país -> série FRED (taxa de política, %). BCE é a mesma taxa p/ toda a zona do euro.
-FRED_RATES = {"eua":"FEDFUNDS","alemanha":"ECBDFR","franca":"ECBDFR","italia":"ECBDFR","espanha":"ECBDFR","holanda":"ECBDFR"}
+WB_INDICATORS = {
+    "gdp_b":     ("NY.GDP.MKTP.CD",    1e9),   # -> bilhões de US$
+    "pop":       ("SP.POP.TOTL",       1e6),   # -> milhões de pessoas
+    "dividaPib": ("GC.DOD.TOTL.GD.ZS", 1.0),
+    "consumo":   ("NE.CON.PRVT.ZS",    1.0),
+    "desemp":    ("SL.UEM.TOTL.ZS",    1.0),
+    "gini":      ("SI.POV.GINI",       1.0),
+}
+FRED_RATES = {"eua": "FEDFUNDS", "alemanha": "ECBDFR", "franca": "ECBDFR",
+              "italia": "ECBDFR", "espanha": "ECBDFR", "holanda": "ECBDFR"}
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC = os.path.join(ROOT, "data", "sources", "countries.csv")
@@ -27,46 +43,56 @@ def main():
     rows = list(csv.DictReader(open(SRC, encoding="utf-8")))
     iso_to_id = {r["iso3"]: r["id"] for r in rows if r.get("iso3")}
     iso_to_name = {r["iso3"]: r["name"] for r in rows if r.get("iso3")}
+    iso_set = set(iso_to_id.keys())
 
     sess = requests.Session()
-    sess.headers.update({"Accept": "application/json", "User-Agent": "market-graph/1.0"})
+    sess.headers.update({"User-Agent": "market-graph/1.0"})
 
-    def get_json(url, tries=2):
-        # fail-fast: PIB é anual; se o World Bank não responder rápido, mantemos as sementes.
+    def wb(indicator, tries=3):
+        # O World Bank bloqueia o cliente do `requests` (igual ao FRED) mas libera o curl.
+        # Rota `country/all` + intervalo de datas é a única estável (o lote `;`+mrnev dá Request Error).
+        url = ("https://api.worldbank.org/v2/country/all/indicator/{ind}"
+               "?format=json&date=2018:2025&per_page=20000").format(ind=indicator)
         for _ in range(tries):
             try:
-                r = sess.get(url, timeout=12)
-                if r.status_code == 200 and r.text.strip().startswith("["):
-                    return r.json()
+                txt = subprocess.run(["curl", "-s", "--max-time", "45", url],
+                                     capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=55).stdout
+                if txt and txt.strip().startswith("["):
+                    j = json.loads(txt)
+                    if isinstance(j, list) and len(j) > 1 and j[1]:
+                        return j[1]
             except Exception:
                 pass
-            time.sleep(0.5)
+            time.sleep(1.5)
         return None
 
     out = {}
-    base = "https://api.worldbank.org/v2/country/{c}/indicator/NY.GDP.MKTP.CD?format=json&mrnev=1&per_page=1000"
-    data = get_json(base.format(c=";".join(iso_to_id.keys())))
-    if isinstance(data, list) and len(data) > 1 and data[1]:
-        for rec in data[1]:
-            iso = rec.get("countryiso3code")
-            local = iso_to_id.get(iso)
-            if local and rec.get("value"):
-                out[local] = {"gdp_b": round(rec["value"] / 1e9, 1), "year": rec["date"], "iso3": iso}
-    if not out:
-        print("  Banco Mundial indisponível agora — PIB mantém as sementes curadas (dado anual).")
+    for field, (indicator, div) in WB_INDICATORS.items():
+        recs = wb(indicator)
+        if not recs:
+            print(f"  [World Bank] {field:<10} indisponível agora — mantém semente")
+            continue
+        best = {}  # iso -> (ano, valor)  => pega o ano mais recente com valor
+        for rec in recs:
+            iso = rec.get("countryiso3code"); val = rec.get("value"); dt = rec.get("date") or ""
+            if iso in iso_set and val is not None and (iso not in best or dt > best[iso][0]):
+                best[iso] = (dt, val)
+        for iso, (dt, val) in best.items():
+            local = iso_to_id[iso]
+            out.setdefault(local, {})[field] = round(val / div, 1)
+            out[local].setdefault("_years", {})[field] = dt
+        print(f"  [World Bank] {field:<10} {indicator:<18} {len(best)} países")
 
-    # ---- JUROS reais ----
+    # ---- JUROS reais (FRED via curl; BCB p/ Selic) ----
     def fred_latest(series):
-        # O FRED bloqueia o cliente do requests (WAF/fingerprint) mas libera o curl —
-        # então usamos curl (presente no host e no runner ubuntu do GitHub Actions).
         try:
-            out = subprocess.run(
+            txt = subprocess.run(
                 ["curl", "-s", "--max-time", "20",
                  "https://fred.stlouisfed.org/graph/fredgraph.csv?id=" + series],
-                capture_output=True, text=True, timeout=25).stdout
-            if not out or "<html" in out[:200].lower():
+                capture_output=True, text=True, encoding="utf-8", errors="replace", timeout=25).stdout
+            if not txt or "<html" in txt[:200].lower():
                 return None
-            for line in reversed(out.strip().splitlines()[1:]):
+            for line in reversed(txt.strip().splitlines()[1:]):
                 parts = line.split(",")
                 if len(parts) >= 2:
                     try:
@@ -83,31 +109,30 @@ def main():
             continue
         v = fred_cache.get(series)
         if v is None:
-            v = fred_latest(series); fred_cache[series] = v
+            v = fred_latest(series)
+            fred_cache[series] = v
         if v is not None:
             out.setdefault(cid, {})["juros"] = v
-            print(f"  juros {cid:<10} {series:<10} {v}%")
 
-    # Selic (Brasil) via BCB (série 432 = meta Selic, % a.a.)
     try:
         r = sess.get("https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json", timeout=20)
         if r.status_code == 200 and r.json():
-            sel = round(float(r.json()[-1]["valor"]), 2)
-            out.setdefault("brasil", {})["juros"] = sel
-            print(f"  juros brasil     BCB-432    {sel}%")
+            out.setdefault("brasil", {})["juros"] = round(float(r.json()[-1]["valor"]), 2)
     except Exception:
         pass
 
+    covered = sum(1 for e in out.values() if e.get("gdp_b"))
     for iso, name in iso_to_name.items():
-        loc = iso_to_id[iso]
-        e = out.get(loc, {})
-        gdp = ("$%.0fB" % e["gdp_b"]) if e.get("gdp_b") else "PIB curado"
-        jr = (" · juros %.2f%%" % e["juros"]) if e.get("juros") is not None else ""
-        print(f"  {name:<16} {iso}  {gdp}{jr}")
+        e = out.get(iso_to_id[iso], {})
+        bits = []
+        if e.get("gdp_b"): bits.append("PIB $%.0fB" % e["gdp_b"])
+        if e.get("pop"): bits.append("%.0fM hab" % e["pop"])
+        if e.get("juros") is not None: bits.append("juros %.2f%%" % e["juros"])
+        print(f"  {name:<16} {iso}  " + (" · ".join(bits) if bits else "sem dado (semente)"))
 
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     json.dump(out, open(OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    print(f"OK {len(out)} países c/ dado real -> {OUT}")
+    print(f"OK {len(out)} países no cache ({covered} com PIB real) -> {OUT}")
 
 
 if __name__ == "__main__":
